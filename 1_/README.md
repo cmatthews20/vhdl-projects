@@ -44,20 +44,20 @@ K6   = DE'F' + DE'F + DEF' + DEF = DE(F' + F) + DE(F' + F)
 
 ## Final Outputs for each door
 
-Door1   = K1(A'B'C) 
-        = **A'B'CE**
+D1  = K1(A'B'C) 
+    = **A'B'CE**
 
-Door2   = K2(A'BC')
-        = **A'BC'F**
+D2  = K2(A'BC')
+    = **A'BC'F**
 
-Door3   = K3(A'BC) = A'BC(E + D)
-        = **A'BCE + A'BCD**
+D3  = K3(A'BC) = A'BC(E + D)
+    = **A'BCE + A'BCD**
 
-Door4   = K4(AB'C')
-        = **AB'C'DE**
+D4  = K4(AB'C')
+    = **AB'C'DE**
 
-Door5   = K5(AB'C)
-        = **AB'CD'E**
+D5  = K5(AB'C)
+    = **AB'CD'E**
 
-Door6   = K6(ABC')
-        = **ABC'D**
+D6  = K6(ABC')
+    = **ABC'D**
