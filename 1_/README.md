@@ -1,6 +1,6 @@
 ## System Block Diagram
 
-![Block Diagram](./assets/block_diagram)
+![Block Diagram](./assets/block_diagram.jpg)
 
 ## Keypad combinations for each door (boolean algebra)
 
