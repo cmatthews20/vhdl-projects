@@ -69,4 +69,4 @@ D5  = K5(AB'C)
 D6  = K6(ABC')
     = **ABC'D**
 
-Alarm = ABC
+Alarm = **ABC**
