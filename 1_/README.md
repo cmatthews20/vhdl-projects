@@ -2,6 +2,10 @@
 
 ![Block Diagram](./assets/block_diagram.jpg)
 
+## Design Procedure
+
+Collect minterms from keypad combinations for each door and simplify using boolean algebra. AND those results with the valid codes from the cardreader (in order for the door to unlock, the correct card and keypad combo must be used).
+
 ## Keypad combinations for each door (boolean algebra)
 
 Door 1 valid keys are (as a combination of DEF): 010, 011, 110, 111
@@ -64,3 +68,5 @@ D5  = K5(AB'C)
 
 D6  = K6(ABC')
     = **ABC'D**
+
+Alarm = ABC
