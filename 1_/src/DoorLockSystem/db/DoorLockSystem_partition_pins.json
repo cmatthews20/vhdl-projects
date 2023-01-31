@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DoorOne",
+					"strict" : false
+				},
+				{
+					"name" : "DoorTwo",
+					"strict" : false
+				},
+				{
+					"name" : "DoorThree",
+					"strict" : false
+				},
+				{
+					"name" : "DoorFour",
+					"strict" : false
+				},
+				{
+					"name" : "DoorFive",
+					"strict" : false
+				},
+				{
+					"name" : "DoorSix",
+					"strict" : false
+				},
+				{
+					"name" : "Alarm",
+					"strict" : false
+				},
+				{
+					"name" : "A",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				},
+				{
+					"name" : "B",
+					"strict" : false
+				},
+				{
+					"name" : "E",
+					"strict" : false
+				},
+				{
+					"name" : "F",
+					"strict" : false
+				},
+				{
+					"name" : "D",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

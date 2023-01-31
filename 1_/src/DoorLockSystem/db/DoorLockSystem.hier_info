@@ -1,0 +1,40 @@
+|DoorLockSystem
+A => DoorFour.IN1
+A => DoorFive.IN1
+A => DoorSix.IN0
+A => Alarm.IN0
+A => DoorOne.IN0
+A => DoorTwo.IN0
+A => DoorThree.IN0
+B => DoorTwo.IN1
+B => DoorThree.IN1
+B => DoorSix.IN1
+B => Alarm.IN1
+B => DoorOne.IN1
+B => DoorFour.IN1
+B => DoorFive.IN1
+C => DoorOne.IN1
+C => DoorThree.IN1
+C => DoorFive.IN1
+C => Alarm.IN1
+C => DoorTwo.IN1
+C => DoorFour.IN1
+C => DoorSix.IN1
+D => DoorThree.IN1
+D => DoorFour.IN0
+D => DoorSix.IN1
+D => DoorFive.IN0
+E => DoorOne.IN1
+E => DoorThree.IN1
+E => DoorFour.IN1
+E => DoorFive.IN1
+F => DoorTwo.IN1
+DoorOne <= DoorOne.DB_MAX_OUTPUT_PORT_TYPE
+DoorTwo <= DoorTwo.DB_MAX_OUTPUT_PORT_TYPE
+DoorThree <= DoorThree.DB_MAX_OUTPUT_PORT_TYPE
+DoorFour <= DoorFour.DB_MAX_OUTPUT_PORT_TYPE
+DoorFive <= DoorFive.DB_MAX_OUTPUT_PORT_TYPE
+DoorSix <= DoorSix.DB_MAX_OUTPUT_PORT_TYPE
+Alarm <= Alarm.DB_MAX_OUTPUT_PORT_TYPE
+
+
