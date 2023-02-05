@@ -1,0 +1,103 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/colem/Documents/VHDL-Projects/1_/src/Structural/simulation/qsim
+Estructural
+Z1 w1675130149
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
+!i122 12
+R0
+Z9 8Structural.vho
+Z10 FStructural.vho
+l0
+L37 1
+V^XKAM^Oeb;D[>7RR:[m8e3
+!s100 `c9J7kUcWWo;QBK:@;jKO2
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1675130151
+!i10b 1
+Z13 !s108 1675130151.000000
+Z14 !s90 -work|work|Structural.vho|
+Z15 !s107 Structural.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 10 structural 0 22 ^XKAM^Oeb;D[>7RR:[m8e3
+!i122 12
+l76
+L53 111
+V3BU`=K0Y<oDWonS?R]0k42
+!s100 5V2C4[7ZH7;m_4WnbKKFS3
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Estructural_vhd_vec_tst
+Z18 w1675130148
+R6
+R7
+!i122 13
+R0
+Z19 8Waveform1.vwf.vht
+Z20 FWaveform1.vwf.vht
+l0
+L32 1
+VPMJnO4EJYRYf0X;noH?NT0
+!s100 L6k;XOQg3k:VGmV:YCCVh0
+R11
+32
+R12
+!i10b 1
+R13
+Z21 !s90 -work|work|Waveform1.vwf.vht|
+Z22 !s107 Waveform1.vwf.vht|
+!i113 1
+R16
+R17
+Astructural_arch
+R6
+R7
+Z23 DEx4 work 22 structural_vhd_vec_tst 0 22 PMJnO4EJYRYf0X;noH?NT0
+!i122 13
+l49
+Z24 L34 64
+Z25 VScGQNTFHMnC>NYm1HS@e80
+Z26 !s100 DTNAF[=:an7D[:A2oV84D0
+R11
+32
+R12
+!i10b 1
+R13
+R21
+R22
+!i113 1
+R16
+R17

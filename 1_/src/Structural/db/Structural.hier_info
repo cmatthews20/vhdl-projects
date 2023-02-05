@@ -1,0 +1,19 @@
+|Structural
+A => AndGate:Component1.A
+B => AndGate:Component1.B
+D => OrGate:Component2.D
+E << OrGate:Component2.E
+
+
+|Structural|AndGate:Component1
+A => C.IN0
+B => C.IN1
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Structural|OrGate:Component2
+C => E.IN0
+D => E.IN1
+E <= E.DB_MAX_OUTPUT_PORT_TYPE
+
+

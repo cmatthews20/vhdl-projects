@@ -1,0 +1,103 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/colem/Documents/VHDL-Projects/1_/src/Dataflow/simulation/qsim
+Edataflow
+Z1 w1675127929
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
+!i122 10
+R0
+Z9 8Dataflow.vho
+Z10 FDataflow.vho
+l0
+L37 1
+V1`W?gKNQAo;ojj5;?[T;f0
+!s100 mcnm3<nkzhIM29j5hXYL;2
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1675127931
+!i10b 1
+Z13 !s108 1675127930.000000
+Z14 !s90 -work|work|Dataflow.vho|
+Z15 !s107 Dataflow.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 8 dataflow 0 22 1`W?gKNQAo;ojj5;?[T;f0
+!i122 10
+l76
+L53 111
+VYbEW<[nbM]0iO@O0bBBmP1
+!s100 ig2D5>of[B1HZH>^S`fk00
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Edataflow_vhd_vec_tst
+Z18 w1675127927
+R6
+R7
+!i122 11
+R0
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
+l0
+L32 1
+VFO4R8zAi:l[T7z2g4Y:h02
+!s100 ojI5b40mmk>dU433JOYDJ1
+R11
+32
+R12
+!i10b 1
+Z21 !s108 1675127931.000000
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
+!i113 1
+R16
+R17
+Adataflow_arch
+R6
+R7
+Z24 DEx4 work 20 dataflow_vhd_vec_tst 0 22 FO4R8zAi:l[T7z2g4Y:h02
+!i122 11
+l49
+Z25 L34 64
+Z26 V_lUId<amg3]JXTWImkmdG0
+Z27 !s100 MKOf[?a<7gPkkB@mSmPLl3
+R11
+32
+R12
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R16
+R17

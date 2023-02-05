@@ -1,0 +1,43 @@
+entity Structural is 
+	port( A, B, D: in bit;
+			E: out bit);
+end Structural;
+
+--Structural Implementation of Lab1_1
+entity and2 is
+	port (in1, in2: in bit;
+			out1: out bit);
+end and2;
+
+architecture Equations of and2 is
+begin
+	out1 <= in1 and in2;
+end Equations;
+
+entity or2 is
+	port (in1, in2: in bit;
+			out1: out bit);
+end or2;
+
+architecture Equations of or2 is
+begin
+	out1 <= in1 or in2;
+end Equations;
+
+
+architecture Structure of Structural is
+	component and2
+		port (in1, in2: in bit;
+			out1: out bit);
+	end component;
+	
+	component OrGate
+		port (in1, in2: in bit;
+			out1: out bit);
+	end component;
+	
+	signal C: bit;
+begin
+	Component1: and2 port map (A,B,C);
+	Component2: or2 port map (C,D,E);
+end Structure;
