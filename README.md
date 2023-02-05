@@ -88,15 +88,17 @@ The value of `CLK` is inverted, and after 5 ns it is assigned to `CLK`. This cha
 
 Sometimes values other than `‘0’` and `‘1’` are needed. There is a standard library by IEEE with `std_logic` and `std_logic_vector` data types. The IEEE 1164 standard specifies a multivalues logic type with 9 possible values that can improve simulation results/accuracy:
 
-* `'U'`: Initialized value (common for inside shift register)
-* `'X'`: Forces unknown (cannot resolve value)
-* `'Z'`: High impedance (think tri-state buffer with 0, 1, and high-impedance/open circuit)
-* `'-'`: Don't care
+- `'U'`: Initialized value (common for inside shift register)
+- `'X'`: Forces unknown (cannot resolve value)
+- `'Z'`: High impedance (think tri-state buffer with 0, 1, and high-impedance/open circuit)
+- `'-'`: Don't care
 
-* `'L' and 'H'`: Weak `'0'` and weak `'1'`. Related to wired logic connection
-* `'W'`: Weak unknown. Related to wired logic connection
 
-* `'0' and '1'`: Strong drive logic
+- `'L' and 'H'`: Weak `'0'` and weak `'1'`. Related to wired logic connection
+- `'W'`: Weak unknown. Related to wired logic connection
+
+
+- `'0' and '1'`: Strong drive logic
 
 ## VHDL Modules
 
