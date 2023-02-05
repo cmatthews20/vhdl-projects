@@ -35,8 +35,10 @@ VHDL is inherently concurrent since circuits have something going on all the tim
 
 If `A`, `B`, `C`, and `D` are signals, they can be concurrently assigned (with no delays):
 
-`C <= A and B;`
-`E <= C or D;`
+```
+C <= A and B;
+E <= C or D;
+```
 
 Each line above executes at the same time, so the order doesn’t matter. Whenever a signal on the right side changes, the expression on the right is reevaluated and assigned to the left (in this case, it is assigned immediately. If there was a specified delay, it would be assigned after the delay). 
  
@@ -102,18 +104,19 @@ Sometimes values other than `‘0’` and `‘1’` are needed. There is a stand
 
 ## VHDL Modules
 
-VHDL designs are inherently modular. A VHDL module is composed of two parts:
+VHDL designs are inherently modular. Modules can be reused and composed with eachother. A VHDL module is composed of two parts:
 - An `entity` description: Comparable to a function prototype or class declaration in other programming languages. The ports (inputs and outputs) are defined here.
 - An `architecture` description: The particular implementation of the internals of the entity.
 
 A single entity can have multiple corresponding architectures. In some ways, the entity description is analogous to an interface in C++/Java (be careful; multiple architectures are not suppored by all synthesis tools). 
 
+The entity descriptions can be thought of like the black-box representations of the components. This is often how we are taught to think about software modules, but a VHDL entity actually represents a hardware block that can only possibly interact with the rest of the system via its inputs and outputs. This 'black box' view of entities makes it possible for them to be used based soley on the interface defined by their description. The associated architecture simply defines what goes on inside.
+
 Consider a basic logic circuit with three inputs (A, B, D), one output (E), and an internal signal (C) that takes the result of A AND B to be ORed with D.
 
 ```
 entity two_gates is
-    port(A, B, D: in bit);
-         E: out bit;
+    port(A, B, D: in bit; E: out bit);
 end two_gates;
 
 architecture gates of two_gates is
@@ -124,4 +127,28 @@ begin
 end gates;
 ```
 
+Consider another example, for a component that has three AND gates in parallel. With three pairs of inputs, a `bit_vector` can be used for the input and output ports.
+
+```
+entity and_array is
+    port(A, B: in bit_vector(2 downto 0); C: out bit_vector(2 downto 0));
+end and_array;
+
+architecture hard_way of and_array is
+begin
+    -- Specify each AND individually for each element of the input vector
+    C (2) <= A (2) and B (2);
+    C (1) <= A (1) and B (1);
+    C (0) <= A (0) and B (0);
+end hard_way ;
+```
+
+There is an easier way to implement the above architecture since operators work directly on `bit_vectors`. Using the same entity description above:
+
+```
+architecture easy_way of and_array is
+begin
+    C <= A and B ;
+end easy_way ;
+```
 
