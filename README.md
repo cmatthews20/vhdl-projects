@@ -1,7 +1,7 @@
 # 1 - Introduction 
 
-Simulation: Verifies functional correctness
-Synthesis: Converts HDL into netlist of actual components
+- Simulation: Verifies functional correctness
+- Synthesis: Converts HDL into netlist of actual components
 
 ## Levels of Abstraction
 
@@ -11,7 +11,7 @@ Behavioral:
 
 Dataflow (RTL): 
 - Explicitly shows movement of + operation on data. Often used for complex design aspects for synthesis
-- Code describes circuit WRT flow of data between register inputs/outputs (logic equations)
+- Code describes circuit with respect to flow of data between register inputs/outputs (logic equations)
 
 Structural: 
 - Explicitly defines connection/organization of modules. Used to connect top-level system components (reduces details required)
@@ -86,4 +86,22 @@ The value of `CLK` is inverted, and after 5 ns it is assigned to `CLK`. This cha
 
 `bit_vector`: 1-dimensional array of bits. Give the size and indices of a bit vector: `bit_vector(3 downto 0)`. This gives the programmer the ability to choose the range of indices and whether they ascend or descend (the highest index can correspond to the least or most significant bit). It is best practice to start indexing from 0, with 0 as the least significant bit (as seen above). Bit vectors can get assigned all at once with: `B <= “1100”;`
 
-Sometimes values other than `‘0’` and `‘1’` are needed. There is a standard library by IEEE with `std_logic` and `std_logic_vector` data types.
+Sometimes values other than `‘0’` and `‘1’` are needed. There is a standard library by IEEE with `std_logic` and `std_logic_vector` data types. The IEEE 1164 standard specifies a multivalues logic type with 9 possible values that can improve simulation results/accuracy:
+
+* `'U'`: Initialized value (common for inside shift register)
+* `'X'`: Forces unknown (cannot resolve value)
+* `'Z'`: High impedance (think tri-state buffer with 0, 1, and high-impedance/open circuit)
+* `'-'`: Don't care
+
+* `'L' and 'H'`: Weak `'0'` and weak `'1'`. Related to wired logic connection
+* `'W'`: Weak unknown. Related to wired logic connection
+
+* `'0' and '1'`: Strong drive logic
+
+## VHDL Modules
+
+VHDL designs are inherently modular. A VHDL module is composed of two parts:
+- An `entity` description: Comparable to a function prototype or class declaration in other programming languages. The ports (inputs and outputs) are defined here.
+- An `architecture` description: The particular implementation of the internals of the entity.
+
+A single entity can have multiple corresponding architectures.
