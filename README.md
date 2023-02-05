@@ -29,7 +29,7 @@ HDLs are high-level programming languages used to model microelectronic circuits
 
 # 2 - VHDL Basics
 
-VHDL is inherently concurrent since circuits have something going on all the time (unless power is cut). A signal in VHDL is equivalent to a wire in physical systems. `<=` is the signal assignment operator. The value computed on the right gets assigned to the left.
+VHDL is inherently concurrent since circuits have something going on all the time (unless power is cut). A signal in VHDL is equivalent to a wire in physical systems. `<=` is the signal assignment operator. The value computed on the right gets assigned to the left. Comments are started with `--`.
 
 ## Concurrent Assignment Statements
 
@@ -106,4 +106,22 @@ VHDL designs are inherently modular. A VHDL module is composed of two parts:
 - An `entity` description: Comparable to a function prototype or class declaration in other programming languages. The ports (inputs and outputs) are defined here.
 - An `architecture` description: The particular implementation of the internals of the entity.
 
-A single entity can have multiple corresponding architectures.
+A single entity can have multiple corresponding architectures. In some ways, the entity description is analogous to an interface in C++/Java (be careful; multiple architectures are not suppored by all synthesis tools). 
+
+Consider a basic logic circuit with three inputs (A, B, D), one output (E), and an internal signal (C) that takes the result of A AND B to be ORed with D.
+
+```
+entity two_gates is
+    port(A, B, D: in bit);
+         E: out bit;
+end two_gates;
+
+architecture gates of two_gates is
+    signal C: bit;
+begin
+    C <= A and B; -- This line is concurent with
+    E <= C or D; -- this line
+end gates;
+```
+
+
