@@ -1,0 +1,373 @@
+|ALU
+A[0] => Adder8:Z1.A[0]
+A[0] => BitwiseOR:Z2.X[0]
+A[0] => BitwiseAND:Z3.X[0]
+A[1] => Adder8:Z1.A[1]
+A[1] => BitwiseOR:Z2.X[1]
+A[1] => BitwiseAND:Z3.X[1]
+A[2] => Adder8:Z1.A[2]
+A[2] => BitwiseOR:Z2.X[2]
+A[2] => BitwiseAND:Z3.X[2]
+A[3] => Adder8:Z1.A[3]
+A[3] => BitwiseOR:Z2.X[3]
+A[3] => BitwiseAND:Z3.X[3]
+A[4] => Adder8:Z1.A[4]
+A[4] => BitwiseOR:Z2.X[4]
+A[4] => BitwiseAND:Z3.X[4]
+A[5] => Adder8:Z1.A[5]
+A[5] => BitwiseOR:Z2.X[5]
+A[5] => BitwiseAND:Z3.X[5]
+A[6] => Adder8:Z1.A[6]
+A[6] => BitwiseOR:Z2.X[6]
+A[6] => BitwiseAND:Z3.X[6]
+A[7] => Adder8:Z1.A[7]
+A[7] => BitwiseOR:Z2.X[7]
+A[7] => BitwiseAND:Z3.X[7]
+B[0] => Mux2:Z0.A[0]
+B[0] => BitwiseOR:Z2.Y[0]
+B[0] => BitwiseAND:Z3.Y[0]
+B[0] => Mux2:Z0.B[0]
+B[1] => Mux2:Z0.A[1]
+B[1] => BitwiseOR:Z2.Y[1]
+B[1] => BitwiseAND:Z3.Y[1]
+B[1] => Mux2:Z0.B[1]
+B[2] => Mux2:Z0.A[2]
+B[2] => BitwiseOR:Z2.Y[2]
+B[2] => BitwiseAND:Z3.Y[2]
+B[2] => Mux2:Z0.B[2]
+B[3] => Mux2:Z0.A[3]
+B[3] => BitwiseOR:Z2.Y[3]
+B[3] => BitwiseAND:Z3.Y[3]
+B[3] => Mux2:Z0.B[3]
+B[4] => Mux2:Z0.A[4]
+B[4] => BitwiseOR:Z2.Y[4]
+B[4] => BitwiseAND:Z3.Y[4]
+B[4] => Mux2:Z0.B[4]
+B[5] => Mux2:Z0.A[5]
+B[5] => BitwiseOR:Z2.Y[5]
+B[5] => BitwiseAND:Z3.Y[5]
+B[5] => Mux2:Z0.B[5]
+B[6] => Mux2:Z0.A[6]
+B[6] => BitwiseOR:Z2.Y[6]
+B[6] => BitwiseAND:Z3.Y[6]
+B[6] => Mux2:Z0.B[6]
+B[7] => Mux2:Z0.A[7]
+B[7] => BitwiseOR:Z2.Y[7]
+B[7] => BitwiseAND:Z3.Y[7]
+B[7] => Mux2:Z0.B[7]
+O => S.IN0
+O => Cout.IN1
+O => Mux2:Z5.S
+P => S.IN1
+P => Mux2:Z4.S
+Cout << Cout.DB_MAX_OUTPUT_PORT_TYPE
+F[0] << Mux2:Z5.F[0]
+F[1] << Mux2:Z5.F[1]
+F[2] << Mux2:Z5.F[2]
+F[3] << Mux2:Z5.F[3]
+F[4] << Mux2:Z5.F[4]
+F[5] << Mux2:Z5.F[5]
+F[6] << Mux2:Z5.F[6]
+F[7] << Mux2:Z5.F[7]
+
+
+|ALU|Mux2:Z0
+A[0] => F.DATAB
+A[1] => F.DATAB
+A[2] => F.DATAB
+A[3] => F.DATAB
+A[4] => F.DATAB
+A[5] => F.DATAB
+A[6] => F.DATAB
+A[7] => F.DATAB
+B[0] => F.DATAA
+B[1] => F.DATAA
+B[2] => F.DATAA
+B[3] => F.DATAA
+B[4] => F.DATAA
+B[5] => F.DATAA
+B[6] => F.DATAA
+B[7] => F.DATAA
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+F[0] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[3] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[4] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[5] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[6] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[7] <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Adder8:Z1
+A[0] => FullAdder:FA0.X
+A[1] => FullAdder:FA1.X
+A[2] => FullAdder:FA2.X
+A[3] => FullAdder:FA3.X
+A[4] => FullAdder:FA4.X
+A[5] => FullAdder:FA5.X
+A[6] => FullAdder:FA6.X
+A[7] => FullAdder:FA7.X
+B[0] => FullAdder:FA0.Y
+B[1] => FullAdder:FA1.Y
+B[2] => FullAdder:FA2.Y
+B[3] => FullAdder:FA3.Y
+B[4] => FullAdder:FA4.Y
+B[5] => FullAdder:FA5.Y
+B[6] => FullAdder:FA6.Y
+B[7] => FullAdder:FA7.Y
+Cin => FullAdder:FA0.Cin
+Sum[0] <= FullAdder:FA0.Sum
+Sum[1] <= FullAdder:FA1.Sum
+Sum[2] <= FullAdder:FA2.Sum
+Sum[3] <= FullAdder:FA3.Sum
+Sum[4] <= FullAdder:FA4.Sum
+Sum[5] <= FullAdder:FA5.Sum
+Sum[6] <= FullAdder:FA6.Sum
+Sum[7] <= FullAdder:FA7.Sum
+Cout <= FullAdder:FA7.Cout
+
+
+|ALU|Adder8:Z1|FullAdder:FA0
+X => Sum.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => Sum.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Adder8:Z1|FullAdder:FA1
+X => Sum.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => Sum.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Adder8:Z1|FullAdder:FA2
+X => Sum.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => Sum.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Adder8:Z1|FullAdder:FA3
+X => Sum.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => Sum.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Adder8:Z1|FullAdder:FA4
+X => Sum.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => Sum.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Adder8:Z1|FullAdder:FA5
+X => Sum.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => Sum.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Adder8:Z1|FullAdder:FA6
+X => Sum.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => Sum.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Adder8:Z1|FullAdder:FA7
+X => Sum.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => Sum.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|BitwiseOR:Z2
+X[0] => Z.IN0
+X[1] => Z.IN0
+X[2] => Z.IN0
+X[3] => Z.IN0
+X[4] => Z.IN0
+X[5] => Z.IN0
+X[6] => Z.IN0
+X[7] => Z.IN0
+Y[0] => Z.IN1
+Y[1] => Z.IN1
+Y[2] => Z.IN1
+Y[3] => Z.IN1
+Y[4] => Z.IN1
+Y[5] => Z.IN1
+Y[6] => Z.IN1
+Y[7] => Z.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[7] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|BitwiseAND:Z3
+X[0] => Z.IN0
+X[1] => Z.IN0
+X[2] => Z.IN0
+X[3] => Z.IN0
+X[4] => Z.IN0
+X[5] => Z.IN0
+X[6] => Z.IN0
+X[7] => Z.IN0
+Y[0] => Z.IN1
+Y[1] => Z.IN1
+Y[2] => Z.IN1
+Y[3] => Z.IN1
+Y[4] => Z.IN1
+Y[5] => Z.IN1
+Y[6] => Z.IN1
+Y[7] => Z.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[7] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Mux2:Z4
+A[0] => F.DATAB
+A[1] => F.DATAB
+A[2] => F.DATAB
+A[3] => F.DATAB
+A[4] => F.DATAB
+A[5] => F.DATAB
+A[6] => F.DATAB
+A[7] => F.DATAB
+B[0] => F.DATAA
+B[1] => F.DATAA
+B[2] => F.DATAA
+B[3] => F.DATAA
+B[4] => F.DATAA
+B[5] => F.DATAA
+B[6] => F.DATAA
+B[7] => F.DATAA
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+F[0] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[3] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[4] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[5] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[6] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[7] <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Mux2:Z5
+A[0] => F.DATAB
+A[1] => F.DATAB
+A[2] => F.DATAB
+A[3] => F.DATAB
+A[4] => F.DATAB
+A[5] => F.DATAB
+A[6] => F.DATAB
+A[7] => F.DATAB
+B[0] => F.DATAA
+B[1] => F.DATAA
+B[2] => F.DATAA
+B[3] => F.DATAA
+B[4] => F.DATAA
+B[5] => F.DATAA
+B[6] => F.DATAA
+B[7] => F.DATAA
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+S => F.OUTPUTSELECT
+F[0] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[3] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[4] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[5] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[6] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[7] <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
