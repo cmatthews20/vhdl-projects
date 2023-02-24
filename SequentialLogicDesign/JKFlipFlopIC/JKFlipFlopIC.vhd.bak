@@ -1,0 +1,44 @@
+entity JKFlipFlop is 
+	generic(N: bit);
+	port(PR, CLR, J, K, CLK: in bit; 
+			Q, QN: out bit);
+end JKFlipFlop;
+
+architecture behavior of JKFlipFlop is
+	signal Qint, QNint: bit;
+begin
+	Q <= Qint;
+	QN <= QNint;
+	process(PR,CLR,CLK)
+	begin
+		if (PR = '0') and (CLR = '0') then
+			Qint <= '1';
+			QNint <= '1';
+		elsif CLR = '0' then
+			Qint <= '0';
+			QNint <= '1';
+		elsif PR = '0' then
+			Qint <= '1';
+			QNint <= '0';
+		elsif CLK'event and CLK = N then
+			Qint <= (J and not Qint) or (not K and Qint);
+			QNint <= not Qint;
+		end if;
+	end process;
+end behavior;
+
+entity JKFlipFlopIC is
+	port(PR1, CLR1, J1, K1, PR2, CLR2, J2, K2, CLK: in bit;
+			Q1, QN1, Q2, QN2: out bit);
+end JKFlipFlopIC;
+
+architecture structure of JKFlipFlopIC is
+	component JKFlipFlop is
+	generic(N: bit);
+	port(PR, CLR, J, K, CLK: in bit; 
+			Q, QN: out bit);
+	end component;
+begin
+	JKFF1: JKFlipFlop generic map('1') port map(PR1, CLR1, J1, K1, CLK, Q1, QN1);
+	JKFF2: JKFlipFlop generic map('0') port map(PR2, CLR2, J2, K2, CLK, Q2, QN2);
+end structure;

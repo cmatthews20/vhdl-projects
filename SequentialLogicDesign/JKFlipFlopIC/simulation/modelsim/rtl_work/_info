@@ -1,0 +1,122 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/simulation/modelsim
+Ejkflipflop
+Z1 w1677211656
+!i122 1
+R0
+Z2 8C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd
+Z3 FC:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd
+l0
+L7 1
+VQbe8DM70KCk?LJN_FDTbb0
+!s100 K;UY1`_6JH`_DO>Ve:mkQ0
+Z4 OV;C;2020.1;71
+31
+Z5 !s110 1677211690
+!i10b 1
+Z6 !s108 1677211690.000000
+Z7 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd|
+Z8 !s107 C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd|
+!i113 1
+Z9 o-93 -work work
+Z10 tExplicit 1 CvgOpt 0
+Abehavior
+Z11 DEx4 work 10 jkflipflop 0 22 Qbe8DM70KCk?LJN_FDTbb0
+!i122 1
+l21
+Z12 L17 30
+Z13 VCj6N=PE@5[<1c=ioVVn=z1
+Z14 !s100 3NlJieFmcoL^e::0TI]Vh1
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Ejkflipflopic
+R1
+!i122 1
+R0
+R2
+R3
+l0
+L50 1
+VLSo2Wh1;m[CaONBAY?;BF3
+!s100 ?mjPPaoC`j;Y2ZZ;B0jle3
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Astructure
+Z15 DEx4 work 12 jkflipflopic 0 22 LSo2Wh1;m[CaONBAY?;BF3
+!i122 1
+l69
+Z16 L58 17
+Z17 VhiREGfCmA<1BWW[HFKUoP1
+Z18 !s100 DeJTF04fgaIUDbHzU?GNT0
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Etestbench
+R1
+!i122 1
+R0
+R2
+R3
+l0
+L78 1
+V2:UbB_`BKhO6<OC_UZW1W0
+!s100 cTm;ZT_kh7o:Xk;R9i1ij0
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Atest
+Z19 DEx4 work 9 testbench 0 22 2:UbB_`BKhO6<OC_UZW1W0
+!i122 1
+l92
+Z20 L81 28
+Z21 VDDnH0Wo47_ZLkzMR;LO<Q2
+Z22 !s100 ^kGbK4Gb=EgZf:IkaCLlO0
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
