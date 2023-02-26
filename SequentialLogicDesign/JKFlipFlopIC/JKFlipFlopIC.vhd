@@ -49,8 +49,8 @@ end behavior;
 -- 7476 IC entity and architecture
 entity JKFlipFlopIC is
 
-	port(CLK, PR1, CLR1, J1, K1, PR2, CLR2, J2, K2: in bit;
-			Q1, QN1, Q2, QN2: out bit);
+	port(CLK0, PR0, CLR0, J0, K0, CLK1, PR1, CLR1, J1, K1: in bit;
+			Q0, QN0, Q1, QN1: out bit);
 			
 end JKFlipFlopIC;
 
@@ -68,8 +68,8 @@ architecture structure of JKFlipFlopIC is
 	
 begin
 
-	JKFF1: JKFlipFlop generic map('1') port map(CLK, PR1, CLR1, J1, K1, Q1, QN1);
-	JKFF2: JKFlipFlop generic map('0') port map(CLK, PR2, CLR2, J2, K2, Q2, QN2);
+	JKFF1: JKFlipFlop generic map('1') port map(CLK0, PR0, CLR0, J0, K0, Q0, QN0);
+	JKFF2: JKFlipFlop generic map('0') port map(CLK1, PR1, CLR1, J1, K1, Q1, QN1);
 	
 end structure;
 
@@ -82,8 +82,8 @@ architecture test of TestBench is
 
 	component JKFlipFlopIC is
 	
-	port(CLK, PR1, CLR1, J1, K1, PR2, CLR2, J2, K2: in bit;
-			Q1, QN1, Q2, QN2: out bit);
+	port(CLK0, PR0, CLR0, J0, K0, CLK1, PR1, CLR1, J1, K1: in bit;
+			Q0, QN0, Q1, QN1: out bit);
 			
 	end component;
 	
@@ -91,7 +91,7 @@ architecture test of TestBench is
 	
 begin
 
-	Test1: JKFlipFlopIC port map(clock,preset1,clear1,j1,k1,preset2,clear2,j2,k2,
+	Test1: JKFlipFlopIC port map(clock,preset1,clear1,j1,k1,clock,preset2,clear2,j2,k2,
 											q1,qn1,q2,qn2);
 	
 	-- Driving signals for testing (subject to change)

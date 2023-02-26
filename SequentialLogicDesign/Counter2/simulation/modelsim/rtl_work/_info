@@ -1,0 +1,196 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/Counter2/simulation/modelsim
+Ecounter2
+Z1 w1677367051
+!i122 2
+R0
+Z2 8C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/Counter2/Counter2.vhd
+Z3 FC:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/Counter2/Counter2.vhd
+l0
+L3 1
+VhH`7LLO<7L5@Um]:`i4S62
+!s100 =C2Zfzm0lHmO5_diD^dBd1
+Z4 OV;C;2020.1;71
+31
+Z5 !s110 1677367095
+!i10b 1
+Z6 !s108 1677367095.000000
+Z7 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/Counter2/Counter2.vhd|
+Z8 !s107 C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/Counter2/Counter2.vhd|
+!i113 1
+Z9 o-93 -work work
+Z10 tExplicit 1 CvgOpt 0
+Aa
+Z11 DEx4 work 8 counter2 0 22 hH`7LLO<7L5@Um]:`i4S62
+!i122 2
+l17
+Z12 L8 22
+Z13 VeBSNn@fVXA]06;<5mEPNX1
+Z14 !s100 aVXW;?jKOFMjZ8nAlH8jH1
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Ejkflipflop
+Z15 w1677366137
+!i122 0
+R0
+Z16 8C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd
+Z17 FC:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd
+l0
+L7 1
+VQbe8DM70KCk?LJN_FDTbb0
+!s100 K;UY1`_6JH`_DO>Ve:mkQ0
+R4
+31
+R5
+!i10b 1
+R6
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd|
+Z19 !s107 C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd|
+!i113 1
+R9
+R10
+Abehavior
+DEx4 work 10 jkflipflop 0 22 Qbe8DM70KCk?LJN_FDTbb0
+!i122 0
+l21
+L17 30
+VCj6N=PE@5[<1c=ioVVn=z1
+!s100 3NlJieFmcoL^e::0TI]Vh1
+R4
+31
+R5
+!i10b 1
+R6
+R18
+R19
+!i113 1
+R9
+R10
+Ejkflipflopic
+R15
+!i122 0
+R0
+R16
+R17
+l0
+L50 1
+ViDj=Ml00Mo:NX<aNXLDih2
+!s100 E=>5DjGBfGXSMGTaHZVz]3
+R4
+31
+R5
+!i10b 1
+R6
+R18
+R19
+!i113 1
+R9
+R10
+Astructure
+DEx4 work 12 jkflipflopic 0 22 iDj=Ml00Mo:NX<aNXLDih2
+!i122 0
+l69
+L58 17
+VM;a?KS5fE>AZX>]j@<=ZD1
+!s100 EU[;<U7PM;feFZUOkj:6V2
+R4
+31
+R5
+!i10b 1
+R6
+R18
+R19
+!i113 1
+R9
+R10
+Etestbench
+R15
+!i122 0
+R0
+R16
+R17
+l0
+L78 1
+V2:UbB_`BKhO6<OC_UZW1W0
+!s100 cTm;ZT_kh7o:Xk;R9i1ij0
+R4
+31
+R5
+!i10b 1
+R6
+R18
+R19
+!i113 1
+R9
+R10
+Atest
+DEx4 work 9 testbench 0 22 2:UbB_`BKhO6<OC_UZW1W0
+!i122 0
+l92
+L81 28
+V@XRS`>dSeT88T9GJe=IjJ0
+!s100 h=[0KBYXlQX:1bacnR;A91
+R4
+31
+R5
+!i10b 1
+R6
+R18
+R19
+!i113 1
+R9
+R10
+Etestbenchcounter2
+R1
+!i122 2
+R0
+R2
+R3
+l0
+L33 1
+VleAF0>Z6X1G25HE@@HFnb3
+!s100 NMMLZ?=GP5@a6JRd^F>HG0
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Atest
+Z20 DEx4 work 17 testbenchcounter2 0 22 leAF0>Z6X1G25HE@@HFnb3
+!i122 2
+l43
+Z21 L36 16
+Z22 VC5hWPo2]T8Pa`Gi8mkk<o3
+Z23 !s100 =f;zcBYFo5W2]84OF91C]0
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10

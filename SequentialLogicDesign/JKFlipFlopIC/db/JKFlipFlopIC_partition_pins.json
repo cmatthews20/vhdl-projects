@@ -4,6 +4,14 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "Q0",
+					"strict" : false
+				},
+				{
+					"name" : "QN0",
+					"strict" : false
+				},
+				{
 					"name" : "Q1",
 					"strict" : false
 				},
@@ -12,11 +20,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Q2",
-					"strict" : false
-				},
-				{
-					"name" : "QN2",
+					"name" : "CLR0",
 					"strict" : false
 				},
 				{
@@ -24,7 +28,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLR2",
+					"name" : "PR0",
+					"strict" : false
+				},
+				{
+					"name" : "J0",
+					"strict" : false
+				},
+				{
+					"name" : "K0",
+					"strict" : false
+				},
+				{
+					"name" : "CLK0",
 					"strict" : false
 				},
 				{
@@ -40,19 +56,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
-					"strict" : false
-				},
-				{
-					"name" : "PR2",
-					"strict" : false
-				},
-				{
-					"name" : "J2",
-					"strict" : false
-				},
-				{
-					"name" : "K2",
+					"name" : "CLK1",
 					"strict" : false
 				}
 			]

@@ -1,0 +1,59 @@
+|Counter2
+CLK => JKFlipFlopIC:JKFFIC.CLK0
+CLK => JKFlipFlopIC:JKFFIC.CLK1
+E => JK1int.IN1
+E => JKFlipFlopIC:JKFFIC.J0
+E => JKFlipFlopIC:JKFFIC.K0
+X => JK1int.IN1
+X => JK1int.IN1
+C1 <= JKFlipFlopIC:JKFFIC.Q1
+C0 <= JKFlipFlopIC:JKFFIC.Q0
+
+
+|Counter2|JKFlipFlopIC:JKFFIC
+CLK0 => JKFlipFlop:JKFF1.CLK
+PR0 => JKFlipFlop:JKFF1.PR
+CLR0 => JKFlipFlop:JKFF1.CLR
+J0 => JKFlipFlop:JKFF1.J
+K0 => JKFlipFlop:JKFF1.K
+CLK1 => JKFlipFlop:JKFF2.CLK
+PR1 => JKFlipFlop:JKFF2.PR
+CLR1 => JKFlipFlop:JKFF2.CLR
+J1 => JKFlipFlop:JKFF2.J
+K1 => JKFlipFlop:JKFF2.K
+Q0 <= JKFlipFlop:JKFF1.Q
+QN0 <= JKFlipFlop:JKFF1.QN
+Q1 <= JKFlipFlop:JKFF2.Q
+QN1 <= JKFlipFlop:JKFF2.QN
+
+
+|Counter2|JKFlipFlopIC:JKFFIC|JKFlipFlop:JKFF1
+CLK => QNint.CLK
+CLK => Qint.CLK
+PR => Qint.IN0
+PR => process_0.IN0
+CLR => Qint.IN1
+CLR => process_0.IN1
+CLR => QNint.IN1
+CLR => Qint.IN1
+J => Qint.IN1
+K => Qint.IN1
+Q <= Qint.DB_MAX_OUTPUT_PORT_TYPE
+QN <= QNint.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter2|JKFlipFlopIC:JKFFIC|JKFlipFlop:JKFF2
+CLK => QNint.CLK
+CLK => Qint.CLK
+PR => Qint.IN0
+PR => process_0.IN0
+CLR => Qint.IN1
+CLR => process_0.IN1
+CLR => QNint.IN1
+CLR => Qint.IN1
+J => Qint.IN1
+K => Qint.IN1
+Q <= Qint.DB_MAX_OUTPUT_PORT_TYPE
+QN <= QNint.DB_MAX_OUTPUT_PORT_TYPE
+
+

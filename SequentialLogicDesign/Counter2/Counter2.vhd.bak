@@ -1,0 +1,19 @@
+ENTITY Counter2 IS
+	PORT(CLK, E, X: IN BIT; C1, C0: OUT BIT);
+end Counter2;
+
+
+ARCHITECTURE a OF Counter2 IS
+
+	COMPONENT Counter2 IS
+	PORT(CLK, E, X: IN BIT; C1, C0: OUT BIT);
+	END COMPONENT;
+	
+	COMPONENT JKFlipFlopIC IS
+	PORT(CLK, PR1, CLR1, J1, K1, PR2, CLR2, J2, K2: in bit;
+			Q1, QN1, Q2, QN2: out bit);
+	END COMPONENT;
+	
+BEGIN
+	
+	

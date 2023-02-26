@@ -1,18 +1,18 @@
 |JKFlipFlopIC
-CLK => JKFlipFlop:JKFF1.CLK
-CLK => JKFlipFlop:JKFF2.CLK
-PR1 => JKFlipFlop:JKFF1.PR
-CLR1 => JKFlipFlop:JKFF1.CLR
-J1 => JKFlipFlop:JKFF1.J
-K1 => JKFlipFlop:JKFF1.K
-PR2 => JKFlipFlop:JKFF2.PR
-CLR2 => JKFlipFlop:JKFF2.CLR
-J2 => JKFlipFlop:JKFF2.J
-K2 => JKFlipFlop:JKFF2.K
-Q1 <= JKFlipFlop:JKFF1.Q
-QN1 <= JKFlipFlop:JKFF1.QN
-Q2 <= JKFlipFlop:JKFF2.Q
-QN2 <= JKFlipFlop:JKFF2.QN
+CLK0 => JKFlipFlop:JKFF1.CLK
+PR0 => JKFlipFlop:JKFF1.PR
+CLR0 => JKFlipFlop:JKFF1.CLR
+J0 => JKFlipFlop:JKFF1.J
+K0 => JKFlipFlop:JKFF1.K
+CLK1 => JKFlipFlop:JKFF2.CLK
+PR1 => JKFlipFlop:JKFF2.PR
+CLR1 => JKFlipFlop:JKFF2.CLR
+J1 => JKFlipFlop:JKFF2.J
+K1 => JKFlipFlop:JKFF2.K
+Q0 << JKFlipFlop:JKFF1.Q
+QN0 << JKFlipFlop:JKFF1.QN
+Q1 << JKFlipFlop:JKFF2.Q
+QN1 << JKFlipFlop:JKFF2.QN
 
 
 |JKFlipFlopIC|JKFlipFlop:JKFF1
