@@ -1,5 +1,5 @@
 Flow report for StateMachine
-Sun Feb 26 22:49:45 2023
+Tue Mar  7 00:40:25 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Sun Feb 26 22:49:45 2023          ;
+; Flow Status                 ; Successful - Tue Mar  7 00:40:25 2023          ;
 ; Quartus Prime Version       ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name               ; StateMachine                                   ;
 ; Top-level Entity Name       ; StateMachine                                   ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/26/2023 22:49:36 ;
+; Start date & time ; 03/07/2023 00:40:17 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; StateMachine        ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 259913564305436.167746437613836        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 259913564305436.167816221708800        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; test_sm                           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -105,8 +105,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 4852 MB             ; 00:00:22                           ;
-; Total                  ; 00:00:09     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Elaboration ; 00:00:08     ; 1.0                     ; 4848 MB             ; 00:00:22                           ;
+; Total                  ; 00:00:08     ; --                      ; --                  ; 00:00:22                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

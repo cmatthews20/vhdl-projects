@@ -1,5 +1,5 @@
 EDA Netlist Writer report for StateMachine
-Sun Feb 26 22:48:06 2023
+Tue Mar  7 00:39:18 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Feb 26 22:48:06 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Mar  7 00:39:18 2023 ;
 ; Revision Name             ; StateMachine                          ;
 ; Top-level Entity Name     ; StateMachine                          ;
 ; Family                    ; Cyclone V                             ;
@@ -45,34 +45,34 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------+---------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                          ;
-+---------------------------------------------------------------------------------------------------+--------------------------+
-; Option                                                                                            ; Setting                  ;
-+---------------------------------------------------------------------------------------------------+--------------------------+
-; Tool Name                                                                                         ; Questa Intel FPGA (VHDL) ;
-; Generate functional simulation netlist                                                            ; On                       ;
-; Truncate long hierarchy paths                                                                     ; Off                      ;
-; Map illegal HDL characters                                                                        ; Off                      ;
-; Flatten buses into individual nodes                                                               ; Off                      ;
-; Maintain hierarchy                                                                                ; Off                      ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                      ;
-; Enable glitch filtering                                                                           ; Off                      ;
-; Do not write top level VHDL entity                                                                ; Off                      ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                      ;
-; Architecture name in VHDL output netlist                                                          ; structure                ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                      ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                      ;
-+---------------------------------------------------------------------------------------------------+--------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                 ;
++---------------------------------------------------------------------------------------------------+-----------------+
+; Option                                                                                            ; Setting         ;
++---------------------------------------------------------------------------------------------------+-----------------+
+; Tool Name                                                                                         ; ModelSim (VHDL) ;
+; Generate functional simulation netlist                                                            ; On              ;
+; Truncate long hierarchy paths                                                                     ; Off             ;
+; Map illegal HDL characters                                                                        ; Off             ;
+; Flatten buses into individual nodes                                                               ; Off             ;
+; Maintain hierarchy                                                                                ; Off             ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off             ;
+; Enable glitch filtering                                                                           ; Off             ;
+; Do not write top level VHDL entity                                                                ; Off             ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off             ;
+; Architecture name in VHDL output netlist                                                          ; structure       ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off             ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off             ;
++---------------------------------------------------------------------------------------------------+-----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                   ;
-+--------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                              ;
-+--------------------------------------------------------------------------------------------------------------+
-; C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/StateMachine/simulation/questa/StateMachine.vho ;
-+--------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                     ;
++----------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                ;
++----------------------------------------------------------------------------------------------------------------+
+; C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/StateMachine/simulation/modelsim/StateMachine.vho ;
++----------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,13 +81,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Sun Feb 26 22:48:05 2023
+    Info: Processing started: Tue Mar  7 00:39:17 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off StateMachine -c StateMachine
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file StateMachine.vho in folder "C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/StateMachine/simulation/questa/" for EDA simulation tool
+Info (204019): Generated file StateMachine.vho in folder "C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/StateMachine/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4734 megabytes
-    Info: Processing ended: Sun Feb 26 22:48:06 2023
+    Info: Peak virtual memory: 4725 megabytes
+    Info: Processing ended: Tue Mar  7 00:39:18 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

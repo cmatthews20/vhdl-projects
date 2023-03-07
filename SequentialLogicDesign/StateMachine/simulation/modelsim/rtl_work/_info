@@ -21,9 +21,9 @@ VQbe8DM70KCk?LJN_FDTbb0
 !s100 K;UY1`_6JH`_DO>Ve:mkQ0
 Z4 OV;C;2020.1;71
 31
-Z5 !s110 1677464407
+Z5 !s110 1678162243
 !i10b 1
-Z6 !s108 1677464407.000000
+Z6 !s108 1678162243.000000
 Z7 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd|
 Z8 !s107 C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd|
 !i113 1
@@ -84,7 +84,7 @@ R8
 R9
 R10
 Estatemachine
-Z11 w1677464210
+Z11 w1678162103
 !i122 2
 R0
 Z12 8C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/StateMachine/StateMachine.vhd
@@ -95,28 +95,28 @@ VMDeSiFa6ekf<T72@S3bI32
 !s100 ?OZ6HoNT9MYdLVS2JZNSE1
 R4
 31
-Z14 !s110 1677464408
+R5
 !i10b 1
 R6
-Z15 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/StateMachine/StateMachine.vhd|
-Z16 !s107 C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/StateMachine/StateMachine.vhd|
+Z14 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/StateMachine/StateMachine.vhd|
+Z15 !s107 C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/StateMachine/StateMachine.vhd|
 !i113 1
 R9
 R10
 Aa
-Z17 DEx4 work 12 statemachine 0 22 MDeSiFa6ekf<T72@S3bI32
+Z16 DEx4 work 12 statemachine 0 22 MDeSiFa6ekf<T72@S3bI32
 !i122 2
 l12
-Z18 L6 17
-Z19 V7z8k281ofdoF8i4A7I2^=1
-Z20 !s100 V05gMA_IzYJDU4D73L8Z10
+Z17 L6 17
+Z18 VVY^Ha5Z`LDm>bfmcYm<Y?3
+Z19 !s100 ^M`f=Poe187STG?0NYJ650
 R4
 31
-R14
+R5
 !i10b 1
 R6
+R14
 R15
-R16
 !i113 1
 R9
 R10
@@ -132,28 +132,28 @@ VD9V?CVeX]YlO3GA0z]kSk3
 !s100 `omiLX24>h41f?_7SQ;gG3
 R4
 31
-R14
+R5
 !i10b 1
 R6
+R14
 R15
-R16
 !i113 1
 R9
 R10
 Atest
-Z21 DEx4 work 7 test_sm 0 22 D9V?CVeX]YlO3GA0z]kSk3
+Z20 DEx4 work 7 test_sm 0 22 D9V?CVeX]YlO3GA0z]kSk3
 !i122 2
 l33
-Z22 L27 17
-Z23 VA;@:_ffZ_IG:_ID<7?ec>1
-Z24 !s100 kT[3MD^n1X0mS4YV91iLG0
+Z21 L27 17
+Z22 V9@BAUlmV27AbTROZY0aIJ2
+Z23 !s100 N@>Gg?:TZAP1_:UZ;g2OX2
 R4
 31
-R14
+R5
 !i10b 1
 R6
+R14
 R15
-R16
 !i113 1
 R9
 R10

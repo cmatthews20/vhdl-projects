@@ -2,7 +2,6 @@
 X => JKBint.IN1
 X => Y.IN1
 X => JKBint.IN1
-X => Y.IN1
 CLK => JKFlipFlopIC:JKFFIC.CLK0
 CLK => JKFlipFlopIC:JKFFIC.CLK1
 B << JKFlipFlopIC:JKFFIC.Q0

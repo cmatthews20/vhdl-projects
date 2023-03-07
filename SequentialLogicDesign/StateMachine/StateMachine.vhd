@@ -17,7 +17,7 @@ architecture a of StateMachine is
         B <= Bint;
         CLKN <= not CLK;
         JKBint <= (not X and ANint) or (X and Aint);
-        Y <= (not X and Aint and not Bint) or (X and Bint) or (not Aint and Bint);
+        Y <= X xor Aint xor Bint;
 
 end a;
 
@@ -29,7 +29,7 @@ architecture test of test_sm is
         port(X, CLK: in bit;
                 B, A, Y: out bit);
     end component;
-    signal iX, iCLK, oB, oA, oY: bit;
+    signal iX, iCLK, oB, oA, oY: bit := '0';
     begin
         m1: StateMachine port map(iX, iCLK, oB, oA, oY);
         iCLK <= not iCLK after 10 ns;
@@ -40,4 +40,4 @@ architecture test of test_sm is
                 '1' after 80 ns,
                 '0' after 120 ns,
                 '1' after 140 ns; 
-    end test;
+end test;
