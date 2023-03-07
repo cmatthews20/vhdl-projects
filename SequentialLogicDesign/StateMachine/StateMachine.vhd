@@ -39,5 +39,6 @@ architecture test of test_sm is
                 '0' after 60 ns,
                 '1' after 80 ns,
                 '0' after 120 ns,
-                '1' after 140 ns; 
+                '1' after 140 ns,
+					 '0' after 160 ns; 
 end test;

@@ -21,9 +21,9 @@ VQbe8DM70KCk?LJN_FDTbb0
 !s100 K;UY1`_6JH`_DO>Ve:mkQ0
 Z4 OV;C;2020.1;71
 31
-Z5 !s110 1678162243
+Z5 !s110 1678164727
 !i10b 1
-Z6 !s108 1678162243.000000
+Z6 !s108 1678164727.000000
 Z7 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd|
 Z8 !s107 C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/JKFlipFlopIC/JKFlipFlopIC.vhd|
 !i113 1
@@ -84,7 +84,7 @@ R8
 R9
 R10
 Estatemachine
-Z11 w1678162103
+Z11 w1678164545
 !i122 2
 R0
 Z12 8C:/Users/colem/Documents/VHDL-Projects/SequentialLogicDesign/StateMachine/StateMachine.vhd
@@ -144,9 +144,9 @@ Atest
 Z20 DEx4 work 7 test_sm 0 22 D9V?CVeX]YlO3GA0z]kSk3
 !i122 2
 l33
-Z21 L27 17
-Z22 V9@BAUlmV27AbTROZY0aIJ2
-Z23 !s100 N@>Gg?:TZAP1_:UZ;g2OX2
+Z21 L27 18
+Z22 VbWGa;<_E<OM@jWh=fUCcl0
+Z23 !s100 R1FabBANM_HfNJ6hD:`^b1
 R4
 31
 R5
