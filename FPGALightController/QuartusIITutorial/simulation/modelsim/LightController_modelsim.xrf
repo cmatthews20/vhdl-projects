@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/colem/Documents/VHDL-Projects/QuartusIITutorial/LightController.vhd
+source_file = 1, c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/colem/Documents/VHDL-Projects/QuartusIITutorial/db/LightController.cbx.xml
+design_name = LightController
+instance = comp, \f~output , f~output, LightController, 1
+instance = comp, \x2~input , x2~input, LightController, 1
+instance = comp, \x1~input , x1~input, LightController, 1
+instance = comp, \f~0 , f~0, LightController, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, LightController, 1
