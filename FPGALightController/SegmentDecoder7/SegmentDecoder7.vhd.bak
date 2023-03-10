@@ -1,0 +1,25 @@
+-- Light Controller Implementation on DE1-SoC FPGA
+
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+
+ENTITY SegmentDecoder7 IS
+
+	PORT( SW: IN std_logic_vector( 3 DOWNTO 0 );
+			HEX: OUT std_logic_vector( 6 DOWNTO 0 ));
+			
+END SegmentDecoder7;
+
+
+ARCHITECTURE rtl OF SegmentDecoder7 IS
+BEGIN
+
+	HEX(0) <= ( not SW(3) and not SW(2) and not SW(1) and SW(0) ) or ( not SW(3) and SW(2) and not SW(1) and not SW(0) ) or (SW(3) and SW(2) and not SW(1) and SW(0) ) or 
+	HEX(1) <= 
+	HEX(2) <= 
+	HEX(3) <= 
+	HEX(4) <= 
+	HEX(5) <= 
+	HEX(6) <= 
+	
+END rtl;
