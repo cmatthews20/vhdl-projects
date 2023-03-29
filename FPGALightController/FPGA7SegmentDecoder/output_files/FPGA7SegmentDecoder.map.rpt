@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA7SegmentDecoder
-Fri Mar 10 09:40:16 2023
+Fri Mar 24 10:22:09 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar 10 09:40:16 2023          ;
+; Analysis & Synthesis Status     ; Successful - Fri Mar 24 10:22:09 2023          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; FPGA7SegmentDecoder                            ;
 ; Top-level Entity Name           ; FPGA7SegmentDecoder                            ;
@@ -261,7 +261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Fri Mar 10 09:40:01 2023
+    Info: Processing started: Fri Mar 24 10:21:56 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA7SegmentDecoder -c FPGA7SegmentDecoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -286,9 +286,9 @@ Info (21057): Implemented 38 device resources after synthesis - the final resour
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 14 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4867 megabytes
-    Info: Processing ended: Fri Mar 10 09:40:16 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Fri Mar 24 10:22:10 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:31
 
 

@@ -1,0 +1,6 @@
+
+State Machine - |TopLevel|StateMachine:SM0|next_state
+Name next_state.ShiftRight next_state.ShiftLeft next_state.INIT 
+next_state.INIT 0 0 0 
+next_state.ShiftLeft 0 1 1 
+next_state.ShiftRight 1 0 1 
