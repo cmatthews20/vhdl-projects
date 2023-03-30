@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/simulation/modelsim
 Etoplevel
-w1679661608
+w1680143980
 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 0
@@ -18,13 +18,13 @@ R0
 FC:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd
 l0
 L6 1
-V8HOaOgY]L^`76MNH5kn@g2
-!s100 7]bf>Rd0hizoOD>bFQD_m3
+VTU493S;PAlDBMhzfZ4DK_3
+!s100 RT0Daidok>Q>`oYaEgEDP2
 OV;C;2020.1;71
 31
-!s110 1680070057
+!s110 1680144049
 !i10b 1
-!s108 1680070057.000000
+!s108 1680144049.000000
 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd|
 !s107 C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd|
 !i113 1

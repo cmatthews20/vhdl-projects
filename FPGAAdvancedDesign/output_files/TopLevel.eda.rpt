@@ -1,5 +1,5 @@
 EDA Netlist Writer report for TopLevel
-Wed Mar 29 04:07:09 2023
+Thu Mar 30 02:21:18 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Mar 29 04:07:09 2023 ;
+; EDA Netlist Writer Status ; Successful - Thu Mar 30 02:21:18 2023 ;
 ; Revision Name             ; TopLevel                              ;
 ; Top-level Entity Name     ; TopLevel                              ;
 ; Family                    ; Cyclone V                             ;
@@ -45,34 +45,34 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                 ;
-+---------------------------------------------------------------------------------------------------+-----------------+
-; Option                                                                                            ; Setting         ;
-+---------------------------------------------------------------------------------------------------+-----------------+
-; Tool Name                                                                                         ; ModelSim (VHDL) ;
-; Generate functional simulation netlist                                                            ; On              ;
-; Truncate long hierarchy paths                                                                     ; Off             ;
-; Map illegal HDL characters                                                                        ; Off             ;
-; Flatten buses into individual nodes                                                               ; Off             ;
-; Maintain hierarchy                                                                                ; Off             ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off             ;
-; Enable glitch filtering                                                                           ; Off             ;
-; Do not write top level VHDL entity                                                                ; Off             ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off             ;
-; Architecture name in VHDL output netlist                                                          ; structure       ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off             ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off             ;
-+---------------------------------------------------------------------------------------------------+-----------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                    ;
++---------------------------------------------------------------------------------------------------+--------------------+
+; Option                                                                                            ; Setting            ;
++---------------------------------------------------------------------------------------------------+--------------------+
+; Tool Name                                                                                         ; ModelSim (Verilog) ;
+; Generate functional simulation netlist                                                            ; On                 ;
+; Truncate long hierarchy paths                                                                     ; Off                ;
+; Map illegal HDL characters                                                                        ; Off                ;
+; Flatten buses into individual nodes                                                               ; Off                ;
+; Maintain hierarchy                                                                                ; Off                ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                ;
+; Enable glitch filtering                                                                           ; Off                ;
+; Do not write top level VHDL entity                                                                ; Off                ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                ;
+; Architecture name in VHDL output netlist                                                          ; structure          ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                ;
++---------------------------------------------------------------------------------------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                 ;
-+--------------------------------------------------------------------------------------------+
-; Generated Files                                                                            ;
-+--------------------------------------------------------------------------------------------+
-; C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/simulation/modelsim/TopLevel.vho ;
-+--------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                ;
++-------------------------------------------------------------------------------------------+
+; Generated Files                                                                           ;
++-------------------------------------------------------------------------------------------+
+; C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/simulation/modelsim/TopLevel.vo ;
++-------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,14 +81,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Mar 29 04:07:08 2023
+    Info: Processing started: Thu Mar 30 02:21:17 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off TopLevel -c TopLevel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file TopLevel.vho in folder "C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file TopLevel.vo in folder "C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4733 megabytes
-    Info: Processing ended: Wed Mar 29 04:07:09 2023
+    Info: Peak virtual memory: 4739 megabytes
+    Info: Processing ended: Thu Mar 30 02:21:18 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

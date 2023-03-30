@@ -51,12 +51,15 @@ vlib rtl_work
 vmap work rtl_work
 
 vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd}
+vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/Counter.vhd}
+vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd}
+vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/StateMachine.vhd}
 
-vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegisterTestBench.vhd}
+vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  ShiftRegisterTestBench
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  TopLevelTest
 
 add wave *
 view structure
 view signals
-run 100 ns
+run 200 ns

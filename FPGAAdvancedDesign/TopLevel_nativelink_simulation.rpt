@@ -1,24 +1,893 @@
 Info: Start Nativelink Simulation process
-Info: NativeLink has detected VHDL design -- VHDL simulation models will be used
 
 ========= EDA Simulation Settings =====================
 
-Sim Mode              :  RTL
+Sim Mode              :  Gate
 Family                :  cyclonev
 Quartus root          :  c:/intelfpga_lite/22.1std/quartus/bin64/
 Quartus sim root      :  c:/intelfpga_lite/22.1std/quartus/eda/sim_lib
 Simulation Tool       :  modelsim
-Simulation Language   :  vhdl
-Version               :  93
+Simulation Language   :  verilog
 Simulation Mode       :  GUI
-Sim Output File       :  
-Sim SDF file          :  
+Sim Output File       :  TopLevel.vo
+Sim SDF file          :  TopLevel__verilog.sdo
 Sim dir               :  simulation\modelsim
 
 =======================================================
 
 Info: Starting NativeLink simulation with ModelSim software
 Sourced NativeLink script c:/intelfpga_lite/22.1std/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File TopLevel_run_msim_rtl_vhdl.do already exists - backing up current file as TopLevel_run_msim_rtl_vhdl.do.bak7
-Info: Spawning ModelSim Simulation software 
-Info: NativeLink simulation flow was successful
+Warning: File TopLevel_run_msim_gate_verilog.do already exists - backing up current file as TopLevel_run_msim_gate_verilog.do.bak2
+Probing transcript
+ModelSim Info: # Reading pref.tcl
+ModelSim Info: # do TopLevel_run_msim_gate_verilog.do
+ModelSim Info: # if ![file isdirectory verilog_libs] {
+ModelSim Info: # 	file mkdir verilog_libs
+ModelSim Info: # }
+ModelSim Info: # 
+ModelSim Info: # vlib verilog_libs/altera_ver
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+ModelSim Info: # vmap altera_ver ./verilog_libs/altera_ver
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap altera_ver ./verilog_libs/altera_ver 
+ModelSim Info: # Copying C:/intelFPGA_lite/22.1std/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+ModelSim Info: # Modifying modelsim.ini
+ModelSim Info: # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:10 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
+ModelSim Info: # -- Compiling module global
+ModelSim Info: # -- Compiling module carry
+ModelSim Info: # -- Compiling module cascade
+ModelSim Info: # -- Compiling module carry_sum
+ModelSim Info: # -- Compiling module exp
+ModelSim Info: # -- Compiling module soft
+ModelSim Info: # -- Compiling module opndrn
+ModelSim Info: # -- Compiling module row_global
+ModelSim Info: # -- Compiling module TRI
+ModelSim Info: # -- Compiling module lut_input
+ModelSim Info: # -- Compiling module lut_output
+ModelSim Info: # -- Compiling module latch
+ModelSim Info: # -- Compiling module dlatch
+ModelSim Info: # -- Compiling module prim_gdff
+ModelSim Info: # -- Compiling module dff
+ModelSim Info: # -- Compiling module dffe
+ModelSim Info: # -- Compiling module dffea
+ModelSim Info: # -- Compiling module dffeas
+ModelSim Info: # -- Compiling module dffeas_pr
+ModelSim Info: # -- Compiling module prim_gtff
+ModelSim Info: # -- Compiling module tff
+ModelSim Info: # -- Compiling module tffe
+ModelSim Info: # -- Compiling module prim_gjkff
+ModelSim Info: # -- Compiling module jkff
+ModelSim Info: # -- Compiling module jkffe
+ModelSim Info: # -- Compiling module prim_gsrff
+ModelSim Info: # -- Compiling module srff
+ModelSim Info: # -- Compiling module srffe
+ModelSim Info: # -- Compiling module clklock
+ModelSim Info: # -- Compiling module alt_inbuf
+ModelSim Info: # -- Compiling module alt_outbuf
+ModelSim Info: # -- Compiling module alt_outbuf_tri
+ModelSim Info: # -- Compiling module alt_iobuf
+ModelSim Info: # -- Compiling module alt_inbuf_diff
+ModelSim Info: # -- Compiling module alt_outbuf_diff
+ModelSim Info: # -- Compiling module alt_outbuf_tri_diff
+ModelSim Info: # -- Compiling module alt_iobuf_diff
+ModelSim Info: # -- Compiling module alt_bidir_diff
+ModelSim Info: # -- Compiling module alt_bidir_buf
+ModelSim Info: # -- Compiling UDP PRIM_GDFF_LOW
+ModelSim Info: # -- Compiling UDP PRIM_GDFF_LOW_SCLR_PRIORITY
+ModelSim Info: # -- Compiling UDP PRIM_GDFF_HIGH
+ModelSim Info: # -- Compiling UDP PRIM_GDFF_HIGH_SCLR_PRIORITY
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	global
+ModelSim Info: # 	carry
+ModelSim Info: # 	cascade
+ModelSim Info: # 	carry_sum
+ModelSim Info: # 	exp
+ModelSim Info: # 	soft
+ModelSim Info: # 	opndrn
+ModelSim Info: # 	row_global
+ModelSim Info: # 	TRI
+ModelSim Info: # 	lut_input
+ModelSim Info: # 	lut_output
+ModelSim Info: # 	latch
+ModelSim Info: # 	dlatch
+ModelSim Info: # 	dff
+ModelSim Info: # 	dffe
+ModelSim Info: # 	dffea
+ModelSim Info: # 	dffeas
+ModelSim Info: # 	dffeas_pr
+ModelSim Info: # 	tff
+ModelSim Info: # 	tffe
+ModelSim Info: # 	jkff
+ModelSim Info: # 	jkffe
+ModelSim Info: # 	srff
+ModelSim Info: # 	srffe
+ModelSim Info: # 	clklock
+ModelSim Info: # 	alt_inbuf
+ModelSim Info: # 	alt_outbuf
+ModelSim Info: # 	alt_outbuf_tri
+ModelSim Info: # 	alt_iobuf
+ModelSim Info: # 	alt_inbuf_diff
+ModelSim Info: # 	alt_outbuf_diff
+ModelSim Info: # 	alt_outbuf_tri_diff
+ModelSim Info: # 	alt_iobuf_diff
+ModelSim Info: # 	alt_bidir_diff
+ModelSim Info: # 	alt_bidir_buf
+ModelSim Info: # End time: 00:27:10 on Mar 30,2023, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # vlib verilog_libs/altera_lnsim_ver
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
+ModelSim Info: # vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver 
+ModelSim Info: # Modifying modelsim.ini
+ModelSim Info: # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:11 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
+ModelSim Info: # -- Compiling package altera_lnsim_functions
+ModelSim Info: # -- Compiling package altera_generic_pll_functions
+ModelSim Info: # -- Compiling module generic_pll
+ModelSim Info: # -- Importing package altera_lnsim_functions
+ModelSim Info: # -- Importing package altera_generic_pll_functions
+ModelSim Info: # -- Compiling module generic_cdr
+ModelSim Info: # -- Compiling module common_28nm_ram_pulse_generator
+ModelSim Info: # -- Compiling module common_28nm_ram_register
+ModelSim Info: # -- Compiling module common_28nm_ram_block
+ModelSim Info: # -- Compiling module generic_m20k
+ModelSim Info: # -- Compiling module generic_m10k
+ModelSim Info: # -- Compiling module common_28nm_mlab_cell_pulse_generator
+ModelSim Info: # -- Compiling module common_28nm_mlab_latch
+ModelSim Info: # -- Compiling module common_28nm_mlab_cell_core
+ModelSim Info: # -- Compiling module common_porta_latches
+ModelSim Info: # -- Compiling module generic_28nm_hp_mlab_cell_impl
+ModelSim Info: # -- Compiling module common_porta_registers
+ModelSim Info: # -- Compiling module generic_28nm_lc_mlab_cell_impl
+ModelSim Info: # -- Compiling module common_28nm_lutram_register
+ModelSim Info: # -- Compiling module generic_14nm_mlab_cell_impl
+ModelSim Info: # -- Compiling module common_14nm_lutram_register
+ModelSim Info: # -- Compiling module generic_mux
+ModelSim Info: # -- Compiling module generic_device_pll
+ModelSim Info: # -- Compiling module altera_mult_add
+ModelSim Info: # -- Compiling module altera_mult_add_rtl
+ModelSim Info: # -- Compiling module ama_signed_extension_function
+ModelSim Info: # -- Compiling module ama_dynamic_signed_function
+ModelSim Info: # -- Compiling module ama_register_function
+ModelSim Info: # -- Compiling module ama_register_with_ext_function
+ModelSim Info: # -- Compiling module ama_data_split_reg_ext_function
+ModelSim Info: # -- Compiling module ama_coef_reg_ext_function
+ModelSim Info: # -- Compiling module ama_adder_function
+ModelSim Info: # -- Compiling module ama_multiplier_function
+ModelSim Info: # -- Compiling module ama_preadder_function
+ModelSim Info: # -- Compiling module ama_chainout_adder_accumulator_function
+ModelSim Info: # -- Compiling module ama_systolic_adder_function
+ModelSim Info: # -- Compiling module ama_scanchain
+ModelSim Info: # -- Compiling module ama_latency_function
+ModelSim Info: # -- Compiling module altera_pll_reconfig_tasks
+ModelSim Info: # -- Compiling module altera_syncram
+ModelSim Info: # -- Compiling module altera_syncram_forwarding_logic
+ModelSim Info: # -- Compiling module ALTERA_LNSIM_MEMORY_INITIALIZATION
+ModelSim Info: # -- Compiling module altera_stratixv_pll
+ModelSim Info: # -- Compiling module altera_arriav_pll
+ModelSim Info: # -- Compiling module altera_arriavgz_pll
+ModelSim Info: # -- Compiling module altera_cyclonev_pll
+ModelSim Info: # -- Compiling module altera_pll
+ModelSim Info: # -- Compiling module dps_extra_kick
+ModelSim Info: # -- Compiling module dprio_init
+ModelSim Info: # -- Compiling module dps_pulse_gen
+ModelSim Info: # -- Compiling module altera_iopll
+ModelSim Info: # -- Compiling module dps_pulse_gen_iopll
+ModelSim Info: # -- Compiling module twentynm_iopll_arlol
+ModelSim Info: # -- Compiling module fourteennm_altera_iopll
+ModelSim Info: # -- Compiling module dps_pulse_gen_fourteennm_iopll
+ModelSim Info: # -- Compiling package fourteennm_iopll_functions
+ModelSim Info: # -- Compiling module fourteennm_simple_iopll
+ModelSim Info: # -- Importing package fourteennm_iopll_functions
+ModelSim Info: # -- Compiling module fourteennm_sub_iopll
+ModelSim Info: # -- Compiling module twentynm_iopll_ip
+ModelSim Info: # -- Compiling module altera_iopll_rotation_lcells
+ModelSim Info: # -- Compiling module altera_pll_dps_lcell_comb
+ModelSim Info: # -- Compiling module iopll_bootstrap
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	generic_cdr
+ModelSim Info: # 	generic_m20k
+ModelSim Info: # 	generic_m10k
+ModelSim Info: # 	common_porta_latches
+ModelSim Info: # 	generic_28nm_hp_mlab_cell_impl
+ModelSim Info: # 	generic_28nm_lc_mlab_cell_impl
+ModelSim Info: # 	generic_14nm_mlab_cell_impl
+ModelSim Info: # 	generic_mux
+ModelSim Info: # 	generic_device_pll
+ModelSim Info: # 	altera_mult_add
+ModelSim Info: # 	altera_pll_reconfig_tasks
+ModelSim Info: # 	altera_syncram
+ModelSim Info: # 	altera_pll
+ModelSim Info: # 	altera_iopll
+ModelSim Info: # 	fourteennm_altera_iopll
+ModelSim Info: # 	fourteennm_simple_iopll
+ModelSim Info: # End time: 00:27:11 on Mar 30,2023, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # vlib verilog_libs/cyclonev_ver
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "verilog_libs/cyclonev_ver".
+ModelSim Info: # vmap cyclonev_ver ./verilog_libs/cyclonev_ver
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap cyclonev_ver ./verilog_libs/cyclonev_ver 
+ModelSim Info: # Modifying modelsim.ini
+ModelSim Info: # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:12 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # End time: 00:27:14 on Mar 30,2023, Elapsed time: 0:00:02
+ModelSim Info: # Errors: 0, Warnings: 10
+ModelSim Info: # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:14 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # End time: 00:27:16 on Mar 30,2023, Elapsed time: 0:00:02
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:16 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
+ModelSim Info: # -- Compiling UDP CYCLONEV_PRIM_DFFE
+ModelSim Info: # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
+ModelSim Info: # -- Compiling UDP CYCLONEV_PRIM_DFFEAS_HIGH
+ModelSim Info: # -- Compiling module cyclonev_dffe
+ModelSim Info: # -- Compiling module cyclonev_mux21
+ModelSim Info: # -- Compiling module cyclonev_mux41
+ModelSim Info: # -- Compiling module cyclonev_and1
+ModelSim Info: # -- Compiling module cyclonev_and16
+ModelSim Info: # -- Compiling module cyclonev_bmux21
+ModelSim Info: # -- Compiling module cyclonev_b17mux21
+ModelSim Info: # -- Compiling module cyclonev_nmux21
+ModelSim Info: # -- Compiling module cyclonev_b5mux21
+ModelSim Info: # -- Compiling module cyclonev_ff
+ModelSim Info: # -- Compiling module cyclonev_lcell_comb
+ModelSim Info: # -- Compiling module cyclonev_routing_wire
+ModelSim Info: # -- Compiling module cyclonev_ram_block
+ModelSim Info: # -- Compiling module cyclonev_mlab_cell
+ModelSim Info: # -- Compiling module cyclonev_io_ibuf
+ModelSim Info: # -- Compiling module cyclonev_io_obuf
+ModelSim Info: # -- Compiling module cyclonev_ddio_out
+ModelSim Info: # -- Compiling module cyclonev_ddio_oe
+ModelSim Info: # -- Compiling module cyclonev_ddio_in
+ModelSim Info: # -- Compiling module cyclonev_io_pad
+ModelSim Info: # -- Compiling module cyclonev_pseudo_diff_out
+ModelSim Info: # -- Compiling module cyclonev_bias_logic
+ModelSim Info: # -- Compiling module cyclonev_bias_generator
+ModelSim Info: # -- Compiling module cyclonev_bias_block
+ModelSim Info: # -- Compiling module cyclonev_clk_phase_select
+ModelSim Info: # -- Compiling module cyclonev_clkena
+ModelSim Info: # -- Compiling module cyclonev_clkselect
+ModelSim Info: # -- Compiling module cyclonev_delay_chain
+ModelSim Info: # -- Compiling module cyclonev_dll_offset_ctrl
+ModelSim Info: # -- Compiling module cyclonev_dll
+ModelSim Info: # -- Compiling module cyclonev_dqs_config
+ModelSim Info: # -- Compiling module cyclonev_dqs_delay_chain
+ModelSim Info: # -- Compiling module cyclonev_dqs_enable_ctrl
+ModelSim Info: # -- Compiling module cyclonev_duty_cycle_adjustment
+ModelSim Info: # -- Compiling module cyclonev_fractional_pll
+ModelSim Info: # -- Compiling module cyclonev_half_rate_input
+ModelSim Info: # -- Compiling module cyclonev_input_phase_alignment
+ModelSim Info: # -- Compiling module cyclonev_io_clock_divider
+ModelSim Info: # -- Compiling module cyclonev_io_config
+ModelSim Info: # -- Compiling module cyclonev_leveling_delay_chain
+ModelSim Info: # -- Compiling module cyclonev_pll_dll_output
+ModelSim Info: # -- Compiling module cyclonev_pll_dpa_output
+ModelSim Info: # -- Compiling module cyclonev_pll_extclk_output
+ModelSim Info: # -- Compiling module cyclonev_pll_lvds_output
+ModelSim Info: # -- Compiling module cyclonev_pll_output_counter
+ModelSim Info: # -- Compiling module cyclonev_pll_reconfig
+ModelSim Info: # -- Compiling module cyclonev_pll_refclk_select
+ModelSim Info: # -- Compiling module cyclonev_termination_logic
+ModelSim Info: # -- Compiling module cyclonev_termination
+ModelSim Info: # -- Compiling module cyclonev_asmiblock
+ModelSim Info: # -- Compiling module cyclonev_chipidblock
+ModelSim Info: # -- Compiling module cyclonev_controller
+ModelSim Info: # -- Compiling module cyclonev_crcblock
+ModelSim Info: # -- Compiling module cyclonev_jtag
+ModelSim Info: # -- Compiling module cyclonev_prblock
+ModelSim Info: # -- Compiling module cyclonev_rublock
+ModelSim Info: # -- Compiling module cyclonev_tsdblock
+ModelSim Info: # -- Compiling module cyclonev_read_fifo
+ModelSim Info: # -- Compiling module cyclonev_read_fifo_read_enable
+ModelSim Info: # -- Compiling module cyclonev_phy_clkbuf
+ModelSim Info: # -- Compiling module cyclonev_ir_fifo_userdes
+ModelSim Info: # -- Compiling module cyclonev_read_fifo_read_clock_select
+ModelSim Info: # -- Compiling module cyclonev_lfifo
+ModelSim Info: # -- Compiling module cyclonev_vfifo
+ModelSim Info: # -- Compiling module cyclonev_mac
+ModelSim Info: # -- Compiling module cyclonev_mem_phy
+ModelSim Info: # -- Compiling module cyclonev_oscillator
+ModelSim Info: # -- Compiling module cyclonev_hps_interface_fpga2sdram
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	cyclonev_dffe
+ModelSim Info: # 	cyclonev_mux41
+ModelSim Info: # 	cyclonev_and1
+ModelSim Info: # 	cyclonev_and16
+ModelSim Info: # 	cyclonev_bmux21
+ModelSim Info: # 	cyclonev_b17mux21
+ModelSim Info: # 	cyclonev_nmux21
+ModelSim Info: # 	cyclonev_b5mux21
+ModelSim Info: # 	cyclonev_ff
+ModelSim Info: # 	cyclonev_lcell_comb
+ModelSim Info: # 	cyclonev_routing_wire
+ModelSim Info: # 	cyclonev_ram_block
+ModelSim Info: # 	cyclonev_mlab_cell
+ModelSim Info: # 	cyclonev_io_ibuf
+ModelSim Info: # 	cyclonev_io_obuf
+ModelSim Info: # 	cyclonev_ddio_out
+ModelSim Info: # 	cyclonev_ddio_oe
+ModelSim Info: # 	cyclonev_ddio_in
+ModelSim Info: # 	cyclonev_io_pad
+ModelSim Info: # 	cyclonev_pseudo_diff_out
+ModelSim Info: # 	cyclonev_bias_block
+ModelSim Info: # 	cyclonev_clk_phase_select
+ModelSim Info: # 	cyclonev_clkena
+ModelSim Info: # 	cyclonev_clkselect
+ModelSim Info: # 	cyclonev_delay_chain
+ModelSim Info: # 	cyclonev_dll_offset_ctrl
+ModelSim Info: # 	cyclonev_dll
+ModelSim Info: # 	cyclonev_dqs_config
+ModelSim Info: # 	cyclonev_dqs_delay_chain
+ModelSim Info: # 	cyclonev_dqs_enable_ctrl
+ModelSim Info: # 	cyclonev_duty_cycle_adjustment
+ModelSim Info: # 	cyclonev_fractional_pll
+ModelSim Info: # 	cyclonev_half_rate_input
+ModelSim Info: # 	cyclonev_input_phase_alignment
+ModelSim Info: # 	cyclonev_io_clock_divider
+ModelSim Info: # 	cyclonev_io_config
+ModelSim Info: # 	cyclonev_leveling_delay_chain
+ModelSim Info: # 	cyclonev_pll_dll_output
+ModelSim Info: # 	cyclonev_pll_dpa_output
+ModelSim Info: # 	cyclonev_pll_extclk_output
+ModelSim Info: # 	cyclonev_pll_lvds_output
+ModelSim Info: # 	cyclonev_pll_output_counter
+ModelSim Info: # 	cyclonev_pll_reconfig
+ModelSim Info: # 	cyclonev_pll_refclk_select
+ModelSim Info: # 	cyclonev_termination_logic
+ModelSim Info: # 	cyclonev_termination
+ModelSim Info: # 	cyclonev_asmiblock
+ModelSim Info: # 	cyclonev_chipidblock
+ModelSim Info: # 	cyclonev_controller
+ModelSim Info: # 	cyclonev_crcblock
+ModelSim Info: # 	cyclonev_jtag
+ModelSim Info: # 	cyclonev_prblock
+ModelSim Info: # 	cyclonev_rublock
+ModelSim Info: # 	cyclonev_tsdblock
+ModelSim Info: # 	cyclonev_read_fifo
+ModelSim Info: # 	cyclonev_read_fifo_read_enable
+ModelSim Info: # 	cyclonev_phy_clkbuf
+ModelSim Info: # 	cyclonev_ir_fifo_userdes
+ModelSim Info: # 	cyclonev_read_fifo_read_clock_select
+ModelSim Info: # 	cyclonev_lfifo
+ModelSim Info: # 	cyclonev_vfifo
+ModelSim Info: # 	cyclonev_mac
+ModelSim Info: # 	cyclonev_mem_phy
+ModelSim Info: # 	cyclonev_oscillator
+ModelSim Info: # 	cyclonev_hps_interface_fpga2sdram
+ModelSim Info: # End time: 00:27:17 on Mar 30,2023, Elapsed time: 0:00:01
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # vlib verilog_libs/lpm_ver
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
+ModelSim Info: # vmap lpm_ver ./verilog_libs/lpm_ver
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap lpm_ver ./verilog_libs/lpm_ver 
+ModelSim Info: # Modifying modelsim.ini
+ModelSim Info: # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:17 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
+ModelSim Info: # -- Compiling module LPM_MEMORY_INITIALIZATION
+ModelSim Info: # -- Compiling module LPM_HINT_EVALUATION
+ModelSim Info: # -- Compiling module LPM_DEVICE_FAMILIES
+ModelSim Info: # -- Compiling module lpm_constant
+ModelSim Info: # -- Compiling module lpm_inv
+ModelSim Info: # -- Compiling module lpm_and
+ModelSim Info: # -- Compiling module lpm_or
+ModelSim Info: # -- Compiling module lpm_xor
+ModelSim Info: # -- Compiling module lpm_bustri
+ModelSim Info: # -- Compiling module lpm_mux
+ModelSim Info: # -- Compiling module lpm_decode
+ModelSim Info: # -- Compiling module lpm_clshift
+ModelSim Info: # -- Compiling module lpm_add_sub
+ModelSim Info: # -- Compiling module lpm_compare
+ModelSim Info: # -- Compiling module lpm_mult
+ModelSim Info: # -- Compiling module lpm_divide
+ModelSim Info: # -- Compiling module lpm_abs
+ModelSim Info: # -- Compiling module lpm_counter
+ModelSim Info: # -- Compiling module lpm_latch
+ModelSim Info: # -- Compiling module lpm_ff
+ModelSim Info: # -- Compiling module lpm_shiftreg
+ModelSim Info: # -- Compiling module lpm_ram_dq
+ModelSim Info: # -- Compiling module lpm_ram_dp
+ModelSim Info: # -- Compiling module lpm_ram_io
+ModelSim Info: # -- Compiling module lpm_rom
+ModelSim Info: # -- Compiling module lpm_fifo
+ModelSim Info: # -- Compiling module lpm_fifo_dc_dffpipe
+ModelSim Info: # -- Compiling module lpm_fifo_dc_fefifo
+ModelSim Info: # -- Compiling module lpm_fifo_dc_async
+ModelSim Info: # -- Compiling module lpm_fifo_dc
+ModelSim Info: # -- Compiling module lpm_inpad
+ModelSim Info: # -- Compiling module lpm_outpad
+ModelSim Info: # -- Compiling module lpm_bipad
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	lpm_constant
+ModelSim Info: # 	lpm_inv
+ModelSim Info: # 	lpm_and
+ModelSim Info: # 	lpm_or
+ModelSim Info: # 	lpm_xor
+ModelSim Info: # 	lpm_bustri
+ModelSim Info: # 	lpm_mux
+ModelSim Info: # 	lpm_decode
+ModelSim Info: # 	lpm_clshift
+ModelSim Info: # 	lpm_add_sub
+ModelSim Info: # 	lpm_compare
+ModelSim Info: # 	lpm_mult
+ModelSim Info: # 	lpm_divide
+ModelSim Info: # 	lpm_abs
+ModelSim Info: # 	lpm_counter
+ModelSim Info: # 	lpm_latch
+ModelSim Info: # 	lpm_ff
+ModelSim Info: # 	lpm_shiftreg
+ModelSim Info: # 	lpm_ram_dq
+ModelSim Info: # 	lpm_ram_dp
+ModelSim Info: # 	lpm_ram_io
+ModelSim Info: # 	lpm_rom
+ModelSim Info: # 	lpm_fifo
+ModelSim Info: # 	lpm_fifo_dc
+ModelSim Info: # 	lpm_inpad
+ModelSim Info: # 	lpm_outpad
+ModelSim Info: # 	lpm_bipad
+ModelSim Info: # End time: 00:27:17 on Mar 30,2023, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # vlib verilog_libs/sgate_ver
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
+ModelSim Info: # vmap sgate_ver ./verilog_libs/sgate_ver
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap sgate_ver ./verilog_libs/sgate_ver 
+ModelSim Info: # Modifying modelsim.ini
+ModelSim Info: # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:17 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
+ModelSim Info: # -- Compiling module oper_add
+ModelSim Info: # -- Compiling module oper_addsub
+ModelSim Info: # -- Compiling module mux21
+ModelSim Info: # -- Compiling module io_buf_tri
+ModelSim Info: # -- Compiling module io_buf_opdrn
+ModelSim Info: # -- Compiling module oper_mult
+ModelSim Info: # -- Compiling module tri_bus
+ModelSim Info: # -- Compiling module oper_div
+ModelSim Info: # -- Compiling module oper_mod
+ModelSim Info: # -- Compiling module oper_left_shift
+ModelSim Info: # -- Compiling module oper_right_shift
+ModelSim Info: # -- Compiling module oper_rotate_left
+ModelSim Info: # -- Compiling module oper_rotate_right
+ModelSim Info: # -- Compiling module oper_less_than
+ModelSim Info: # -- Compiling module oper_mux
+ModelSim Info: # -- Compiling module oper_selector
+ModelSim Info: # -- Compiling module oper_decoder
+ModelSim Info: # -- Compiling module oper_bus_mux
+ModelSim Info: # -- Compiling module oper_latch
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	oper_add
+ModelSim Info: # 	oper_addsub
+ModelSim Info: # 	mux21
+ModelSim Info: # 	io_buf_tri
+ModelSim Info: # 	io_buf_opdrn
+ModelSim Info: # 	oper_mult
+ModelSim Info: # 	tri_bus
+ModelSim Info: # 	oper_div
+ModelSim Info: # 	oper_mod
+ModelSim Info: # 	oper_left_shift
+ModelSim Info: # 	oper_right_shift
+ModelSim Info: # 	oper_rotate_left
+ModelSim Info: # 	oper_rotate_right
+ModelSim Info: # 	oper_less_than
+ModelSim Info: # 	oper_mux
+ModelSim Info: # 	oper_selector
+ModelSim Info: # 	oper_decoder
+ModelSim Info: # 	oper_bus_mux
+ModelSim Info: # 	oper_latch
+ModelSim Info: # End time: 00:27:18 on Mar 30,2023, Elapsed time: 0:00:01
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # vlib verilog_libs/cyclonev_hssi_ver
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "verilog_libs/cyclonev_hssi_ver".
+ModelSim Info: # vmap cyclonev_hssi_ver ./verilog_libs/cyclonev_hssi_ver
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap cyclonev_hssi_ver ./verilog_libs/cyclonev_hssi_ver 
+ModelSim Info: # Modifying modelsim.ini
+ModelSim Info: # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:18 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # End time: 00:27:20 on Mar 30,2023, Elapsed time: 0:00:02
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:20 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
+ModelSim Info: # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
+ModelSim Info: # -- Compiling module cyclonev_hssi_8g_rx_pcs
+ModelSim Info: # -- Compiling module cyclonev_hssi_8g_tx_pcs
+ModelSim Info: # -- Compiling module cyclonev_hssi_common_pcs_pma_interface
+ModelSim Info: # -- Compiling module cyclonev_hssi_common_pld_pcs_interface
+ModelSim Info: # -- Compiling module cyclonev_hssi_pipe_gen1_2
+ModelSim Info: # -- Compiling module cyclonev_hssi_pma_aux
+ModelSim Info: # -- Compiling module cyclonev_hssi_pma_int
+ModelSim Info: # -- Compiling module cyclonev_hssi_pma_rx_buf
+ModelSim Info: # -- Compiling module cyclonev_hssi_pma_rx_deser
+ModelSim Info: # -- Compiling module cyclonev_hssi_pma_tx_buf
+ModelSim Info: # -- Compiling module cyclonev_hssi_pma_tx_cgb
+ModelSim Info: # -- Compiling module cyclonev_hssi_pma_tx_ser
+ModelSim Info: # -- Compiling module cyclonev_hssi_pma_cdr_refclk_select_mux
+ModelSim Info: # -- Compiling module cyclonev_hssi_rx_pcs_pma_interface
+ModelSim Info: # -- Compiling module cyclonev_hssi_rx_pld_pcs_interface
+ModelSim Info: # -- Compiling module cyclonev_hssi_tx_pcs_pma_interface
+ModelSim Info: # -- Compiling module cyclonev_hssi_tx_pld_pcs_interface
+ModelSim Info: # -- Compiling module cyclonev_hssi_refclk_divider
+ModelSim Info: # -- Compiling module cyclonev_pll_aux
+ModelSim Info: # -- Compiling module cyclonev_channel_pll
+ModelSim Info: # -- Compiling module cyclonev_hssi_avmm_interface
+ModelSim Info: # -- Compiling module cyclonev_hssi_pma_hi_pmaif
+ModelSim Info: # -- Compiling module cyclonev_hssi_pma_hi_xcvrif
+ModelSim Info: # -- Compiling module arriav_hssi_8g_pcs_aggregate
+ModelSim Info: # -- Compiling module arriav_hssi_8g_rx_pcs
+ModelSim Info: # -- Compiling module arriav_hssi_8g_tx_pcs
+ModelSim Info: # -- Compiling module arriav_hssi_common_pcs_pma_interface
+ModelSim Info: # -- Compiling module arriav_hssi_common_pld_pcs_interface
+ModelSim Info: # -- Compiling module arriav_hssi_pipe_gen1_2
+ModelSim Info: # -- Compiling module arriav_hssi_pma_aux
+ModelSim Info: # -- Compiling module arriav_hssi_pma_int
+ModelSim Info: # -- Compiling module arriav_hssi_pma_rx_buf
+ModelSim Info: # -- Compiling module arriav_hssi_pma_rx_deser
+ModelSim Info: # -- Compiling module arriav_hssi_pma_tx_buf
+ModelSim Info: # -- Compiling module arriav_hssi_pma_tx_cgb
+ModelSim Info: # -- Compiling module arriav_hssi_pma_tx_ser
+ModelSim Info: # -- Compiling module arriav_hssi_pma_cdr_refclk_select_mux
+ModelSim Info: # -- Compiling module arriav_hssi_rx_pcs_pma_interface
+ModelSim Info: # -- Compiling module arriav_hssi_rx_pld_pcs_interface
+ModelSim Info: # -- Compiling module arriav_hssi_tx_pcs_pma_interface
+ModelSim Info: # -- Compiling module arriav_hssi_tx_pld_pcs_interface
+ModelSim Info: # -- Compiling module arriav_hssi_refclk_divider
+ModelSim Info: # -- Compiling module arriav_pll_aux
+ModelSim Info: # -- Compiling module arriav_channel_pll
+ModelSim Info: # -- Compiling module arriav_hssi_avmm_interface
+ModelSim Info: # -- Compiling module arriav_hssi_pma_hi_pmaif
+ModelSim Info: # -- Compiling module arriav_hssi_pma_hi_xcvrif
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	cyclonev_hssi_8g_pcs_aggregate
+ModelSim Info: # 	cyclonev_hssi_8g_rx_pcs
+ModelSim Info: # 	cyclonev_hssi_8g_tx_pcs
+ModelSim Info: # 	cyclonev_hssi_common_pcs_pma_interface
+ModelSim Info: # 	cyclonev_hssi_common_pld_pcs_interface
+ModelSim Info: # 	cyclonev_hssi_pipe_gen1_2
+ModelSim Info: # 	cyclonev_hssi_pma_aux
+ModelSim Info: # 	cyclonev_hssi_pma_int
+ModelSim Info: # 	cyclonev_hssi_pma_rx_buf
+ModelSim Info: # 	cyclonev_hssi_pma_rx_deser
+ModelSim Info: # 	cyclonev_hssi_pma_tx_buf
+ModelSim Info: # 	cyclonev_hssi_pma_tx_cgb
+ModelSim Info: # 	cyclonev_hssi_pma_tx_ser
+ModelSim Info: # 	cyclonev_hssi_pma_cdr_refclk_select_mux
+ModelSim Info: # 	cyclonev_hssi_rx_pcs_pma_interface
+ModelSim Info: # 	cyclonev_hssi_rx_pld_pcs_interface
+ModelSim Info: # 	cyclonev_hssi_tx_pcs_pma_interface
+ModelSim Info: # 	cyclonev_hssi_tx_pld_pcs_interface
+ModelSim Info: # 	cyclonev_hssi_refclk_divider
+ModelSim Info: # 	cyclonev_pll_aux
+ModelSim Info: # 	cyclonev_channel_pll
+ModelSim Info: # 	cyclonev_hssi_avmm_interface
+ModelSim Info: # 	cyclonev_hssi_pma_hi_pmaif
+ModelSim Info: # 	cyclonev_hssi_pma_hi_xcvrif
+ModelSim Info: # 	arriav_hssi_8g_pcs_aggregate
+ModelSim Info: # 	arriav_hssi_8g_rx_pcs
+ModelSim Info: # 	arriav_hssi_8g_tx_pcs
+ModelSim Info: # 	arriav_hssi_common_pcs_pma_interface
+ModelSim Info: # 	arriav_hssi_common_pld_pcs_interface
+ModelSim Info: # 	arriav_hssi_pipe_gen1_2
+ModelSim Info: # 	arriav_hssi_pma_aux
+ModelSim Info: # 	arriav_hssi_pma_int
+ModelSim Info: # 	arriav_hssi_pma_rx_buf
+ModelSim Info: # 	arriav_hssi_pma_rx_deser
+ModelSim Info: # 	arriav_hssi_pma_tx_buf
+ModelSim Info: # 	arriav_hssi_pma_tx_cgb
+ModelSim Info: # 	arriav_hssi_pma_tx_ser
+ModelSim Info: # 	arriav_hssi_pma_cdr_refclk_select_mux
+ModelSim Info: # 	arriav_hssi_rx_pcs_pma_interface
+ModelSim Info: # 	arriav_hssi_rx_pld_pcs_interface
+ModelSim Info: # 	arriav_hssi_tx_pcs_pma_interface
+ModelSim Info: # 	arriav_hssi_tx_pld_pcs_interface
+ModelSim Info: # 	arriav_hssi_refclk_divider
+ModelSim Info: # 	arriav_pll_aux
+ModelSim Info: # 	arriav_channel_pll
+ModelSim Info: # 	arriav_hssi_avmm_interface
+ModelSim Info: # 	arriav_hssi_pma_hi_pmaif
+ModelSim Info: # 	arriav_hssi_pma_hi_xcvrif
+ModelSim Info: # End time: 00:27:20 on Mar 30,2023, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # vlib verilog_libs/altera_mf_ver
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
+ModelSim Info: # vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap altera_mf_ver ./verilog_libs/altera_mf_ver 
+ModelSim Info: # Modifying modelsim.ini
+ModelSim Info: # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:20 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
+ModelSim Info: # -- Compiling module lcell
+ModelSim Info: # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+ModelSim Info: # -- Compiling module ALTERA_MF_HINT_EVALUATION
+ModelSim Info: # -- Compiling module ALTERA_DEVICE_FAMILIES
+ModelSim Info: # -- Compiling module dffp
+ModelSim Info: # -- Compiling module pll_iobuf
+ModelSim Info: # -- Compiling module stx_m_cntr
+ModelSim Info: # -- Compiling module stx_n_cntr
+ModelSim Info: # -- Compiling module stx_scale_cntr
+ModelSim Info: # -- Compiling module MF_pll_reg
+ModelSim Info: # -- Compiling module MF_stratix_pll
+ModelSim Info: # -- Compiling module arm_m_cntr
+ModelSim Info: # -- Compiling module arm_n_cntr
+ModelSim Info: # -- Compiling module arm_scale_cntr
+ModelSim Info: # -- Compiling module MF_stratixii_pll
+ModelSim Info: # -- Compiling module ttn_m_cntr
+ModelSim Info: # -- Compiling module ttn_n_cntr
+ModelSim Info: # -- Compiling module ttn_scale_cntr
+ModelSim Info: # -- Compiling module MF_stratixiii_pll
+ModelSim Info: # -- Compiling module cda_m_cntr
+ModelSim Info: # -- Compiling module cda_n_cntr
+ModelSim Info: # -- Compiling module cda_scale_cntr
+ModelSim Info: # -- Compiling module MF_cycloneiii_pll
+ModelSim Info: # -- Compiling module MF_cycloneiiigl_m_cntr
+ModelSim Info: # -- Compiling module MF_cycloneiiigl_n_cntr
+ModelSim Info: # -- Compiling module MF_cycloneiiigl_scale_cntr
+ModelSim Info: # -- Compiling module cycloneiiigl_post_divider
+ModelSim Info: # -- Compiling module MF_cycloneiiigl_pll
+ModelSim Info: # -- Compiling module altpll
+ModelSim Info: # -- Compiling module altlvds_rx
+ModelSim Info: # -- Compiling module stratix_lvds_rx
+ModelSim Info: # -- Compiling module stratixgx_dpa_lvds_rx
+ModelSim Info: # -- Compiling module stratixii_lvds_rx
+ModelSim Info: # -- Compiling module flexible_lvds_rx
+ModelSim Info: # -- Compiling module stratixiii_lvds_rx
+ModelSim Info: # -- Compiling module stratixiii_lvds_rx_channel
+ModelSim Info: # -- Compiling module stratixiii_lvds_rx_dpa
+ModelSim Info: # -- Compiling module altlvds_tx
+ModelSim Info: # -- Compiling module stratixv_local_clk_divider
+ModelSim Info: # -- Compiling module stratix_tx_outclk
+ModelSim Info: # -- Compiling module stratixii_tx_outclk
+ModelSim Info: # -- Compiling module flexible_lvds_tx
+ModelSim Info: # -- Compiling module dcfifo_dffpipe
+ModelSim Info: # -- Compiling module dcfifo_fefifo
+ModelSim Info: # -- Compiling module dcfifo_async
+ModelSim Info: # -- Compiling module dcfifo_sync
+ModelSim Info: # -- Compiling module dcfifo_low_latency
+ModelSim Info: # -- Compiling module dcfifo_mixed_widths
+ModelSim Info: # -- Compiling module dcfifo
+ModelSim Info: # -- Compiling module altera_syncram_derived
+ModelSim Info: # -- Compiling module altera_syncram_derived_forwarding_logic
+ModelSim Info: # -- Compiling module altaccumulate
+ModelSim Info: # -- Compiling module altmult_accum
+ModelSim Info: # -- Compiling module altmult_add
+ModelSim Info: # -- Compiling module altfp_mult
+ModelSim Info: # -- Compiling module altsqrt
+ModelSim Info: # -- Compiling module altclklock
+ModelSim Info: # -- Compiling module altddio_in
+ModelSim Info: # -- Compiling module altddio_out
+ModelSim Info: # -- Compiling module altddio_bidir
+ModelSim Info: # -- Compiling module altdpram
+ModelSim Info: # -- Compiling module altsyncram
+ModelSim Info: # -- Compiling module altsyncram_body
+ModelSim Info: # -- Compiling module alt3pram
+ModelSim Info: # -- Compiling module parallel_add
+ModelSim Info: # -- Compiling module scfifo
+ModelSim Info: # -- Compiling module altshift_taps
+ModelSim Info: # -- Compiling module a_graycounter
+ModelSim Info: # -- Compiling module altsquare
+ModelSim Info: # -- Compiling module altera_std_synchronizer
+ModelSim Info: # -- Compiling module altera_std_synchronizer_bundle
+ModelSim Info: # -- Compiling module alt_cal
+ModelSim Info: # -- Compiling module alt_cal_mm
+ModelSim Info: # -- Compiling module alt_cal_c3gxb
+ModelSim Info: # -- Compiling module alt_cal_sv
+ModelSim Info: # -- Compiling module alt_cal_av
+ModelSim Info: # -- Compiling module alt_aeq_s4
+ModelSim Info: # -- Compiling module alt_eyemon
+ModelSim Info: # -- Compiling module alt_dfe
+ModelSim Info: # -- Compiling module signal_gen
+ModelSim Info: # -- Compiling module jtag_tap_controller
+ModelSim Info: # -- Compiling module dummy_hub
+ModelSim Info: # -- Compiling module sld_virtual_jtag
+ModelSim Info: # -- Compiling module sld_signaltap
+ModelSim Info: # -- Compiling module altstratixii_oct
+ModelSim Info: # -- Compiling module altparallel_flash_loader
+ModelSim Info: # -- Compiling module altserial_flash_loader
+ModelSim Info: # -- Compiling module alt_fault_injection
+ModelSim Info: # -- Compiling module sld_virtual_jtag_basic
+ModelSim Info: # -- Compiling module altsource_probe
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	lcell
+ModelSim Info: # 	altpll
+ModelSim Info: # 	altlvds_rx
+ModelSim Info: # 	altlvds_tx
+ModelSim Info: # 	dcfifo
+ModelSim Info: # 	altaccumulate
+ModelSim Info: # 	altmult_accum
+ModelSim Info: # 	altmult_add
+ModelSim Info: # 	altfp_mult
+ModelSim Info: # 	altsqrt
+ModelSim Info: # 	altclklock
+ModelSim Info: # 	altddio_bidir
+ModelSim Info: # 	altdpram
+ModelSim Info: # 	alt3pram
+ModelSim Info: # 	parallel_add
+ModelSim Info: # 	scfifo
+ModelSim Info: # 	altshift_taps
+ModelSim Info: # 	a_graycounter
+ModelSim Info: # 	altsquare
+ModelSim Info: # 	altera_std_synchronizer_bundle
+ModelSim Info: # 	alt_cal
+ModelSim Info: # 	alt_cal_mm
+ModelSim Info: # 	alt_cal_c3gxb
+ModelSim Info: # 	alt_cal_sv
+ModelSim Info: # 	alt_cal_av
+ModelSim Info: # 	alt_aeq_s4
+ModelSim Info: # 	alt_eyemon
+ModelSim Info: # 	alt_dfe
+ModelSim Info: # 	sld_virtual_jtag
+ModelSim Info: # 	sld_signaltap
+ModelSim Info: # 	altstratixii_oct
+ModelSim Info: # 	altparallel_flash_loader
+ModelSim Info: # 	altserial_flash_loader
+ModelSim Info: # 	alt_fault_injection
+ModelSim Info: # 	sld_virtual_jtag_basic
+ModelSim Info: # 	altsource_probe
+ModelSim Info: # End time: 00:27:21 on Mar 30,2023, Elapsed time: 0:00:01
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # vlib verilog_libs/cyclonev_pcie_hip_ver
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "verilog_libs/cyclonev_pcie_hip_ver".
+ModelSim Info: # vmap cyclonev_pcie_hip_ver ./verilog_libs/cyclonev_pcie_hip_ver
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap cyclonev_pcie_hip_ver ./verilog_libs/cyclonev_pcie_hip_ver 
+ModelSim Info: # Modifying modelsim.ini
+ModelSim Info: # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:22 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Warning: # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # End time: 00:27:24 on Mar 30,2023, Elapsed time: 0:00:02
+ModelSim Info: # Errors: 0, Warnings: 6
+ModelSim Info: # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:24 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
+ModelSim Info: # -- Compiling module cyclonev_hd_altpe2_hip_top
+ModelSim Info: # -- Compiling module arriav_hd_altpe2_hip_top
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	cyclonev_hd_altpe2_hip_top
+ModelSim Info: # End time: 00:27:24 on Mar 30,2023, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # if {[file exists gate_work]} {
+ModelSim Info: # 	vdel -lib gate_work -all
+ModelSim Info: # }
+ModelSim Info: # vlib gate_work
+ModelSim Info: # vmap work gate_work
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+ModelSim Info: # vmap work gate_work 
+ModelSim Info: # Modifying modelsim.ini
+ModelSim Info: # 
+ModelSim Info: # vlog -vlog01compat -work work +incdir+. {TopLevel.vo}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:24 on Mar 30,2023
+ModelSim Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." TopLevel.vo 
+ModelSim Info: # -- Compiling module TopLevel
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	TopLevel
+ModelSim Info: # End time: 00:27:25 on Mar 30,2023, Elapsed time: 0:00:01
+ModelSim Info: # Errors: 0, Warnings: 0
+ModelSim Info: # 
+ModelSim Info: # vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd}
+ModelSim Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+ModelSim Info: # Start time: 00:27:25 on Mar 30,2023
+ModelSim Info: # vcom -reportprogress 300 -93 -work work C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd 
+ModelSim Info: # -- Loading package STANDARD
+ModelSim Info: # -- Loading package TEXTIO
+ModelSim Info: # -- Loading package std_logic_1164
+ModelSim Info: # -- Compiling entity StateMachine
+ModelSim Info: # -- Compiling architecture rtl of StateMachine
+ModelSim Info: # -- Compiling entity ShiftRegister
+ModelSim Info: # -- Compiling architecture rtl of ShiftRegister
+ModelSim Info: # -- Loading package NUMERIC_STD
+ModelSim Info: # -- Compiling entity Counter
+ModelSim Info: # -- Compiling architecture a of Counter
+ModelSim Info: # -- Compiling entity TopLevel
+ModelSim Info: # -- Compiling architecture rtl of TopLevel
+ModelSim Error: # ** Error: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd(170): (vcom-1436) Actual expression (prefix expression) of formal "SYNCCLRN" is not globally static.
+ModelSim Error: # ** Error: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd(171): (vcom-1436) Actual expression (prefix expression) of formal "ld" is not globally static.
+ModelSim Info: # ** Note: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd(174): VHDL Compiler exiting
+ModelSim Info: # End time: 00:27:25 on Mar 30,2023, Elapsed time: 0:00:00
+ModelSim Info: # Errors: 2, Warnings: 0
+ModelSim Error: # ** Error: C:/intelFPGA_lite/22.1std/modelsim_ase/win32aloem/vcom failed.
+ModelSim Info: # Error in macro ./TopLevel_run_msim_gate_verilog.do line 50
+ModelSim Info: # C:/intelFPGA_lite/22.1std/modelsim_ase/win32aloem/vcom failed.
+ModelSim Info: #     while executing
+ModelSim Info: # "vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd}"
+Error: Errors encountered while running modelsim do file
+Error: NativeLink simulation flow was NOT successful
+
+
+
+================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
+Nativelink TCL script failed with errorCode:  1
+Nativelink TCL script failed with errorInfo:  1
+    (procedure "launch_sim" line 1)
+    invoked from within
+"launch_sim launch_args_hash"
+    ("eval" body line 1)
+    invoked from within
+"eval launch_sim launch_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+                set savedCode $::errorCode
+                set savedInfo $::errorInfo
+                error $result $..."
+    invoked from within
+"if [catch {eval launch_sim launch_args_hash} result ] {
+            set status 1
+            if [ info exists ::errorCode ] {
+                set save..."
+    (procedure "run_sim" line 74)
+    invoked from within
+"run_sim run_sim_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+            set savedCode $::errorCode
+            set savedInfo $::errorInfo
+            error "$result" $savedInfo ..."
+    (procedure "run_eda_simulation_tool" line 334)
+    invoked from within
+"run_eda_simulation_tool eda_opts_hash"

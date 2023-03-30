@@ -1,5 +1,5 @@
 Flow report for TopLevel
-Wed Mar 29 04:07:09 2023
+Thu Mar 30 02:21:18 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -41,24 +41,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Wed Mar 29 04:07:09 2023          ;
+; Flow Status                     ; Successful - Thu Mar 30 02:21:18 2023          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; TopLevel                                       ;
 ; Top-level Entity Name           ; TopLevel                                       ;
 ; Family                          ; Cyclone V                                      ;
-; Device                          ; 5CSEMA5F31C6                                   ;
+; Device                          ; 5CGXFC7C7F23C8                                 ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 1 / 32,070 ( < 1 % )                           ;
-; Total registers                 ; 0                                              ;
-; Total pins                      ; 15 / 457 ( 3 % )                               ;
+; Logic utilization (in ALMs)     ; 18 / 56,480 ( < 1 % )                          ;
+; Total registers                 ; 31                                             ;
+; Total pins                      ; 15 / 268 ( 6 % )                               ;
 ; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                                  ;
+; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                          ;
+; Total DSP Blocks                ; 0 / 156 ( 0 % )                                ;
+; Total HSSI RX PCSs              ; 0 / 6 ( 0 % )                                  ;
+; Total HSSI PMA RX Deserializers ; 0 / 6 ( 0 % )                                  ;
+; Total HSSI TX PCSs              ; 0 / 6 ( 0 % )                                  ;
+; Total HSSI PMA TX Serializers   ; 0 / 6 ( 0 % )                                  ;
+; Total PLLs                      ; 0 / 13 ( 0 % )                                 ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
 +---------------------------------+------------------------------------------------+
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/29/2023 04:06:00 ;
+; Start date & time ; 03/30/2023 02:20:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TopLevel            ;
 +-------------------+---------------------+
@@ -79,33 +79,25 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 259913564305436.168007176001804        ; --            ; --          ; --                                ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CounterTestBench                  ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ShiftRegisterTestBench            ;
+; COMPILER_SIGNATURE_ID                ; 259913564305436.168015180000940        ; --            ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; TopLevelTest                      ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; ShiftRegisterTestBench                 ; --            ; --          ; eda_simulation                    ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                  ; ModelSim (VHDL)                        ; <None>        ; --          ; --                                ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; TopLevelTest                           ; --            ; --          ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
+; EDA_RUN_TOOL_AUTOMATICALLY           ; Off                                    ; --            ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                  ; ModelSim (Verilog)                     ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_FILE                  ; CounterTestBench.vhd                   ; --            ; --          ; CounterTestBench                  ;
-; EDA_TEST_BENCH_FILE                  ; ShiftRegisterTestBench.vhd             ; --            ; --          ; ShiftRegisterTestBench            ;
-; EDA_TEST_BENCH_MODULE_NAME           ; CounterTestBench                       ; --            ; --          ; CounterTestBench                  ;
-; EDA_TEST_BENCH_MODULE_NAME           ; ShiftRegisterTestBench                 ; --            ; --          ; ShiftRegisterTestBench            ;
-; EDA_TEST_BENCH_NAME                  ; CounterTestBench                       ; --            ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_NAME                  ; ShiftRegisterTestBench                 ; --            ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 200 ns                                 ; --            ; --          ; CounterTestBench                  ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                 ; --            ; --          ; ShiftRegisterTestBench            ;
+; EDA_TEST_BENCH_FILE                  ; TopLevel.vhd                           ; --            ; --          ; TopLevelTest                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TopLevelTest                           ; --            ; --          ; TopLevelTest                      ;
+; EDA_TEST_BENCH_NAME                  ; TopLevelTest                           ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 200 ns                                 ; --            ; --          ; TopLevelTest                      ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
@@ -115,12 +107,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4864 MB             ; 00:00:31                           ;
-; Fitter               ; 00:00:35     ; 1.0                     ; 6472 MB             ; 00:01:02                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4870 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 5120 MB             ; 00:00:06                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
-; Total                ; 00:01:02     ; --                      ; --                  ; 00:01:47                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4862 MB             ; 00:00:25                           ;
+; Fitter               ; 00:00:38     ; 1.0                     ; 6693 MB             ; 00:01:06                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4870 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 5203 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4739 MB             ; 00:00:01                           ;
+; Total                ; 00:01:12     ; --                      ; --                  ; 00:01:44                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

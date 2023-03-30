@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Mar 29 04:06:13 2023
+Analysis & Synthesis Status : Successful - Thu Mar 30 02:20:21 2023
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : TopLevel
 Top-level Entity Name : TopLevel
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
+Total registers : 31
 Total pins : 15
 Total virtual pins : 0
 Total block memory bits : 0

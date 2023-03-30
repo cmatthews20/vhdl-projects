@@ -1,0 +1,183 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/simulation/modelsim
+Ecounter
+Z1 w1680145002
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z5 8C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd
+Z6 FC:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd
+l0
+L98 1
+VX[E4CAC5hQo^JU<dMWK=h1
+!s100 jD>5fhSc3B]WCjKFJA>nm0
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1680145045
+!i10b 1
+Z9 !s108 1680145045.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd|
+!s107 C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aa
+R2
+R3
+R4
+DEx4 work 7 counter 0 22 X[E4CAC5hQo^JU<dMWK=h1
+!i122 1
+l107
+L103 22
+V4LGNC?>ERTWKo?GoUX3A<2
+!s100 7oaW@`jBb5]:eQzTZzbAn2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+Z13 !s107 C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd|
+!i113 1
+R11
+R12
+Eshiftregister
+R1
+R3
+R4
+!i122 1
+R0
+R5
+R6
+l0
+L59 1
+V]Rmo=n:4O74PJT<8Kclbm1
+!s100 3clQA<]9jT9MgCkVF<@CI1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R13
+!i113 1
+R11
+R12
+Artl
+R3
+R4
+DEx4 work 13 shiftregister 0 22 ]Rmo=n:4O74PJT<8Kclbm1
+!i122 1
+l70
+L65 26
+Vj@_EfnZRdEVee_K=0W8eV0
+!s100 9]f:W574[m@eKg:_GJgB83
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R13
+!i113 1
+R11
+R12
+Estatemachine
+R1
+R3
+R4
+!i122 1
+R0
+R5
+R6
+l0
+L7 1
+VheFLUFz=mfam6?8[3W`l33
+!s100 5S6AJ@Gcf4hfY6el2SA];2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R13
+!i113 1
+R11
+R12
+Artl
+R3
+R4
+DEx4 work 12 statemachine 0 22 heFLUFz=mfam6?8[3W`l33
+!i122 1
+l19
+L12 41
+VVCC=Zm1=CZPo76=TdJ^a03
+!s100 WEh7WkVV@=NGAjHLRITL;3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R13
+!i113 1
+R11
+R12
+Etoplevel
+R1
+R3
+R4
+!i122 1
+R0
+R5
+R6
+l0
+L132 1
+VU5eeB_J4B?>7P7zd2i@e>1
+!s100 `RYc=j79LAV:R6S?jO4@03
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R13
+!i113 1
+R11
+R12
+vTopLevel
+R8
+!i10b 1
+!s100 TzdJM:@R91WkSXz0XTfbe1
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+Ic7J7hBCBZ::;n2d<Vo6z;3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1680145024
+8TopLevel.vo
+FTopLevel.vo
+!i122 0
+L0 32 1164
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1680145044.000000
+!s107 TopLevel.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|TopLevel.vo|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+tCvgOpt 0
+n@top@level

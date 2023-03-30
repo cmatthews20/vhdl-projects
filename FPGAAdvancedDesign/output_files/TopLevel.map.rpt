@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TopLevel
-Wed Mar 29 04:06:13 2023
+Thu Mar 30 02:20:21 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -13,15 +13,13 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |TopLevel|StateMachine:SM0|next_state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Port Connectivity Checks: "ShiftRegister:R0"
- 13. Port Connectivity Checks: "Counter:C0"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Port Connectivity Checks: "ShiftRegister:R0"
+ 11. Port Connectivity Checks: "Counter:C0"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -48,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 29 04:06:13 2023          ;
+; Analysis & Synthesis Status     ; Successful - Thu Mar 30 02:20:21 2023          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; TopLevel                                       ;
 ; Top-level Entity Name           ; TopLevel                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 0                                              ;
+; Total registers                 ; 31                                             ;
 ; Total pins                      ; 15                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -73,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
 ; Top-level entity name                                                           ; TopLevel           ; TopLevel           ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
@@ -164,10 +162,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -183,79 +182,44 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimate of Logic utilization (ALMs needed) ; 0      ;
-;                                             ;        ;
-; Combinational ALUT usage for logic          ; 0      ;
-;     -- 7 input functions                    ; 0      ;
-;     -- 6 input functions                    ; 0      ;
-;     -- 5 input functions                    ; 0      ;
-;     -- 4 input functions                    ; 0      ;
-;     -- <=3 input functions                  ; 0      ;
-;                                             ;        ;
-; Dedicated logic registers                   ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 15     ;
-;                                             ;        ;
-; Total DSP Blocks                            ; 0      ;
-;                                             ;        ;
-; Maximum fan-out node                        ; KEY[1] ;
-; Maximum fan-out                             ; 1      ;
-; Total fan-out                               ; 15     ;
-; Average fan-out                             ; 0.50   ;
-+---------------------------------------------+--------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 17           ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 26           ;
+;     -- 7 input functions                    ; 0            ;
+;     -- 6 input functions                    ; 0            ;
+;     -- 5 input functions                    ; 0            ;
+;     -- 4 input functions                    ; 2            ;
+;     -- <=3 input functions                  ; 24           ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 31           ;
+;                                             ;              ;
+; I/O pins                                    ; 15           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; CounterClear ;
+; Maximum fan-out                             ; 30           ;
+; Total fan-out                               ; 208          ;
+; Average fan-out                             ; 2.39         ;
++---------------------------------------------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |TopLevel                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 15   ; 0            ; |TopLevel           ; TopLevel    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                             ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+---------------+--------------+
+; |TopLevel                  ; 26 (2)              ; 31 (0)                    ; 0                 ; 0          ; 15   ; 0            ; |TopLevel                  ; TopLevel      ; work         ;
+;    |Counter:C0|            ; 20 (20)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Counter:C0       ; Counter       ; work         ;
+;    |ShiftRegister:R0|      ; 3 (3)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|ShiftRegister:R0 ; ShiftRegister ; work         ;
+;    |StateMachine:SM0|      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|StateMachine:SM0 ; StateMachine  ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------+
-; State Machine - |TopLevel|StateMachine:SM0|next_state                                  ;
-+-----------------------+-----------------------+----------------------+-----------------+
-; Name                  ; next_state.ShiftRight ; next_state.ShiftLeft ; next_state.INIT ;
-+-----------------------+-----------------------+----------------------+-----------------+
-; next_state.INIT       ; 0                     ; 0                    ; 0               ;
-; next_state.ShiftLeft  ; 0                     ; 1                    ; 1               ;
-; next_state.ShiftRight ; 1                     ; 0                    ; 1               ;
-+-----------------------+-----------------------+----------------------+-----------------+
-
-
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; StateMachine:SM0|SR                    ; Stuck at GND due to stuck port data_in      ;
-; StateMachine:SM0|SL                    ; Stuck at GND due to stuck port data_in      ;
-; ShiftRegister:R0|ShiftResult[0..8]     ; Merged with ShiftRegister:R0|ShiftResult[9] ;
-; ShiftRegister:R0|ShiftResult[9]        ; Stuck at GND due to stuck port data_in      ;
-; StateMachine:SM0|next_state.INIT       ; Lost fanout                                 ;
-; StateMachine:SM0|next_state.ShiftLeft  ; Lost fanout                                 ;
-; StateMachine:SM0|next_state.ShiftRight ; Lost fanout                                 ;
-; Total Number of Removed Registers = 15 ;                                             ;
-+----------------------------------------+---------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                              ;
-+---------------------+---------------------------+----------------------------------------+
-; Register name       ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------------+---------------------------+----------------------------------------+
-; StateMachine:SM0|SR ; Stuck at GND              ; ShiftRegister:R0|ShiftResult[9]        ;
-;                     ; due to stuck port data_in ;                                        ;
-+---------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -263,23 +227,35 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 31    ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 30    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; ShiftRegister:R0|ShiftResult[0]        ; 3       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
 +----------------------------------------------+
 ; Port Connectivity Checks: "ShiftRegister:R0" ;
-+------+-------+----------+--------------------+
-; Port ; Type  ; Severity ; Details            ;
-+------+-------+----------+--------------------+
-; clrn ; Input ; Info     ; Stuck at VCC       ;
-+------+-------+----------+--------------------+
++------------+-------+----------+--------------+
+; Port       ; Type  ; Severity ; Details      ;
++------------+-------+----------+--------------+
+; clrn       ; Input ; Info     ; Stuck at VCC ;
+; load[9..1] ; Input ; Info     ; Stuck at GND ;
+; load[0]    ; Input ; Info     ; Stuck at VCC ;
++------------+-------+----------+--------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -287,7 +263,6 @@ Encoding Type:  One-Hot
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port      ; Type   ; Severity ; Details                                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
-; syncclrn  ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; q[13..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; q[8..7]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; q[5..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -300,13 +275,23 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; arriav_ff             ; 31                          ;
+;     CLR               ; 2                           ;
+;     CLR SCLR          ; 20                          ;
+;     CLR SLD           ; 8                           ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 26                          ;
+;     arith             ; 20                          ;
+;         1 data inputs ; 20                          ;
+;     normal            ; 6                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 2                           ;
 ; boundary_port         ; 15                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 2.90                        ;
+; Average LUT depth     ; 1.92                        ;
 +-----------------------+-----------------------------+
 
 
@@ -325,65 +310,57 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Mar 29 04:06:00 2023
+    Info: Processing started: Thu Mar 30 02:20:00 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopLevel -c TopLevel
+Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
     Info (12022): Found design unit 1: TopLevel-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 12
     Info (12023): Found entity 1: TopLevel File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
+Info (12021): Found 4 design units, including 2 entities, in source file counter.vhd
     Info (12022): Found design unit 1: Counter-a File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/Counter.vhd Line: 12
+    Info (12022): Found design unit 2: CounterTestBench-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/Counter.vhd Line: 41
     Info (12023): Found entity 1: Counter File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/Counter.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file shiftregister.vhd
+    Info (12023): Found entity 2: CounterTestBench File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/Counter.vhd Line: 38
+Info (12021): Found 4 design units, including 2 entities, in source file shiftregister.vhd
     Info (12022): Found design unit 1: ShiftRegister-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 12
+    Info (12022): Found design unit 2: ShiftRegisterTestBench-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 45
     Info (12023): Found entity 1: ShiftRegister File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file countertestbench.vhd
-    Info (12022): Found design unit 1: CounterTestBench-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/CounterTestBench.vhd Line: 7
-    Info (12023): Found entity 1: CounterTestBench File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/CounterTestBench.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file shiftregistertestbench.vhd
-    Info (12022): Found design unit 1: ShiftRegisterTestBench-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegisterTestBench.vhd Line: 9
-    Info (12023): Found entity 1: ShiftRegisterTestBench File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegisterTestBench.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file statemachine.vhd
+    Info (12023): Found entity 2: ShiftRegisterTestBench File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 42
+Info (12021): Found 4 design units, including 2 entities, in source file statemachine.vhd
     Info (12022): Found design unit 1: StateMachine-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/StateMachine.vhd Line: 11
+    Info (12022): Found design unit 2: StateMachineTestBench-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/StateMachine.vhd Line: 61
     Info (12023): Found entity 1: StateMachine File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/StateMachine.vhd Line: 6
+    Info (12023): Found entity 2: StateMachineTestBench File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/StateMachine.vhd Line: 58
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at TopLevel.vhd(33): used implicit default value for signal "DefaultLED" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 33
-Info (12128): Elaborating entity "Counter" for hierarchy "Counter:C0" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 43
-Info (12128): Elaborating entity "ShiftRegister" for hierarchy "ShiftRegister:R0" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 44
+Info (12128): Elaborating entity "Counter" for hierarchy "Counter:C0" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 45
+Info (12128): Elaborating entity "ShiftRegister" for hierarchy "ShiftRegister:R0" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 46
 Warning (10492): VHDL Process Statement warning at ShiftRegister.vhd(21): signal "sl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 21
 Warning (10492): VHDL Process Statement warning at ShiftRegister.vhd(21): signal "sr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at ShiftRegister.vhd(22): signal "clrn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 22
-Info (12128): Elaborating entity "StateMachine" for hierarchy "StateMachine:SM0" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 45
-Warning (10540): VHDL Signal Declaration warning at StateMachine.vhd(14): used explicit default value for signal "current_state" because signal was never assigned a value File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/StateMachine.vhd Line: 14
-Warning (10036): Verilog HDL or VHDL warning at StateMachine.vhd(15): object "next_state" assigned a value but never read File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/StateMachine.vhd Line: 15
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 9
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 9
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 9
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 9
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 9
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 9
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 9
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 9
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 9
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 9
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Warning (10492): VHDL Process Statement warning at ShiftRegister.vhd(22): signal "ld" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at ShiftRegister.vhd(23): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at ShiftRegister.vhd(24): signal "clrn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 24
+Info (12128): Elaborating entity "StateMachine" for hierarchy "StateMachine:SM0" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at StateMachine.vhd(34): signal "REG_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/StateMachine.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at StateMachine.vhd(43): signal "REG_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/StateMachine.vhd Line: 43
+Info (13000): Registers with preset signals will power-up high File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/ShiftRegister.vhd Line: 22
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 7
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 7
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 7
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 7
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/colem/Documents/VHDL-Projects/FPGAAdvancedDesign/TopLevel.vhd Line: 8
-Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 10 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4864 megabytes
-    Info: Processing ended: Wed Mar 29 04:06:13 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:32
+    Info (21061): Implemented 34 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Thu Mar 30 02:20:21 2023
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:25
 
 
