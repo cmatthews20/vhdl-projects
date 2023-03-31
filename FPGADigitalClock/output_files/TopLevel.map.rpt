@@ -1,5 +1,5 @@
-Analysis & Synthesis report for TopLevel
-Fri Mar 31 00:40:49 2023
+Analysis & Elaboration report for TopLevel
+Fri Mar 31 12:31:41 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -7,16 +7,13 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "Counter26:OneSecCounter"
+  6. Port Connectivity Checks: "Counter4:SecondsL"
+  7. Port Connectivity Checks: "Counter4:SecondsR"
+  8. Analysis & Elaboration Messages
 
 
 
@@ -40,31 +37,42 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar 31 00:40:49 2023          ;
-; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                   ; TopLevel                                       ;
-; Top-level Entity Name           ; TopLevel                                       ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 0                                              ;
-; Total pins                      ; 67                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Fri Mar 31 12:31:41 2023          ;
+; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                 ; TopLevel                                       ;
+; Top-level Entity Name         ; TopLevel                                       ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -150,120 +158,52 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Counter26:OneSecCounter"                                                                              ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                   ; Type   ; Severity ; Details                                                                             ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; enable                 ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; asyncloadn             ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; asyncclearn            ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; loadinput              ; Input  ; Info     ; Stuck at GND                                                                        ;
+; counter26output[25..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; TopLevel.vhd                     ; yes             ; User VHDL File  ; C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
++-----------------------------------------------+
+; Port Connectivity Checks: "Counter4:SecondsL" ;
++------------+-------+----------+---------------+
+; Port       ; Type  ; Severity ; Details       ;
++------------+-------+----------+---------------+
+; asyncloadn ; Input ; Info     ; Stuck at VCC  ;
++------------+-------+----------+---------------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimate of Logic utilization (ALMs needed) ; 0        ;
-;                                             ;          ;
-; Combinational ALUT usage for logic          ; 0        ;
-;     -- 7 input functions                    ; 0        ;
-;     -- 6 input functions                    ; 0        ;
-;     -- 5 input functions                    ; 0        ;
-;     -- 4 input functions                    ; 0        ;
-;     -- <=3 input functions                  ; 0        ;
-;                                             ;          ;
-; Dedicated logic registers                   ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 67       ;
-;                                             ;          ;
-; Total DSP Blocks                            ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; CLOCK_50 ;
-; Maximum fan-out                             ; 1        ;
-; Total fan-out                               ; 67       ;
-; Average fan-out                             ; 0.50     ;
-+---------------------------------------------+----------+
++-----------------------------------------------+
+; Port Connectivity Checks: "Counter4:SecondsR" ;
++------------+-------+----------+---------------+
+; Port       ; Type  ; Severity ; Details       ;
++------------+-------+----------+---------------+
+; asyncloadn ; Input ; Info     ; Stuck at VCC  ;
++------------+-------+----------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |TopLevel                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 67   ; 0            ; |TopLevel           ; TopLevel    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 2                           ;
-;     normal            ; 2                           ;
-;         0 data inputs ; 2                           ;
-; boundary_port         ; 67                          ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Fri Mar 31 00:40:39 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopLevel -c TopLevel
+    Info: Processing started: Fri Mar 31 12:31:29 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopLevel -c TopLevel --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
+Info (12021): Found 4 design units, including 2 entities, in source file toplevel.vhd
     Info (12022): Found design unit 1: TopLevel-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 17
+    Info (12022): Found design unit 2: TopLevelTest-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 184
     Info (12023): Found entity 1: TopLevel File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 6
+    Info (12023): Found entity 2: TopLevelTest File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 180
 Info (12021): Found 4 design units, including 2 entities, in source file counter4.vhd
     Info (12022): Found design unit 1: Counter4-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 16
     Info (12022): Found design unit 2: Counter4Test-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 63
@@ -280,84 +220,15 @@ Info (12021): Found 4 design units, including 2 entities, in source file segment
     Info (12023): Found entity 1: SegmentDecoder7 File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd Line: 6
     Info (12023): Found entity 2: SegmentDecoder7Test File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd Line: 33
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 11
-    Warning (13410): Pin "LEDR[0]" is stuck at VCC File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 12
-    Warning (13410): Pin "LEDR[1]" is stuck at VCC File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 12
-    Warning (13410): Pin "LEDR[2]" is stuck at VCC File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 12
-    Warning (13410): Pin "LEDR[3]" is stuck at VCC File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 12
-    Warning (13410): Pin "LEDR[4]" is stuck at VCC File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 12
-    Warning (13410): Pin "LEDR[5]" is stuck at VCC File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 12
-    Warning (13410): Pin "LEDR[6]" is stuck at VCC File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 12
-    Warning (13410): Pin "LEDR[7]" is stuck at VCC File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 12
-    Warning (13410): Pin "LEDR[8]" is stuck at VCC File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 12
-    Warning (13410): Pin "LEDR[9]" is stuck at VCC File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 12
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 15 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 9
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 10
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 10
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 10
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 10
-Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 52 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
-    Info: Peak virtual memory: 4864 megabytes
-    Info: Processing ended: Fri Mar 31 00:40:49 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+Info (12128): Elaborating entity "Counter4" for hierarchy "Counter4:SecondsR" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 68
+Warning (10492): VHDL Process Statement warning at Counter4.vhd(30): signal "LoadInput" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 30
+Info (12128): Elaborating entity "Counter26" for hierarchy "Counter26:OneSecCounter" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at Counter26.vhd(30): signal "LoadInput" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter26.vhd Line: 30
+Info (12128): Elaborating entity "SegmentDecoder7" for hierarchy "SegmentDecoder7:SevenSegment0" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 81
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4856 megabytes
+    Info: Processing ended: Fri Mar 31 12:31:41 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:31
 
 

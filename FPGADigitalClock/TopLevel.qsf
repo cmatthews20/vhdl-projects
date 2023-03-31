@@ -62,15 +62,10 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH SegmentDecoder7Test -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH TopLevelTest -section_id eda_simulation
 set_global_assignment -name VHDL_FILE Counter26.vhd
 set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY OFF -section_id eda_simulation
 set_global_assignment -name VHDL_FILE SegmentDecoder7.vhd
-set_global_assignment -name EDA_TEST_BENCH_NAME SegmentDecoder7Test -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id SegmentDecoder7Test
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "170 ns" -section_id SegmentDecoder7Test
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SegmentDecoder7Test -section_id SegmentDecoder7Test
-set_global_assignment -name EDA_TEST_BENCH_FILE SegmentDecoder7.vhd -section_id SegmentDecoder7Test
 set_location_assignment PIN_AJ4 -to ADC_CS_N
 set_location_assignment PIN_AK4 -to ADC_DIN
 set_location_assignment PIN_AK3 -to ADC_DOUT
@@ -329,4 +324,9 @@ set_location_assignment PIN_E12 -to VGA_R[6]
 set_location_assignment PIN_F13 -to VGA_R[7]
 set_location_assignment PIN_C10 -to VGA_SYNC_N
 set_location_assignment PIN_D11 -to VGA_VS
+set_global_assignment -name EDA_TEST_BENCH_NAME TopLevelTest -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id TopLevelTest
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id TopLevelTest
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME TopLevelTest -section_id TopLevelTest
+set_global_assignment -name EDA_TEST_BENCH_FILE TopLevel.vhd -section_id TopLevelTest
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

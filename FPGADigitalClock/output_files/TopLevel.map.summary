@@ -1,17 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Mar 31 00:40:49 2023
+Analysis & Elaboration Status : Successful - Fri Mar 31 12:31:41 2023
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : TopLevel
 Top-level Entity Name : TopLevel
 Family : Cyclone V
-Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 67
-Total virtual pins : 0
-Total block memory bits : 0
-Total DSP Blocks : 0
-Total HSSI RX PCSs : 0
-Total HSSI PMA RX Deserializers : 0
-Total HSSI TX PCSs : 0
-Total HSSI PMA TX Serializers : 0
-Total PLLs : 0
-Total DLLs : 0
+Logic utilization (in ALMs) : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total block memory bits : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge
+Total DLLs : N/A until Partition Merge

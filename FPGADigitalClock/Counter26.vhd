@@ -22,11 +22,8 @@ BEGIN
 	PROCESS(CLK, AsyncClearN, AsyncLoadN)
 		
 	BEGIN
-	
-		IF (Enable = '0') THEN
-			Counter26OutputInt <= Counter26OutputInt;
 			
-		ELSIF (AsyncClearN = '0') THEN
+		IF (AsyncClearN = '0') THEN
 			Counter26OutputInt <= "00000000000000000000000000";
 			
 		ELSIF (AsyncLoadN = '0') THEN
@@ -37,7 +34,10 @@ BEGIN
 			IF (SyncClearN = '0') THEN
 				Counter26OutputInt <= "00000000000000000000000000";
 				
-			ELSE
+			ELSIF (Enable = '0') THEN
+			Counter26OutputInt <= Counter26OutputInt;
+				
+			ELSIF (Enable = '1') THEN
 				Counter26OutputInt <= Counter26OutputInt + "1";
 				
 			END IF;

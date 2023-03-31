@@ -9,126 +9,335 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/simulation/modelsim
-Esegmentdecoder7
-Z1 w1680229822
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Ecounter26
+Z1 w1680273164
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z5 8C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter26.vhd
+Z6 FC:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter26.vhd
+l0
+L7 1
+VOoZD=49Pol:Q^_A:>D8<>1
+!s100 33LABOnYkc]Gj2P1BcTDf0
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1680274929
+!i10b 1
+Z9 !s108 1680274929.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter26.vhd|
+Z11 !s107 C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter26.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 9 counter26 0 22 OoZD=49Pol:Q^_A:>D8<>1
+!i122 2
+l20
+Z14 L16 36
+V=?1nVnJZJ_gUd?C??bCjz2
+!s100 iCcm?A9?3NF>4W8TWW<Ea3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecounter26test
+R1
+R3
+R4
+!i122 2
+R0
+R5
+R6
+l0
+Z15 L59 1
+Vo=?lak_G5V^65QeYZoFNL3
+!s100 QBdmlnQJIgI@531_nzI;X0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Artl
+R3
+R4
+DEx4 work 13 counter26test 0 22 o=?lak_G5V^65QeYZoFNL3
+!i122 2
+l78
+Z16 L63 32
+VGC9>@aIH9RPhBi[a9iBlY3
+!s100 ch^5b@WjZhL_G3GjVo<:;3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecounter4
+Z17 w1680272598
+R2
+R3
+R4
 !i122 1
 R0
-Z4 8C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd
-Z5 FC:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd
+Z18 8C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd
+Z19 FC:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd
+l0
+L7 1
+VCmWZJbeBX9kb?oc9ZZL8Q1
+!s100 ?6lO4;<DTE8a^zm`nbb[]2
+R7
+31
+R8
+!i10b 1
+R9
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd|
+Z21 !s107 C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 8 counter4 0 22 CmWZJbeBX9kb?oc9ZZL8Q1
+!i122 1
+l20
+R14
+VPZDNd53;YTd<K;:AC8iPd0
+!s100 M_1VYE6kTRMH@ngH`6Ba?1
+R7
+31
+R8
+!i10b 1
+R9
+R20
+R21
+!i113 1
+R12
+R13
+Ecounter4test
+R17
+R3
+R4
+!i122 1
+R0
+R18
+R19
+l0
+R15
+Vfk7;79[STLDEC>8g1:DPc0
+!s100 ;n8EiCTDT09HCGm4?8R5T2
+R7
+31
+R8
+!i10b 1
+R9
+R20
+R21
+!i113 1
+R12
+R13
+Artl
+R3
+R4
+DEx4 work 12 counter4test 0 22 fk7;79[STLDEC>8g1:DPc0
+!i122 1
+l78
+R16
+VKa>A>^WBQV`:50@f]o14E1
+!s100 =LA;>eSQ>0A6Aac:]=[AL3
+R7
+31
+R8
+!i10b 1
+R9
+R20
+R21
+!i113 1
+R12
+R13
+Esegmentdecoder7
+Z22 w1680229822
+R3
+R4
+!i122 3
+R0
+Z23 8C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd
+Z24 FC:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd
 l0
 L6 1
 VokB25BWBQTVWa=0hlWRo72
 !s100 :3O4a=JaG9??z<1RSV_b?3
-Z6 OV;C;2020.1;71
+R7
 31
-Z7 !s110 1680230691
+Z25 !s110 1680274930
 !i10b 1
-Z8 !s108 1680230691.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd|
-!s107 C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd|
+Z26 !s108 1680274930.000000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd|
+Z28 !s107 C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd|
 !i113 1
-Z10 o-93 -work work
-Z11 tExplicit 1 CvgOpt 0
+R12
+R13
 Artl
-R2
 R3
+R4
 DEx4 work 15 segmentdecoder7 0 22 okB25BWBQTVWa=0hlWRo72
-!i122 1
+!i122 3
 l15
 L14 12
 VBIk5eH6<1O;j>`KdO5=1U1
 !s100 YWAF3BGW]mIj1<;^`RG292
-R6
-31
 R7
+31
+R25
 !i10b 1
-R8
-R9
-Z12 !s107 C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd|
+R26
+R27
+R28
 !i113 1
-R10
-R11
+R12
+R13
 Esegmentdecoder7test
-R1
-R2
+R22
 R3
-!i122 1
-R0
 R4
-R5
+!i122 3
+R0
+R23
+R24
 l0
 L33 1
 V5o>z5iYfMLXX8<jIed]j_3
 !s100 T949H_6ZjK=Ln=QSU3RZz1
-R6
-31
 R7
+31
+R25
 !i10b 1
-R8
-R9
-R12
+R26
+R27
+R28
 !i113 1
-R10
-R11
+R12
+R13
 Artl
-R2
 R3
+R4
 DEx4 work 19 segmentdecoder7test 0 22 5o>z5iYfMLXX8<jIed]j_3
-!i122 1
+!i122 3
 l49
 L36 35
 VDX0WZ8YejjQh0_e1:0EV53
 !s100 iaKDza>2eaai0WNcCVRYP2
-R6
-31
 R7
+31
+R25
 !i10b 1
-R8
-R9
-R12
+R26
+R27
+R28
 !i113 1
-R10
-R11
+R12
+R13
 Etoplevel
-Z13 w1680218919
-R2
+Z29 w1680274864
 R3
-!i122 0
+R4
+!i122 4
 R0
-Z14 8C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd
-Z15 FC:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd
+Z30 8C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd
+Z31 FC:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd
 l0
 L6 1
-VR;5YdcPL0o=X7c[IK6H7W1
-!s100 9zUmOMaJADo[]^ABm1A852
-R6
+VK?4^;hK5]Ul8a:JS2o<__0
+!s100 B1zENRdb`=NdSA=E^`WeV3
+R7
 31
-Z16 !s110 1680230689
+R25
 !i10b 1
-Z17 !s108 1680230689.000000
-Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd|
-Z19 !s107 C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd|
+R26
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd|
+Z33 !s107 C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd|
 !i113 1
-R10
-R11
+R12
+R13
 Artl
-R2
 R3
-DEx4 work 8 toplevel 0 22 R;5YdcPL0o=X7c[IK6H7W1
-!i122 0
-l15
-L13 7
-ViV88g115nH87df;4EYVGL3
-!s100 QA7RUS?Fa=O0KSaQXSKVi3
-R6
+R4
+Z34 DEx4 work 8 toplevel 0 22 K?4^;hK5]Ul8a:JS2o<__0
+!i122 4
+l64
+Z35 L17 156
+Z36 VJ=C>kof@mRU:1WIZaj]aM1
+Z37 !s100 dT11lm2Jznh3UJ5hUh]8A1
+R7
 31
-R16
+R25
 !i10b 1
-R17
-R18
-R19
+R26
+R32
+R33
 !i113 1
-R10
-R11
+R12
+R13
+Etopleveltest
+R29
+R3
+R4
+!i122 4
+R0
+R30
+R31
+l0
+L180 1
+VAgDVK7INRDW6z?@8G^c7T2
+!s100 SaKa3PY;893L:lhG9nO=M0
+R7
+31
+R25
+!i10b 1
+R26
+R32
+R33
+!i113 1
+R12
+R13
+Artl
+R3
+R4
+Z38 DEx4 work 12 topleveltest 0 22 AgDVK7INRDW6z?@8G^c7T2
+!i122 4
+l202
+Z39 L184 25
+Z40 VBiGT@_Z1:7=4eERcLh:RG2
+Z41 !s100 AYcOE3TRb4Dmf<@LOghWF1
+R7
+31
+R25
+!i10b 1
+R26
+R32
+R33
+!i113 1
+R12
+R13

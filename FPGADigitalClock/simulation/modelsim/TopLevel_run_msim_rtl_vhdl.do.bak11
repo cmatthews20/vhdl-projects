@@ -51,12 +51,15 @@ vlib rtl_work
 vmap work rtl_work
 
 vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd}
-
+vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd}
+vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter26.vhd}
 vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  SegmentDecoder7Test
+vcom -93 -work work {C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  TopLevelTest
 
 add wave *
 view structure
 view signals
-run 200 ns
+run 500 ns
