@@ -15,19 +15,16 @@ END TopLevel;
 
 
 ARCHITECTURE rtl OF TopLevel IS
-
-	-- SIGNAL Hex0IN_int, Hex1IN_int, Hex2IN_int, Hex3IN_int, Hex4IN_int, Hex5IN_int : std_logic_vector( 3 DOWNTO 0 );
-	-- SIGNAL Hex0OUT_int, Hex1OUT_int, Hex2OUT_int, Hex3OUT_int, Hex4OUT_int, Hex5OUT_int : std_logic_vector( 6 DOWNTO 0 );
 	
 	SIGNAL SecondsAsyncClear, MinsAsyncClear, HrsAsyncClear : STD_LOGIC := '1';
 	
-	SIGNAL SecAsyncLoad, MinsAsyncLoad, HrsAsyncLoad : STD_LOGIC := '1';
+	SIGNAL SecAsyncLoad, MinsAsyncLoad, HrsAsyncLoad : STD_LOGIC := '0';
 	
-	SIGNAL HrsL_2, HrsR_3, HrsR_9, MinsL_5, MinsR_9, SecondsL_5, SecondsR_9, OneSecCounter50M : STD_LOGIC := '0';
+	SIGNAL HrsL_2, HrsR_3, HrsR_9, MinsL_5, MinsR_9, SecondsL_5, SecondsR_9, OneSecCounter50M: STD_LOGIC := '0';
 	
-	SIGNAL SecondsRSyncClr, SecondsLSyncClr, MinsRSyncClr, MinsLSyncClr, HrsRSyncClr, HrsLSyncClr : STD_LOGIC := '1';
+	SIGNAL SecondsRSyncClr, SecondsLSyncClr, MinsRSyncClr, MinsLSyncClr, HrsRSyncClr, HrsLSyncClr, OneSecCounterSyncClr : STD_LOGIC := '1';
 	
-	SIGNAL SecondsR_OUT, SecondsL_OUT, MinsR_OUT, MinsL_OUT, HrsR_OUT, HrsL_OUT : std_logic_vector( 3 DOWNTO 0 );
+	SIGNAL SecondsR_OUT, SecondsL_OUT, MinsR_OUT, MinsL_OUT, HrsR_OUT, HrsL_OUT : std_logic_vector( 3 DOWNTO 0 ) := "0000";
 	
 	SIGNAL RightLoadVal, LeftLoadVal : std_logic_vector( 3 DOWNTO 0 ) := "0000";
 	
@@ -74,7 +71,7 @@ BEGIN
 	HrsR : Counter4 PORT MAP(CLOCK_50, HrsREnable, HrsAsyncLoad, HrsRSyncClr, HrsAsyncClear, RightLoadVal, HrsR_OUT);
 	HrsL : Counter4 PORT MAP(CLOCK_50, HrsLEnable, HrsAsyncLoad, HrsLSyncClr, HrsAsyncClear, LeftLoadVal, HrsL_OUT);
 	
-	OneSecCounter : Counter26 PORT MAP(CLOCK_50, '1', '1', OneSecCounter50M, '1', DummyLoadVal, OneSecCounterOUT);
+	OneSecCounter : Counter26 PORT MAP(CLOCK_50, '1', '1', OneSecCounterSyncClr, '1', DummyLoadVal, OneSecCounterOUT);
 	
 	DummyLoadVal <= "00000000000000000000000000";
 	
@@ -94,13 +91,11 @@ BEGIN
 	LEDR <= SW;
 	
 	
-	RightLoadVal <= SW(3 DOWNTO 0);
-	LeftLoadVal <= SW(7 DOWNTO 4);
+	RightLoadVal <= SW(3 DOWNTO 0) AFTER 5 ns;
+	LeftLoadVal <= SW(7 DOWNTO 4) AFTER 5 ns;
 	
 	
 	-- TOP LEVEL PORT ASSIGNMENTS END --
-	
-	
 	
 	
 	-- COUNTER INTERMEDIATE SIGNALS START --
@@ -109,8 +104,8 @@ BEGIN
 	MinsAsyncClear <= KEY(0);
 	HrsAsyncClear <= KEY(0);
 	
-	MinsAsyncLoad <= KEY(3);
-	HrsAsyncLoad <= KEY(2);
+	MinsAsyncLoad <= KEY(3) AFTER 5 ns;
+	HrsAsyncLoad <= KEY(2) AFTER 5 ns;
 	SecAsyncLoad <= '1';
 	
 	SecondsREnable <= OneSecCounter50M;
@@ -125,22 +120,26 @@ BEGIN
 	SecondsRSyncClr <= NOT (OneSecCounter50M AND SecondsR_9);
 	SecondsLSyncClr <= NOT(OneSecCounter50M AND SecondsR_9 AND SecondsL_5);
 	
+	OneSecCounterSyncClr <= NOT OneSecCounter50M;
+	
 	MinsRSyncClr <= NOT (OneSecCounter50M AND SecondsR_9 AND SecondsL_5 AND MinsR_9);
 	MinsLSyncClr <= NOT (OneSecCounter50M AND SecondsR_9 AND SecondsL_5 AND MinsR_9 AND MinsL_5);
 	
-	HrsRSyncClr <= NOT (OneSecCounter50M AND SecondsR_9 AND SecondsL_5 AND MinsR_9 AND MinsL_5 AND HrsR_9);
+	HrsRSyncClr <= NOT (( OneSecCounter50M AND SecondsR_9 AND SecondsL_5 AND MinsR_9 AND MinsL_5 AND HrsR_9) OR 
+								(OneSecCounter50M AND SecondsR_9 AND SecondsL_5 AND MinsR_9 AND MinsL_5 AND HrsR_3 AND HrsL_2));
+								
 	HrsLSyncClr <= NOT (OneSecCounter50M AND SecondsR_9 AND SecondsL_5 AND MinsR_9 AND MinsL_5 AND HrsR_3 AND HrsL_2);
 	
 	-- COUNTER INTERMEDIATE SIGNALS END --
 	
 	-- COUNTER COMBINATIONAL LOGIC START --
 	
-	--OneSecCounter50M <=  OneSecCounterOUT(25) AND OneSecCounterOUT(23) AND OneSecCounterOUT(22) AND 
-	--							OneSecCounterOUT(21) AND OneSecCounterOUT(20) AND OneSecCounterOUT(19) AND 
-	--							OneSecCounterOUT(17) AND OneSecCounterOUT(15) AND OneSecCounterOUT(14) AND 
-	--							OneSecCounterOUT(13) AND OneSecCounterOUT(12) AND OneSecCounterOUT(7);
+	OneSecCounter50M <=  OneSecCounterOUT(25) AND OneSecCounterOUT(23) AND OneSecCounterOUT(22) AND 
+								OneSecCounterOUT(21) AND OneSecCounterOUT(20) AND OneSecCounterOUT(19) AND 
+								OneSecCounterOUT(17) AND OneSecCounterOUT(15) AND OneSecCounterOUT(14) AND 
+								OneSecCounterOUT(13) AND OneSecCounterOUT(12) AND OneSecCounterOUT(7);
 	
-	OneSecCounter50M <= OneSecCounterOUT(1) OR (OneSecCounterOUT(1) AND OneSecCounterOUT(0));
+	--OneSecCounter50M <= OneSecCounterOUT(1);
 								
 	SecondsR_9 <= SecondsR_OUT(3) AND SecondsR_OUT(0);
 	SecondsL_5 <= SecondsL_OUT(2) AND SecondsL_OUT(0);
@@ -154,20 +153,7 @@ BEGIN
 	
 	HrsL_2 <= HrsL_OUT(1);
 	
-	-- COUNTER COMBINATIONAL LOGIC START --
-	
-	-- 7 SEGMENT DECODER INTERMEDIATE SIGNALS START --
-	
-	-- Hex0IN_int <= SecondsR_OUT;
-	-- Hex1IN_int <= SecondsL_OUT;
-	-- Hex2IN_int <= MinsR_OUT;
-	-- Hex3IN_int <= MinsL_OUT;
-	-- Hex4IN_int <= HrsR_OUT;
-	-- Hex5IN_int <= HrsL_OUT;
-	
-	-- 7 SEGMENT DECODER INTERMEDIATE SIGNALS END --
-	
-	
+	-- COUNTER COMBINATIONAL LOGIC START --	
 
 END rtl;
 

@@ -1,5 +1,5 @@
-Analysis & Elaboration report for TopLevel
-Fri Mar 31 12:31:41 2023
+Analysis & Synthesis report for TopLevel
+Fri Mar 31 13:51:36 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -7,13 +7,20 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "Counter26:OneSecCounter"
-  6. Port Connectivity Checks: "Counter4:SecondsL"
-  7. Port Connectivity Checks: "Counter4:SecondsR"
-  8. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "Counter26:OneSecCounter"
+ 11. Port Connectivity Checks: "Counter4:SecondsL"
+ 12. Port Connectivity Checks: "Counter4:SecondsR"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -37,42 +44,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Mar 31 12:31:41 2023          ;
-; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                 ; TopLevel                                       ;
-; Top-level Entity Name         ; TopLevel                                       ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Mar 31 13:51:36 2023          ;
+; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                   ; TopLevel                                       ;
+; Top-level Entity Name           ; TopLevel                                       ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 50                                             ;
+; Total pins                      ; 67                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -158,6 +154,114 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; TopLevel.vhd                     ; yes             ; User VHDL File  ; C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd        ;         ;
+; Counter4.vhd                     ; yes             ; User VHDL File  ; C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd        ;         ;
+; Counter26.vhd                    ; yes             ; User VHDL File  ; C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter26.vhd       ;         ;
+; SegmentDecoder7.vhd              ; yes             ; User VHDL File  ; C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 83             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 158            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 8              ;
+;     -- 5 input functions                    ; 22             ;
+;     -- 4 input functions                    ; 78             ;
+;     -- <=3 input functions                  ; 50             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 50             ;
+;                                             ;                ;
+; I/O pins                                    ; 67             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 50             ;
+; Total fan-out                               ; 862            ;
+; Average fan-out                             ; 2.52           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                    ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name     ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-----------------+--------------+
+; |TopLevel                          ; 158 (14)            ; 50 (0)                    ; 0                 ; 0          ; 67   ; 0            ; |TopLevel                               ; TopLevel        ; work         ;
+;    |Counter26:OneSecCounter|       ; 26 (26)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Counter26:OneSecCounter       ; Counter26       ; work         ;
+;    |Counter4:HrsL|                 ; 16 (16)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Counter4:HrsL                 ; Counter4        ; work         ;
+;    |Counter4:HrsR|                 ; 20 (20)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Counter4:HrsR                 ; Counter4        ; work         ;
+;    |Counter4:MinsL|                ; 13 (13)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Counter4:MinsL                ; Counter4        ; work         ;
+;    |Counter4:MinsR|                ; 15 (15)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Counter4:MinsR                ; Counter4        ; work         ;
+;    |Counter4:SecondsL|             ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Counter4:SecondsL             ; Counter4        ; work         ;
+;    |Counter4:SecondsR|             ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Counter4:SecondsR             ; Counter4        ; work         ;
+;    |SegmentDecoder7:SevenSegment0| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment0 ; SegmentDecoder7 ; work         ;
+;    |SegmentDecoder7:SevenSegment1| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment1 ; SegmentDecoder7 ; work         ;
+;    |SegmentDecoder7:SevenSegment2| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment2 ; SegmentDecoder7 ; work         ;
+;    |SegmentDecoder7:SevenSegment3| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment3 ; SegmentDecoder7 ; work         ;
+;    |SegmentDecoder7:SevenSegment4| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment4 ; SegmentDecoder7 ; work         ;
+;    |SegmentDecoder7:SevenSegment5| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment5 ; SegmentDecoder7 ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 50    ;
+; Number of registers using Synchronous Clear  ; 26    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 24    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TopLevel|Counter4:SecondsR|Counter4OutputInt[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TopLevel|Counter4:SecondsL|Counter4OutputInt[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TopLevel|Counter4:MinsR|Counter4OutputInt[0]    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TopLevel|Counter4:MinsL|Counter4OutputInt[1]    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TopLevel|Counter4:HrsR|Counter4OutputInt[0]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TopLevel|Counter4:HrsL|Counter4OutputInt[0]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Counter26:OneSecCounter"                                                                              ;
 +------------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -167,7 +271,11 @@ https://fpgasoftware.intel.com/eula.
 ; asyncloadn             ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; asyncclearn            ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; loadinput              ; Input  ; Info     ; Stuck at GND                                                                        ;
-; counter26output[25..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; counter26output[11..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; counter26output[6..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; counter26output[24]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; counter26output[18]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; counter26output[16]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -189,21 +297,56 @@ https://fpgasoftware.intel.com/eula.
 +------------+-------+----------+---------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 50                          ;
+;     CLR               ; 6                           ;
+;     ENA CLR           ; 18                          ;
+;     SCLR              ; 26                          ;
+; arriav_lcell_comb     ; 158                         ;
+;     arith             ; 26                          ;
+;         1 data inputs ; 26                          ;
+;     normal            ; 132                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 78                          ;
+;         5 data inputs ; 22                          ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 67                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.16                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Fri Mar 31 12:31:29 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopLevel -c TopLevel --analysis_and_elaboration
+    Info: Processing started: Fri Mar 31 13:51:23 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopLevel -c TopLevel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 4 design units, including 2 entities, in source file toplevel.vhd
     Info (12022): Found design unit 1: TopLevel-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 17
-    Info (12022): Found design unit 2: TopLevelTest-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 184
+    Info (12022): Found design unit 2: TopLevelTest-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 172
     Info (12023): Found entity 1: TopLevel File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 6
-    Info (12023): Found entity 2: TopLevelTest File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 180
+    Info (12023): Found entity 2: TopLevelTest File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 168
 Info (12021): Found 4 design units, including 2 entities, in source file counter4.vhd
     Info (12022): Found design unit 1: Counter4-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 16
     Info (12022): Found design unit 2: Counter4Test-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 63
@@ -220,15 +363,41 @@ Info (12021): Found 4 design units, including 2 entities, in source file segment
     Info (12023): Found entity 1: SegmentDecoder7 File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd Line: 6
     Info (12023): Found entity 2: SegmentDecoder7Test File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd Line: 33
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Info (12128): Elaborating entity "Counter4" for hierarchy "Counter4:SecondsR" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 68
+Info (12128): Elaborating entity "Counter4" for hierarchy "Counter4:SecondsR" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 65
 Warning (10492): VHDL Process Statement warning at Counter4.vhd(30): signal "LoadInput" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 30
-Info (12128): Elaborating entity "Counter26" for hierarchy "Counter26:OneSecCounter" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 77
+Info (12128): Elaborating entity "Counter26" for hierarchy "Counter26:OneSecCounter" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 74
 Warning (10492): VHDL Process Statement warning at Counter26.vhd(30): signal "LoadInput" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter26.vhd Line: 30
-Info (12128): Elaborating entity "SegmentDecoder7" for hierarchy "SegmentDecoder7:SevenSegment0" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 81
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Fri Mar 31 12:31:41 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:31
+Info (12128): Elaborating entity "SegmentDecoder7" for hierarchy "SegmentDecoder7:SevenSegment0" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 78
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "Counter4:MinsR|Counter4OutputInt[0]" is converted into an equivalent circuit using register "Counter4:MinsR|Counter4OutputInt[0]~_emulated" and latch "Counter4:MinsR|Counter4OutputInt[0]~1" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:MinsR|Counter4OutputInt[3]" is converted into an equivalent circuit using register "Counter4:MinsR|Counter4OutputInt[3]~_emulated" and latch "Counter4:MinsR|Counter4OutputInt[3]~5" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:MinsR|Counter4OutputInt[2]" is converted into an equivalent circuit using register "Counter4:MinsR|Counter4OutputInt[2]~_emulated" and latch "Counter4:MinsR|Counter4OutputInt[2]~9" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:MinsR|Counter4OutputInt[1]" is converted into an equivalent circuit using register "Counter4:MinsR|Counter4OutputInt[1]~_emulated" and latch "Counter4:MinsR|Counter4OutputInt[1]~13" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:MinsL|Counter4OutputInt[0]" is converted into an equivalent circuit using register "Counter4:MinsL|Counter4OutputInt[0]~_emulated" and latch "Counter4:MinsL|Counter4OutputInt[0]~1" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:MinsL|Counter4OutputInt[3]" is converted into an equivalent circuit using register "Counter4:MinsL|Counter4OutputInt[3]~_emulated" and latch "Counter4:MinsL|Counter4OutputInt[3]~5" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:MinsL|Counter4OutputInt[2]" is converted into an equivalent circuit using register "Counter4:MinsL|Counter4OutputInt[2]~_emulated" and latch "Counter4:MinsL|Counter4OutputInt[2]~9" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:MinsL|Counter4OutputInt[1]" is converted into an equivalent circuit using register "Counter4:MinsL|Counter4OutputInt[1]~_emulated" and latch "Counter4:MinsL|Counter4OutputInt[1]~13" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:HrsR|Counter4OutputInt[0]" is converted into an equivalent circuit using register "Counter4:HrsR|Counter4OutputInt[0]~_emulated" and latch "Counter4:HrsR|Counter4OutputInt[0]~1" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:HrsR|Counter4OutputInt[3]" is converted into an equivalent circuit using register "Counter4:HrsR|Counter4OutputInt[3]~_emulated" and latch "Counter4:HrsR|Counter4OutputInt[3]~5" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:HrsR|Counter4OutputInt[2]" is converted into an equivalent circuit using register "Counter4:HrsR|Counter4OutputInt[2]~_emulated" and latch "Counter4:HrsR|Counter4OutputInt[2]~9" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:HrsR|Counter4OutputInt[1]" is converted into an equivalent circuit using register "Counter4:HrsR|Counter4OutputInt[1]~_emulated" and latch "Counter4:HrsR|Counter4OutputInt[1]~13" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:HrsL|Counter4OutputInt[0]" is converted into an equivalent circuit using register "Counter4:HrsL|Counter4OutputInt[0]~_emulated" and latch "Counter4:HrsL|Counter4OutputInt[0]~1" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:HrsL|Counter4OutputInt[3]" is converted into an equivalent circuit using register "Counter4:HrsL|Counter4OutputInt[3]~_emulated" and latch "Counter4:HrsL|Counter4OutputInt[3]~5" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:HrsL|Counter4OutputInt[2]" is converted into an equivalent circuit using register "Counter4:HrsL|Counter4OutputInt[2]~_emulated" and latch "Counter4:HrsL|Counter4OutputInt[2]~9" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (13310): Register "Counter4:HrsL|Counter4OutputInt[1]" is converted into an equivalent circuit using register "Counter4:HrsL|Counter4OutputInt[1]~_emulated" and latch "Counter4:HrsL|Counter4OutputInt[1]~13" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 10
+Info (21057): Implemented 225 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 158 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4871 megabytes
+    Info: Processing ended: Fri Mar 31 13:51:36 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:33
 
 
