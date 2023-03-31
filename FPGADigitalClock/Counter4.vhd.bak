@@ -1,0 +1,16 @@
+-- 4 Bit Counter
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY Counter4 IS
+	PORT( Clock, Enable, SyncClear : IN STD_LOGIC;
+			Counter4Output : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+END Counter4;
+
+
+ARCHITECTURE rtl OF Counter4 IS
+
+	SIGNAL Counter4OutputInt : UNSIGNED(3 DOWNTO 0) := "0000";
+	

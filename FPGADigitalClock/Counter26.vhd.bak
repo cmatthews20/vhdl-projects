@@ -1,0 +1,74 @@
+-- 26 Bit Counter --
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY Counter26 IS
+	PORT( CLK, Enable, SyncClear : IN STD_LOGIC;
+			Counter4Output : OUT STD_LOGIC_VECTOR(25 DOWNTO 0));
+END Counter26;
+
+
+ARCHITECTURE rtl OF Counter26 IS
+
+	SIGNAL Counter4OutputInt : UNSIGNED(3 DOWNTO 0) := "00000000000000000000000000";
+	
+BEGIN 
+
+	PROCESS(CLK)
+		
+	BEGIN
+	
+		IF (Enable = '0') THEN
+			Counter4OutputInt <= Counter4OutputInt;
+		
+		ELSIF (CLK' EVENT) AND (CLK = '1') THEN
+			
+			IF (SyncClear = '1') THEN
+				Counter4OutputInt <= "00000000000000000000000000";
+				
+			ELSE
+				Counter4OutputInt <= Counter4OutputInt + "1";
+				
+			END IF;
+		
+		END IF;
+	
+	END PROCESS;
+	
+	Counter4Output <= STD_LOGIC_VECTOR(Counter4OutputInt);
+	
+END rtl;
+
+
+-- 26 Bit Counter TEST BENCH --
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY Counter4Test IS
+END Counter4Test;
+
+
+ARCHITECTURE rtl OF Counter4Test IS
+
+	COMPONENT Counter4 IS
+	
+		PORT( CLK, Enable, SyncClear : IN STD_LOGIC;
+			Counter4Output : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+			
+	END COMPONENT;
+
+	SIGNAL CLK_int, Enable_int, SyncClear_int : STD_LOGIC := '0';
+	SIGNAL Counter4Output_int : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	
+BEGIN
+
+	Counter4_TestInstance : Counter4 PORT MAP(CLK_int, Enable_int, SyncClear_int, Counter4Output_int);
+	
+	CLK_int <= NOT CLK_int AFTER 5 ns;
+	Enable_int <= '1' AFTER 10 ns;
+	SyncClear_int <= '1' AFTER 180 ns;
+
+END rtl;

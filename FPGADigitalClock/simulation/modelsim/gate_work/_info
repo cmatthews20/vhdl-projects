@@ -1,0 +1,146 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/simulation/modelsim
+Ecounter4
+Z1 w1680221381
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z5 8C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd
+Z6 FC:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd
+l0
+L7 1
+VV;8L`d3bdTccBVXJ7YAFc0
+!s100 IR81WV<jQjkDPgo`n]B4N2
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1680224641
+!i10b 1
+Z9 !s108 1680224641.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd|
+!s107 C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 8 counter4 0 22 V;8L`d3bdTccBVXJ7YAFc0
+!i122 1
+l17
+L13 30
+V15=kJ9SUQ<^749<UQ30^L2
+!s100 TFl^gPGeJ;ihQCdi8hXz62
+R7
+31
+R8
+!i10b 1
+R9
+R10
+Z13 !s107 C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd|
+!i113 1
+R11
+R12
+Ecounter4test
+R1
+R3
+R4
+!i122 1
+R0
+R5
+R6
+l0
+L50 1
+Vg5O^7SLb:6?:ZLUnUUcMm3
+!s100 keJ`l2`DB?MCVSTQ4Fc=d2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R13
+!i113 1
+R11
+R12
+Artl
+R3
+R4
+DEx4 work 12 counter4test 0 22 g5O^7SLb:6?:ZLUnUUcMm3
+!i122 1
+l66
+L54 21
+V8>h]gn?BjYjEFJ_keWBGD1
+!s100 S0oH1fa5J047mWi^P63MQ2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R13
+!i113 1
+R11
+R12
+Etoplevel
+Z14 w1680224611
+Z15 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z16 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^Q<I4_d=;6U7ZlPZM8]Vi3
+Z17 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z18 DPx8 cyclonev 19 cyclonev_components 0 22 2D6AGAL3C<_1Ve5@klln?0
+R3
+R4
+Z19 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 j2UP9CC=Y_B?SOL73A]P;2
+!i122 0
+R0
+Z20 8TopLevel.vho
+Z21 FTopLevel.vho
+l0
+L37 1
+V_ZPlQFiOl1YO^VYmZW_Tl0
+!s100 zh=NB`6V]mGodlFAmG54j2
+R7
+31
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-93|-work|work|TopLevel.vho|
+Z23 !s107 TopLevel.vho|
+!i113 1
+R11
+R12
+Astructure
+R15
+R16
+R17
+R18
+R3
+R4
+R19
+DEx4 work 8 toplevel 0 22 _ZPlQFiOl1YO^VYmZW_Tl0
+!i122 0
+l69
+L56 162
+V;SQNKSch[]F1dmhlLifmz1
+!s100 0z>@18Sz<anmSbNF4?`0N3
+R7
+31
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R11
+R12
