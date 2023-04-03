@@ -1,5 +1,5 @@
 Fitter report for TopLevel
-Fri Mar 31 13:52:30 2023
+Mon Apr  3 01:46:34 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -64,15 +64,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Mar 31 13:52:30 2023          ;
+; Fitter Status                   ; Successful - Mon Apr  3 01:46:34 2023          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; TopLevel                                       ;
 ; Top-level Entity Name           ; TopLevel                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 84 / 32,070 ( < 1 % )                          ;
-; Total registers                 ; 58                                             ;
+; Logic utilization (in ALMs)     ; 86 / 32,070 ( < 1 % )                          ;
+; Total registers                 ; 55                                             ;
 ; Total pins                      ; 67 / 457 ( 15 % )                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
@@ -172,13 +172,10 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------------+------------------+-----------------------+
 ; CLOCK_50~inputCLKENA0                          ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                          ;                  ;                       ;
 ; Counter4:SecondsL|Counter4OutputInt[0]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Counter4:SecondsL|Counter4OutputInt[0]~DUPLICATE         ;                  ;                       ;
-; Counter4:SecondsL|Counter4OutputInt[2]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Counter4:SecondsL|Counter4OutputInt[2]~DUPLICATE         ;                  ;                       ;
-; Counter4:SecondsL|Counter4OutputInt[3]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Counter4:SecondsL|Counter4OutputInt[3]~DUPLICATE         ;                  ;                       ;
+; Counter4:SecondsL|Counter4OutputInt[1]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Counter4:SecondsL|Counter4OutputInt[1]~DUPLICATE         ;                  ;                       ;
 ; Counter4:SecondsR|Counter4OutputInt[0]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Counter4:SecondsR|Counter4OutputInt[0]~DUPLICATE         ;                  ;                       ;
 ; Counter4:SecondsR|Counter4OutputInt[1]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Counter4:SecondsR|Counter4OutputInt[1]~DUPLICATE         ;                  ;                       ;
-; Counter26:OneSecCounter|Counter26OutputInt[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Counter26:OneSecCounter|Counter26OutputInt[7]~DUPLICATE  ;                  ;                       ;
 ; Counter26:OneSecCounter|Counter26OutputInt[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Counter26:OneSecCounter|Counter26OutputInt[12]~DUPLICATE ;                  ;                       ;
-; Counter26:OneSecCounter|Counter26OutputInt[13] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Counter26:OneSecCounter|Counter26OutputInt[13]~DUPLICATE ;                  ;                       ;
 +------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------------+------------------+-----------------------+
 
 
@@ -387,8 +384,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 344 ) ; 0.00 % ( 0 / 344 )         ; 0.00 % ( 0 / 344 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 344 ) ; 0.00 % ( 0 / 344 )         ; 0.00 % ( 0 / 344 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 348 ) ; 0.00 % ( 0 / 348 )         ; 0.00 % ( 0 / 348 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 348 ) ; 0.00 % ( 0 / 348 )         ; 0.00 % ( 0 / 348 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -411,7 +408,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 344 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 348 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -427,14 +424,14 @@ The pin-out file can be found in C:/Users/colem/Documents/VHDL-Projects/FPGADigi
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 84 / 32,070        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 84                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 90 / 32,070        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 22                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 64                 ;       ;
-;         [c] ALMs used for registers                         ; 4                  ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 86 / 32,070        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 86                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 88 / 32,070        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 25                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 63                 ;       ;
+;         [c] ALMs used for registers                         ; 0                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 32,070         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 32,070         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -443,25 +440,25 @@ The pin-out file can be found in C:/Users/colem/Documents/VHDL-Projects/FPGADigi
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 15 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 15                 ;       ;
+; Total LABs:  partially or completely used                   ; 13 / 3,207         ; < 1 % ;
+;     -- Logic LABs                                           ; 13                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 159                ;       ;
+; Combinational ALUT usage for logic                          ; 163                ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 8                  ;       ;
+;     -- 6 input functions                                    ; 9                  ;       ;
 ;     -- 5 input functions                                    ; 22                 ;       ;
-;     -- 4 input functions                                    ; 78                 ;       ;
-;     -- <=3 input functions                                  ; 51                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 5                  ;       ;
+;     -- 4 input functions                                    ; 80                 ;       ;
+;     -- <=3 input functions                                  ; 52                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 58                 ;       ;
+; Dedicated logic registers                                   ; 55                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 50 / 64,140        ; < 1 % ;
-;         -- Secondary logic registers                        ; 8 / 64,140         ; < 1 % ;
+;         -- Secondary logic registers                        ; 5 / 64,140         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 50                 ;       ;
-;         -- Routing optimization registers                   ; 8                  ;       ;
+;         -- Routing optimization registers                   ; 5                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 67 / 457           ; 15 %  ;
@@ -516,12 +513,12 @@ The pin-out file can be found in C:/Users/colem/Documents/VHDL-Projects/FPGADigi
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.3% / 0.3% / 0.2% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 4.1% / 4.3% / 3.8% ;       ;
-; Maximum fan-out                                             ; 58                 ;       ;
-; Highest non-global fan-out                                  ; 37                 ;       ;
-; Total fan-out                                               ; 896                ;       ;
-; Average fan-out                                             ; 2.51               ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.2% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 3.4% / 3.6% / 2.8% ;       ;
+; Maximum fan-out                                             ; 55                 ;       ;
+; Highest non-global fan-out                                  ; 33                 ;       ;
+; Total fan-out                                               ; 898                ;       ;
+; Average fan-out                                             ; 2.54               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -530,14 +527,14 @@ The pin-out file can be found in C:/Users/colem/Documents/VHDL-Projects/FPGADigi
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 84 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 84                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 90 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 22                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 64                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 4                    ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 86 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 86                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 88 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 25                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 63                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 0                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -546,17 +543,17 @@ The pin-out file can be found in C:/Users/colem/Documents/VHDL-Projects/FPGADigi
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 15 / 3207 ( < 1 % )  ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 15                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 13 / 3207 ( < 1 % )  ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 13                   ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 159                  ; 0                              ;
+; Combinational ALUT usage for logic                          ; 163                  ; 0                              ;
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
-;     -- 6 input functions                                    ; 8                    ; 0                              ;
+;     -- 6 input functions                                    ; 9                    ; 0                              ;
 ;     -- 5 input functions                                    ; 22                   ; 0                              ;
-;     -- 4 input functions                                    ; 78                   ; 0                              ;
-;     -- <=3 input functions                                  ; 51                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 5                    ; 0                              ;
+;     -- 4 input functions                                    ; 80                   ; 0                              ;
+;     -- <=3 input functions                                  ; 52                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
@@ -564,10 +561,10 @@ The pin-out file can be found in C:/Users/colem/Documents/VHDL-Projects/FPGADigi
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 50 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 8 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 5 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 50                   ; 0                              ;
-;         -- Routing optimization registers                   ; 8                    ; 0                              ;
+;         -- Routing optimization registers                   ; 5                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -584,7 +581,7 @@ The pin-out file can be found in C:/Users/colem/Documents/VHDL-Projects/FPGADigi
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 896                  ; 0                              ;
+;     -- Total Connections                                    ; 898                  ; 0                              ;
 ;     -- Registered Connections                               ; 143                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
@@ -617,8 +614,8 @@ The pin-out file can be found in C:/Users/colem/Documents/VHDL-Projects/FPGADigi
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 58                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; KEY[0]   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 37                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 55                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; KEY[0]   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]   ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[2]   ; W15   ; 3B       ; 40           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[3]   ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -1692,8 +1689,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; SW[9]    ; Incomplete set of assignments ;
 ; CLOCK_50 ; Incomplete set of assignments ;
 ; KEY[0]   ; Incomplete set of assignments ;
-; KEY[3]   ; Incomplete set of assignments ;
 ; KEY[2]   ; Incomplete set of assignments ;
+; KEY[3]   ; Incomplete set of assignments ;
 +----------+-------------------------------+
 
 
@@ -1702,20 +1699,20 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node         ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name     ; Library Name ;
 +------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------+-----------------+--------------+
-; |TopLevel                          ; 83.5 (8.0)           ; 89.0 (8.0)                       ; 5.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 159 (15)            ; 58 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 67   ; 0            ; |TopLevel                               ; TopLevel        ; work         ;
-;    |Counter26:OneSecCounter|       ; 13.0 (13.0)          ; 16.5 (16.5)                      ; 3.5 (3.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (26)             ; 29 (29)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter26:OneSecCounter       ; Counter26       ; work         ;
-;    |Counter4:HrsL|                 ; 8.2 (8.2)            ; 8.2 (8.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (16)             ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:HrsL                 ; Counter4        ; work         ;
-;    |Counter4:HrsR|                 ; 10.3 (10.3)          ; 11.7 (11.7)                      ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 20 (20)             ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:HrsR                 ; Counter4        ; work         ;
-;    |Counter4:MinsL|                ; 6.5 (6.5)            ; 7.3 (7.3)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:MinsL                ; Counter4        ; work         ;
-;    |Counter4:MinsR|                ; 7.7 (7.7)            ; 8.8 (8.8)                        ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 15 (15)             ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:MinsR                ; Counter4        ; work         ;
-;    |Counter4:SecondsL|             ; 3.8 (3.8)            ; 3.8 (3.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:SecondsL             ; Counter4        ; work         ;
-;    |Counter4:SecondsR|             ; 3.2 (3.2)            ; 3.7 (3.7)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:SecondsR             ; Counter4        ; work         ;
+; |TopLevel                          ; 86.0 (9.8)           ; 88.0 (10.2)                      ; 2.0 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 163 (18)            ; 55 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 67   ; 0            ; |TopLevel                               ; TopLevel        ; work         ;
+;    |Counter26:OneSecCounter|       ; 13.0 (13.0)          ; 13.0 (13.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (26)             ; 27 (27)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter26:OneSecCounter       ; Counter26       ; work         ;
+;    |Counter4:HrsL|                 ; 8.7 (8.7)            ; 9.7 (9.7)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 15 (15)             ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:HrsL                 ; Counter4        ; work         ;
+;    |Counter4:HrsR|                 ; 10.5 (10.5)          ; 10.8 (10.8)                      ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 20 (20)             ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:HrsR                 ; Counter4        ; work         ;
+;    |Counter4:MinsL|                ; 7.3 (7.3)            ; 7.8 (7.8)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:MinsL                ; Counter4        ; work         ;
+;    |Counter4:MinsR|                ; 7.2 (7.2)            ; 8.5 (8.5)                        ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 15 (15)             ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:MinsR                ; Counter4        ; work         ;
+;    |Counter4:SecondsL|             ; 4.0 (4.0)            ; 4.3 (4.3)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:SecondsL             ; Counter4        ; work         ;
+;    |Counter4:SecondsR|             ; 3.2 (3.2)            ; 3.2 (3.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|Counter4:SecondsR             ; Counter4        ; work         ;
 ;    |SegmentDecoder7:SevenSegment0| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment0 ; SegmentDecoder7 ; work         ;
-;    |SegmentDecoder7:SevenSegment1| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment1 ; SegmentDecoder7 ; work         ;
+;    |SegmentDecoder7:SevenSegment1| ; 3.3 (3.3)            ; 3.3 (3.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment1 ; SegmentDecoder7 ; work         ;
 ;    |SegmentDecoder7:SevenSegment2| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment2 ; SegmentDecoder7 ; work         ;
-;    |SegmentDecoder7:SevenSegment3| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment3 ; SegmentDecoder7 ; work         ;
-;    |SegmentDecoder7:SevenSegment4| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment4 ; SegmentDecoder7 ; work         ;
-;    |SegmentDecoder7:SevenSegment5| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment5 ; SegmentDecoder7 ; work         ;
+;    |SegmentDecoder7:SevenSegment3| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment3 ; SegmentDecoder7 ; work         ;
+;    |SegmentDecoder7:SevenSegment4| ; 3.3 (3.3)            ; 3.3 (3.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment4 ; SegmentDecoder7 ; work         ;
+;    |SegmentDecoder7:SevenSegment5| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|SegmentDecoder7:SevenSegment5 ; SegmentDecoder7 ; work         ;
 +------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1790,8 +1787,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[9]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; CLOCK_50 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[0]   ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; KEY[3]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; KEY[2]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[2]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[3]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1856,68 +1853,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLOCK_50                                      ;                   ;         ;
 ; KEY[0]                                        ;                   ;         ;
 ;      - SecondsAsyncClear                      ; 1                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[0]~2  ; 0                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[2]~10 ; 1                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[3]~6  ; 0                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[1]~14 ; 1                 ; 0       ;
-;      - Counter4:MinsL|Counter4OutputInt[0]~2  ; 1                 ; 0       ;
-;      - Counter4:MinsL|Counter4OutputInt[2]~10 ; 1                 ; 0       ;
-;      - Counter4:MinsL|Counter4OutputInt[3]~6  ; 1                 ; 0       ;
-;      - Counter4:MinsL|Counter4OutputInt[1]~14 ; 1                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[0]~2   ; 0                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[2]~10  ; 1                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[3]~6   ; 0                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[1]~14  ; 1                 ; 0       ;
-;      - Counter4:HrsL|Counter4OutputInt[0]~2   ; 1                 ; 0       ;
-;      - Counter4:HrsL|Counter4OutputInt[2]~10  ; 1                 ; 0       ;
-;      - Counter4:HrsL|Counter4OutputInt[3]~6   ; 1                 ; 0       ;
-;      - Counter4:HrsL|Counter4OutputInt[1]~14  ; 1                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[0]~0  ; 0                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[3]~21 ; 0                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[0]~0   ; 0                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[3]~21  ; 1                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[0]~1  ; 1                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[2]~9  ; 1                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[3]~5  ; 1                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[1]~13 ; 1                 ; 0       ;
-;      - Counter4:MinsL|Counter4OutputInt[0]~1  ; 1                 ; 0       ;
-;      - Counter4:MinsL|Counter4OutputInt[2]~9  ; 1                 ; 0       ;
-;      - Counter4:MinsL|Counter4OutputInt[3]~5  ; 1                 ; 0       ;
-;      - Counter4:MinsL|Counter4OutputInt[1]~13 ; 1                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[0]~1   ; 1                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[2]~9   ; 1                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[3]~5   ; 1                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[1]~13  ; 1                 ; 0       ;
-;      - Counter4:HrsL|Counter4OutputInt[0]~1   ; 1                 ; 0       ;
-;      - Counter4:HrsL|Counter4OutputInt[2]~9   ; 1                 ; 0       ;
-;      - Counter4:HrsL|Counter4OutputInt[3]~5   ; 1                 ; 0       ;
-;      - Counter4:HrsL|Counter4OutputInt[1]~13  ; 1                 ; 0       ;
-; KEY[3]                                        ;                   ;         ;
-;      - SecondsAsyncClear                      ; 0                 ; 0       ;
-;      - Counter4:MinsR|Counter4OutputInt[3]~21 ; 0                 ; 0       ;
+;      - MinsAsyncClear~0                       ; 0                 ; 0       ;
+;      - HrsAsyncClear~0                        ; 0                 ; 0       ;
 ; KEY[2]                                        ;                   ;         ;
+;      - SecondsAsyncClear                      ; 0                 ; 0       ;
+;      - Counter4:HrsR|Counter4OutputInt[3]~26  ; 0                 ; 0       ;
+; KEY[3]                                        ;                   ;         ;
 ;      - SecondsAsyncClear                      ; 1                 ; 0       ;
-;      - Counter4:HrsR|Counter4OutputInt[3]~21  ; 1                 ; 0       ;
+;      - Counter4:MinsR|Counter4OutputInt[3]~22 ; 1                 ; 0       ;
 +-----------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                  ;
-+----------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                   ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                               ; PIN_AF14           ; 58      ; Clock                     ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; Counter4:HrsR|Counter4OutputInt[0]~0   ; LABCELL_X35_Y1_N15 ; 8       ; Async. clear              ; no     ; --                   ; --               ; --                        ;
-; Counter4:HrsR|Counter4OutputInt[3]~21  ; LABCELL_X35_Y1_N36 ; 17      ; Latch enable              ; no     ; --                   ; --               ; --                        ;
-; Counter4:MinsR|Counter4OutputInt[0]~0  ; LABCELL_X36_Y1_N57 ; 8       ; Async. clear              ; no     ; --                   ; --               ; --                        ;
-; Counter4:MinsR|Counter4OutputInt[3]~21 ; LABCELL_X36_Y1_N15 ; 17      ; Latch enable              ; no     ; --                   ; --               ; --                        ;
-; HrsRSyncClr~4                          ; LABCELL_X35_Y1_N27 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; MinsRSyncClr~0                         ; LABCELL_X35_Y1_N6  ; 15      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; SecondsAsyncClear                      ; LABCELL_X35_Y2_N48 ; 13      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
-; SecondsLSyncClr~1                      ; LABCELL_X35_Y2_N6  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; SecondsREnable                         ; LABCELL_X35_Y2_N18 ; 35      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; SecondsRSyncClr~0                      ; LABCELL_X35_Y2_N54 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-+----------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                   ;
++----------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                   ; Location            ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                               ; PIN_AF14            ; 55      ; Clock                     ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; Counter4:HrsR|Counter4OutputInt[0]~0   ; LABCELL_X45_Y4_N57  ; 8       ; Async. clear              ; no     ; --                   ; --               ; --                        ;
+; Counter4:HrsR|Counter4OutputInt[3]~26  ; LABCELL_X45_Y4_N24  ; 17      ; Latch enable              ; no     ; --                   ; --               ; --                        ;
+; Counter4:MinsR|Counter4OutputInt[0]~0  ; MLABCELL_X47_Y4_N15 ; 8       ; Async. clear              ; no     ; --                   ; --               ; --                        ;
+; Counter4:MinsR|Counter4OutputInt[3]~22 ; MLABCELL_X47_Y4_N36 ; 17      ; Latch enable              ; no     ; --                   ; --               ; --                        ;
+; HrsRSyncClr~3                          ; LABCELL_X45_Y4_N33  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; MinsRSyncClr~0                         ; LABCELL_X46_Y4_N24  ; 15      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; SecondsAsyncClear                      ; LABCELL_X37_Y2_N24  ; 12      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
+; SecondsLSyncClr~1                      ; LABCELL_X48_Y4_N18  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; SecondsREnable                         ; MLABCELL_X47_Y6_N24 ; 33      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; SecondsRSyncClr~0                      ; LABCELL_X48_Y6_N33  ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
++----------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -1925,7 +1888,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_AF14 ; 58      ; Global Clock         ; GCLK6            ; --                        ;
+; CLOCK_50 ; PIN_AF14 ; 55      ; Global Clock         ; GCLK6            ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1934,14 +1897,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 279 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 20 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 100 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 162 / 56,300 ( < 1 % )  ;
+; Block interconnects                         ; 283 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 19 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 106 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 135 / 56,300 ( < 1 % )  ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 19 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 30 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1997,13 +1960,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 71 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 73 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 196 / 12,676 ( 2 % )    ;
-; R14/C12 interconnect drivers                ; 203 / 20,720 ( < 1 % )  ;
-; R3 interconnects                            ; 194 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 310 / 266,960 ( < 1 % ) ;
-; Spine clocks                                ; 1 / 360 ( < 1 % )       ;
+; R14 interconnects                           ; 137 / 12,676 ( 1 % )    ;
+; R14/C12 interconnect drivers                ; 143 / 20,720 ( < 1 % )  ;
+; R3 interconnects                            ; 172 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 428 / 266,960 ( < 1 % ) ;
+; Spine clocks                                ; 2 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
 
@@ -2132,8 +2095,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[9]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; KEY[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
@@ -2185,12 +2148,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+----------------------+-------------------+
 ; Source Clock(s)     ; Destination Clock(s) ; Delay Added in ns ;
 +---------------------+----------------------+-------------------+
-; CLOCK_50,KEY[0],I/O ; CLOCK_50             ; 91.9              ;
-; I/O                 ; KEY[0]               ; 41.7              ;
-; I/O                 ; CLOCK_50,I/O         ; 29.9              ;
-; KEY[0]              ; CLOCK_50             ; 12.5              ;
-; I/O                 ; CLOCK_50             ; 9.5               ;
-; CLOCK_50            ; CLOCK_50             ; 4.6               ;
+; CLOCK_50,KEY[0],I/O ; CLOCK_50             ; 88.0              ;
+; CLOCK_50,KEY[0],I/O ; KEY[0]               ; 58.0              ;
+; KEY[0]              ; CLOCK_50             ; 5.2               ;
+; CLOCK_50            ; CLOCK_50             ; 4.4               ;
 +---------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -2201,69 +2162,69 @@ This will disable optimization of problematic paths and expose them for further 
 +------------------------------------------------+-----------------------------------------------+-------------------+
 ; Source Register                                ; Destination Register                          ; Delay Added in ns ;
 +------------------------------------------------+-----------------------------------------------+-------------------+
-; KEY[0]                                         ; Counter4:MinsL|Counter4OutputInt[1]~_emulated ; 4.090             ;
-; KEY[3]                                         ; Counter4:MinsR|Counter4OutputInt[0]~_emulated ; 2.552             ;
-; KEY[2]                                         ; Counter4:HrsR|Counter4OutputInt[1]~_emulated  ; 2.451             ;
-; Counter4:MinsL|Counter4OutputInt[2]~_emulated  ; Counter4:MinsL|Counter4OutputInt[2]~_emulated ; 1.978             ;
-; SW[6]                                          ; Counter4:MinsL|Counter4OutputInt[2]~_emulated ; 1.978             ;
-; Counter4:MinsL|Counter4OutputInt[2]~9          ; Counter4:MinsL|Counter4OutputInt[2]~_emulated ; 1.978             ;
-; Counter4:MinsR|Counter4OutputInt[0]~1          ; Counter4:MinsR|Counter4OutputInt[0]~_emulated ; 1.976             ;
-; Counter4:MinsR|Counter4OutputInt[0]~_emulated  ; Counter4:MinsR|Counter4OutputInt[0]~_emulated ; 1.976             ;
-; SW[0]                                          ; Counter4:MinsR|Counter4OutputInt[0]~_emulated ; 1.976             ;
-; Counter4:MinsL|Counter4OutputInt[0]~_emulated  ; Counter4:MinsL|Counter4OutputInt[0]~_emulated ; 1.966             ;
-; SW[4]                                          ; Counter4:MinsL|Counter4OutputInt[0]~_emulated ; 1.966             ;
-; Counter4:MinsL|Counter4OutputInt[0]~1          ; Counter4:MinsL|Counter4OutputInt[0]~_emulated ; 1.966             ;
-; Counter4:MinsR|Counter4OutputInt[3]~5          ; Counter4:MinsR|Counter4OutputInt[3]~_emulated ; 1.960             ;
-; Counter4:MinsR|Counter4OutputInt[3]~_emulated  ; Counter4:MinsR|Counter4OutputInt[3]~_emulated ; 1.960             ;
-; SW[3]                                          ; Counter4:MinsR|Counter4OutputInt[3]~_emulated ; 1.960             ;
-; Counter4:HrsR|Counter4OutputInt[0]~_emulated   ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.870             ;
-; Counter4:HrsR|Counter4OutputInt[0]~1           ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.870             ;
-; Counter4:HrsR|Counter4OutputInt[1]~_emulated   ; Counter4:HrsR|Counter4OutputInt[1]~_emulated  ; 1.849             ;
-; Counter4:HrsR|Counter4OutputInt[1]~13          ; Counter4:HrsR|Counter4OutputInt[1]~_emulated  ; 1.849             ;
-; SW[1]                                          ; Counter4:HrsR|Counter4OutputInt[1]~_emulated  ; 1.849             ;
-; Counter4:HrsR|Counter4OutputInt[3]~_emulated   ; Counter4:HrsR|Counter4OutputInt[3]~_emulated  ; 1.810             ;
-; Counter4:HrsR|Counter4OutputInt[3]~5           ; Counter4:HrsR|Counter4OutputInt[3]~_emulated  ; 1.810             ;
-; Counter4:HrsR|Counter4OutputInt[2]~_emulated   ; Counter4:HrsR|Counter4OutputInt[2]~_emulated  ; 1.710             ;
-; Counter4:HrsR|Counter4OutputInt[2]~9           ; Counter4:HrsR|Counter4OutputInt[2]~_emulated  ; 1.710             ;
-; SW[2]                                          ; Counter4:HrsR|Counter4OutputInt[2]~_emulated  ; 1.710             ;
-; Counter4:MinsR|Counter4OutputInt[1]~13         ; Counter4:MinsR|Counter4OutputInt[1]~_emulated ; 1.568             ;
-; Counter4:MinsR|Counter4OutputInt[1]~_emulated  ; Counter4:MinsR|Counter4OutputInt[1]~_emulated ; 1.568             ;
-; Counter4:MinsL|Counter4OutputInt[1]~_emulated  ; Counter4:MinsL|Counter4OutputInt[1]~_emulated ; 1.555             ;
-; SW[5]                                          ; Counter4:MinsL|Counter4OutputInt[1]~_emulated ; 1.555             ;
-; Counter4:MinsL|Counter4OutputInt[1]~13         ; Counter4:MinsL|Counter4OutputInt[1]~_emulated ; 1.555             ;
-; Counter4:MinsR|Counter4OutputInt[2]~9          ; Counter4:MinsR|Counter4OutputInt[2]~_emulated ; 1.551             ;
-; Counter4:MinsR|Counter4OutputInt[2]~_emulated  ; Counter4:MinsR|Counter4OutputInt[2]~_emulated ; 1.551             ;
-; Counter4:HrsL|Counter4OutputInt[1]~_emulated   ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.506             ;
-; Counter4:HrsL|Counter4OutputInt[1]~13          ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.506             ;
-; Counter4:HrsL|Counter4OutputInt[2]~_emulated   ; Counter4:HrsL|Counter4OutputInt[2]~_emulated  ; 1.255             ;
-; Counter4:HrsL|Counter4OutputInt[2]~9           ; Counter4:HrsL|Counter4OutputInt[2]~_emulated  ; 1.255             ;
-; Counter4:SecondsL|Counter4OutputInt[2]         ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter4:SecondsL|Counter4OutputInt[0]         ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter4:SecondsR|Counter4OutputInt[0]         ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter4:SecondsR|Counter4OutputInt[3]         ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[25] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[22] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[21] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[23] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[19] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[17] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[15] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[14] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[13] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[12] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[20] ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter26:OneSecCounter|Counter26OutputInt[7]  ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.229             ;
-; Counter4:HrsL|Counter4OutputInt[0]~_emulated   ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.207             ;
-; Counter4:HrsL|Counter4OutputInt[0]~1           ; Counter4:HrsL|Counter4OutputInt[1]~_emulated  ; 1.207             ;
-; Counter4:MinsL|Counter4OutputInt[3]~_emulated  ; Counter4:MinsL|Counter4OutputInt[3]~_emulated ; 1.186             ;
-; SW[7]                                          ; Counter4:MinsL|Counter4OutputInt[3]~_emulated ; 1.186             ;
-; Counter4:MinsL|Counter4OutputInt[3]~5          ; Counter4:MinsL|Counter4OutputInt[3]~_emulated ; 1.186             ;
-; Counter4:HrsL|Counter4OutputInt[3]~_emulated   ; Counter4:HrsL|Counter4OutputInt[3]~_emulated  ; 1.066             ;
-; Counter4:HrsL|Counter4OutputInt[3]~5           ; Counter4:HrsL|Counter4OutputInt[3]~_emulated  ; 1.066             ;
-; Counter4:SecondsR|Counter4OutputInt[1]         ; Counter4:SecondsR|Counter4OutputInt[2]        ; 0.236             ;
-; Counter4:SecondsL|Counter4OutputInt[1]         ; Counter4:SecondsL|Counter4OutputInt[2]        ; 0.234             ;
-; Counter4:SecondsR|Counter4OutputInt[2]         ; Counter4:SecondsR|Counter4OutputInt[3]        ; 0.197             ;
-; Counter4:SecondsL|Counter4OutputInt[3]         ; Counter4:SecondsL|Counter4OutputInt[3]        ; 0.143             ;
+; Counter4:HrsR|Counter4OutputInt[1]~_emulated   ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsL|Counter4OutputInt[2]~_emulated   ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsR|Counter4OutputInt[2]~_emulated   ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsR|Counter4OutputInt[3]~_emulated   ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsL|Counter4OutputInt[0]~_emulated   ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsL|Counter4OutputInt[1]~_emulated   ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsL|Counter4OutputInt[3]~_emulated   ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsL|Counter4OutputInt[1]~13          ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; SW[1]                                          ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsL|Counter4OutputInt[3]~5           ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsL|Counter4OutputInt[2]~9           ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; SW[7]                                          ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsL|Counter4OutputInt[0]~1           ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsR|Counter4OutputInt[1]~13          ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; SW[4]                                          ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsR|Counter4OutputInt[3]~5           ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; SW[6]                                          ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; SW[2]                                          ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; SW[3]                                          ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:HrsR|Counter4OutputInt[2]~9           ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; SW[5]                                          ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; KEY[0]                                         ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; KEY[2]                                         ; Counter4:HrsL|Counter4OutputInt[1]~13         ; 4.268             ;
+; Counter4:MinsR|Counter4OutputInt[1]~_emulated  ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsL|Counter4OutputInt[3]~_emulated  ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsL|Counter4OutputInt[2]~_emulated  ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsL|Counter4OutputInt[1]~13         ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsL|Counter4OutputInt[3]~5          ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsR|Counter4OutputInt[2]~9          ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsR|Counter4OutputInt[2]~_emulated  ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsL|Counter4OutputInt[2]~9          ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsR|Counter4OutputInt[3]~5          ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsR|Counter4OutputInt[3]~_emulated  ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsR|Counter4OutputInt[1]~13         ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsL|Counter4OutputInt[1]~_emulated  ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; KEY[3]                                         ; Counter4:MinsL|Counter4OutputInt[1]~13        ; 2.994             ;
+; Counter4:MinsR|Counter4OutputInt[0]~1          ; Counter4:MinsR|Counter4OutputInt[3]~_emulated ; 1.950             ;
+; Counter4:MinsR|Counter4OutputInt[0]~_emulated  ; Counter4:MinsR|Counter4OutputInt[3]~_emulated ; 1.950             ;
+; SW[0]                                          ; Counter4:MinsR|Counter4OutputInt[3]~_emulated ; 1.950             ;
+; Counter4:MinsL|Counter4OutputInt[0]~_emulated  ; Counter4:MinsL|Counter4OutputInt[0]~_emulated ; 1.839             ;
+; Counter4:MinsL|Counter4OutputInt[0]~1          ; Counter4:MinsL|Counter4OutputInt[0]~_emulated ; 1.839             ;
+; Counter4:HrsR|Counter4OutputInt[0]~_emulated   ; Counter4:HrsL|Counter4OutputInt[2]~_emulated  ; 1.418             ;
+; Counter4:HrsR|Counter4OutputInt[0]~1           ; Counter4:HrsL|Counter4OutputInt[2]~_emulated  ; 1.418             ;
+; Counter4:SecondsL|Counter4OutputInt[2]         ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter4:SecondsL|Counter4OutputInt[0]         ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter4:SecondsR|Counter4OutputInt[0]         ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter4:SecondsR|Counter4OutputInt[3]         ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[23] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[22] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[21] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[20] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[19] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[17] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[15] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[14] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[13] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[12] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[25] ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter26:OneSecCounter|Counter26OutputInt[7]  ; Counter4:HrsR|Counter4OutputInt[0]~_emulated  ; 1.248             ;
+; Counter4:SecondsL|Counter4OutputInt[1]         ; Counter4:SecondsL|Counter4OutputInt[2]        ; 0.292             ;
+; Counter4:SecondsR|Counter4OutputInt[1]         ; Counter4:SecondsR|Counter4OutputInt[2]        ; 0.288             ;
+; Counter4:SecondsR|Counter4OutputInt[2]         ; Counter4:SecondsR|Counter4OutputInt[3]        ; 0.245             ;
+; Counter4:SecondsL|Counter4OutputInt[3]         ; Counter4:SecondsL|Counter4OutputInt[3]        ; 0.194             ;
 +------------------------------------------------+-----------------------------------------------+-------------------+
 Note: This table only shows the top 63 path(s) that have the largest delay added for hold.
 
@@ -2478,10 +2439,77 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Warning (335093): The Timing Analyzer is analyzing 16 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'TopLevel.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
+Warning (332125): Found combinational loop of 33 nodes File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 20
+    Warning (332126): Node "HrsAsyncClear~1|combout"
+    Warning (332126): Node "HrsL|Counter4OutputInt[2]~10|datae"
+    Warning (332126): Node "HrsL|Counter4OutputInt[2]~10|combout"
+    Warning (332126): Node "HrsAsyncClear~0|dataa"
+    Warning (332126): Node "HrsAsyncClear~0|combout"
+    Warning (332126): Node "HrsAsyncClear~1|dataf"
+    Warning (332126): Node "HrsR|Counter4OutputInt[2]~10|datae"
+    Warning (332126): Node "HrsR|Counter4OutputInt[2]~10|combout"
+    Warning (332126): Node "HrsAsyncClear~1|dataa"
+    Warning (332126): Node "HrsR|Counter4OutputInt[3]~6|datae"
+    Warning (332126): Node "HrsR|Counter4OutputInt[3]~6|combout"
+    Warning (332126): Node "HrsAsyncClear~1|datab"
+    Warning (332126): Node "HrsL|Counter4OutputInt[0]~2|datae"
+    Warning (332126): Node "HrsL|Counter4OutputInt[0]~2|combout"
+    Warning (332126): Node "HrsAsyncClear~1|datad"
+    Warning (332126): Node "HrsL|Counter4OutputInt[1]~14|datae"
+    Warning (332126): Node "HrsL|Counter4OutputInt[1]~14|combout"
+    Warning (332126): Node "HrsAsyncClear~1|datae"
+    Warning (332126): Node "HrsR|Counter4OutputInt[3]~26|dataa"
+    Warning (332126): Node "HrsR|Counter4OutputInt[3]~26|combout"
+    Warning (332126): Node "HrsR|Counter4OutputInt[1]~14|datac"
+    Warning (332126): Node "HrsR|Counter4OutputInt[1]~14|combout"
+    Warning (332126): Node "HrsAsyncClear~1|datac"
+    Warning (332126): Node "HrsL|Counter4OutputInt[2]~10|datac"
+    Warning (332126): Node "HrsR|Counter4OutputInt[2]~10|datac"
+    Warning (332126): Node "HrsR|Counter4OutputInt[3]~6|datac"
+    Warning (332126): Node "HrsL|Counter4OutputInt[0]~2|datac"
+    Warning (332126): Node "HrsL|Counter4OutputInt[1]~14|datac"
+    Warning (332126): Node "HrsL|Counter4OutputInt[3]~6|datac"
+    Warning (332126): Node "HrsL|Counter4OutputInt[3]~6|combout"
+    Warning (332126): Node "HrsAsyncClear~0|datab"
+    Warning (332126): Node "HrsL|Counter4OutputInt[3]~6|datae"
+    Warning (332126): Node "HrsR|Counter4OutputInt[1]~14|datae"
+Warning (332125): Found combinational loop of 29 nodes File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
+    Warning (332126): Node "MinsR|Counter4OutputInt[1]~14|combout"
+    Warning (332126): Node "MinsAsyncClear~1|datac"
+    Warning (332126): Node "MinsAsyncClear~1|combout"
+    Warning (332126): Node "MinsL|Counter4OutputInt[3]~6|datae"
+    Warning (332126): Node "MinsL|Counter4OutputInt[3]~6|combout"
+    Warning (332126): Node "MinsAsyncClear~0|datab"
+    Warning (332126): Node "MinsAsyncClear~0|combout"
+    Warning (332126): Node "MinsAsyncClear~1|datad"
+    Warning (332126): Node "MinsL|Counter4OutputInt[2]~10|datae"
+    Warning (332126): Node "MinsL|Counter4OutputInt[2]~10|combout"
+    Warning (332126): Node "MinsAsyncClear~0|dataa"
+    Warning (332126): Node "MinsR|Counter4OutputInt[2]~10|datae"
+    Warning (332126): Node "MinsR|Counter4OutputInt[2]~10|combout"
+    Warning (332126): Node "MinsAsyncClear~1|dataa"
+    Warning (332126): Node "MinsR|Counter4OutputInt[3]~6|datae"
+    Warning (332126): Node "MinsR|Counter4OutputInt[3]~6|combout"
+    Warning (332126): Node "MinsAsyncClear~1|datab"
+    Warning (332126): Node "MinsR|Counter4OutputInt[3]~22|dataa"
+    Warning (332126): Node "MinsR|Counter4OutputInt[3]~22|combout"
+    Warning (332126): Node "MinsR|Counter4OutputInt[1]~14|datac"
+    Warning (332126): Node "MinsL|Counter4OutputInt[3]~6|datac"
+    Warning (332126): Node "MinsL|Counter4OutputInt[2]~10|datac"
+    Warning (332126): Node "MinsR|Counter4OutputInt[2]~10|datac"
+    Warning (332126): Node "MinsR|Counter4OutputInt[3]~6|datac"
+    Warning (332126): Node "MinsL|Counter4OutputInt[1]~14|datac"
+    Warning (332126): Node "MinsL|Counter4OutputInt[1]~14|combout"
+    Warning (332126): Node "MinsAsyncClear~0|datac"
+    Warning (332126): Node "MinsL|Counter4OutputInt[1]~14|datae"
+    Warning (332126): Node "MinsR|Counter4OutputInt[1]~14|datae"
+Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: HrsAsyncClear~0|datac  to: HrsL|Counter4OutputInt[3]~6|combout
+    Info (332098): From: MinsAsyncClear~0|datad  to: MinsL|Counter4OutputInt[1]~14|combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
@@ -2490,26 +2518,26 @@ Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X33_Y0 to location X44_Y10
+    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X45_Y0 to location X55_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:11
-Info (11888): Total time spent on timing analysis during the Fitter is 1.10 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:06
+Info (11888): Total time spent on timing analysis during the Fitter is 1.24 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/output_files/TopLevel.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 198 warnings
-    Info: Peak virtual memory: 6544 megabytes
-    Info: Processing ended: Fri Mar 31 13:52:31 2023
-    Info: Elapsed time: 00:00:54
-    Info: Total CPU time (on all processors): 00:01:33
+Info: Quartus Prime Fitter was successful. 0 errors, 262 warnings
+    Info: Peak virtual memory: 6540 megabytes
+    Info: Processing ended: Mon Apr  3 01:46:34 2023
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:01:07
 
 
 +----------------------------+

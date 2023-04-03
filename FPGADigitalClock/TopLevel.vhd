@@ -2,6 +2,7 @@
 
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
 
 ENTITY TopLevel IS
 
@@ -18,7 +19,7 @@ ARCHITECTURE rtl OF TopLevel IS
 	
 	SIGNAL SecondsAsyncClear, MinsAsyncClear, HrsAsyncClear : STD_LOGIC := '1';
 	
-	SIGNAL SecAsyncLoad, MinsAsyncLoad, HrsAsyncLoad : STD_LOGIC := '0';
+	SIGNAL SecAsyncLoad, MinsAsyncLoad, HrsAsyncLoad : STD_LOGIC;
 	
 	SIGNAL HrsL_2, HrsR_3, HrsR_9, MinsL_5, MinsR_9, SecondsL_5, SecondsR_9, OneSecCounter50M: STD_LOGIC := '0';
 	
@@ -60,6 +61,36 @@ ARCHITECTURE rtl OF TopLevel IS
 	
 BEGIN
 
+	-- CHECK IF BAD VALUES BEING LOADED START --
+	
+	PROCESS(CLOCK_50)
+		BEGIN
+
+		IF (UNSIGNED(HrsL_OUT) > "0010") OR 
+			(UNSIGNED(HrsR_OUT) > "1001") OR 
+			(UNSIGNED(HrsL_OUT) = "0010" AND UNSIGNED(HrsR_OUT) > "0011") THEN
+			
+			HrsAsyncClear <= '0';
+			
+		ELSE
+			HrsAsyncClear <= KEY(0);
+			
+		END IF;
+		
+		IF (UNSIGNED(MinsL_OUT) > "0101") OR 
+			(UNSIGNED(MinsR_OUT) > "1001") THEN
+			
+			MinsAsyncClear <= '0';
+			
+		ELSE
+			MinsAsyncClear <= KEY(0);
+			
+		END IF;
+		
+	END PROCESS;
+	
+	-- CHECK IF BAD VALUES BEING LOADED END --
+
 	-- COMPONENTS START -- 
 	
 	SecondsR : Counter4 PORT MAP(CLOCK_50, SecondsREnable, SecAsyncLoad, SecondsRSyncClr, SecondsAsyncClear, RightLoadVal, SecondsR_OUT);
@@ -86,7 +117,7 @@ BEGIN
 	
 	-- COMPONENTS END -- 
 	
-	-- TOP LEVEL PORT ASSIGNMENTS START --
+	-- OTHER TOP LEVEL PORT ASSIGNMENTS START --
 	
 	LEDR <= SW;
 	
@@ -95,18 +126,16 @@ BEGIN
 	LeftLoadVal <= SW(7 DOWNTO 4) AFTER 5 ns;
 	
 	
-	-- TOP LEVEL PORT ASSIGNMENTS END --
+	-- OTHER TOP LEVEL PORT ASSIGNMENTS END --
 	
 	
 	-- COUNTER INTERMEDIATE SIGNALS START --
 	
 	SecondsAsyncClear <= KEY(0) AND KEY(2) AND KEY(3);
-	MinsAsyncClear <= KEY(0);
-	HrsAsyncClear <= KEY(0);
 	
-	MinsAsyncLoad <= KEY(3) AFTER 5 ns;
-	HrsAsyncLoad <= KEY(2) AFTER 5 ns;
 	SecAsyncLoad <= '1';
+	MinsAsyncLoad <= KEY(3);
+	HrsAsyncLoad <= KEY(2);
 	
 	SecondsREnable <= OneSecCounter50M;
 	SecondsLEnable <= OneSecCounter50M AND SecondsR_9;
@@ -138,8 +167,6 @@ BEGIN
 								OneSecCounterOUT(21) AND OneSecCounterOUT(20) AND OneSecCounterOUT(19) AND 
 								OneSecCounterOUT(17) AND OneSecCounterOUT(15) AND OneSecCounterOUT(14) AND 
 								OneSecCounterOUT(13) AND OneSecCounterOUT(12) AND OneSecCounterOUT(7);
-	
-	--OneSecCounter50M <= OneSecCounterOUT(1);
 								
 	SecondsR_9 <= SecondsR_OUT(3) AND SecondsR_OUT(0);
 	SecondsL_5 <= SecondsL_OUT(2) AND SecondsL_OUT(0);
@@ -153,7 +180,7 @@ BEGIN
 	
 	HrsL_2 <= HrsL_OUT(1);
 	
-	-- COUNTER COMBINATIONAL LOGIC START --	
+	-- COUNTER COMBINATIONAL LOGIC END --	
 
 END rtl;
 
