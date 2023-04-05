@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TopLevel
-Mon Apr  3 01:45:56 2023
+Wed Apr  5 20:14:48 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr  3 01:45:56 2023          ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr  5 20:14:48 2023          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; TopLevel                                       ;
 ; Top-level Entity Name           ; TopLevel                                       ;
@@ -167,7 +167,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -328,7 +329,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -338,15 +339,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Apr  3 01:45:46 2023
+    Info: Processing started: Wed Apr  5 20:14:33 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopLevel -c TopLevel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 4 design units, including 2 entities, in source file toplevel.vhd
     Info (12022): Found design unit 1: TopLevel-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 18
-    Info (12022): Found design unit 2: TopLevelTest-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 196
+    Info (12022): Found design unit 2: TopLevelTest-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 195
     Info (12023): Found entity 1: TopLevel File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 7
-    Info (12023): Found entity 2: TopLevelTest File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 192
+    Info (12023): Found entity 2: TopLevelTest File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 191
 Info (12021): Found 4 design units, including 2 entities, in source file counter4.vhd
     Info (12022): Found design unit 1: Counter4-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 16
     Info (12022): Found design unit 2: Counter4Test-rtl File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 63
@@ -363,19 +364,18 @@ Info (12021): Found 4 design units, including 2 entities, in source file segment
     Info (12023): Found entity 1: SegmentDecoder7 File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd Line: 6
     Info (12023): Found entity 2: SegmentDecoder7Test File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/SegmentDecoder7.vhd Line: 33
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at TopLevel.vhd(67): signal "HrsL_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 67
-Warning (10492): VHDL Process Statement warning at TopLevel.vhd(68): signal "HrsR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 68
+Warning (10540): VHDL Signal Declaration warning at TopLevel.vhd(34): used explicit default value for signal "DummyLoadVal" because signal was never assigned a value File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 34
 Warning (10492): VHDL Process Statement warning at TopLevel.vhd(69): signal "HrsL_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at TopLevel.vhd(69): signal "HrsR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at TopLevel.vhd(74): signal "KEY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 74
-Warning (10492): VHDL Process Statement warning at TopLevel.vhd(78): signal "MinsL_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 78
-Warning (10492): VHDL Process Statement warning at TopLevel.vhd(79): signal "MinsR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 79
-Warning (10492): VHDL Process Statement warning at TopLevel.vhd(84): signal "KEY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 84
-Info (12128): Elaborating entity "Counter4" for hierarchy "Counter4:SecondsR" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at TopLevel.vhd(70): signal "HrsR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 70
+Warning (10492): VHDL Process Statement warning at TopLevel.vhd(71): signal "HrsL_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at TopLevel.vhd(71): signal "HrsR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at TopLevel.vhd(80): signal "MinsL_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at TopLevel.vhd(81): signal "MinsR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 81
+Info (12128): Elaborating entity "Counter4" for hierarchy "Counter4:SecondsR" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 96
 Warning (10492): VHDL Process Statement warning at Counter4.vhd(30): signal "LoadInput" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 30
-Info (12128): Elaborating entity "Counter26" for hierarchy "Counter26:OneSecCounter" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 101
+Info (12128): Elaborating entity "Counter26" for hierarchy "Counter26:OneSecCounter" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 105
 Warning (10492): VHDL Process Statement warning at Counter26.vhd(30): signal "LoadInput" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter26.vhd Line: 30
-Info (12128): Elaborating entity "SegmentDecoder7" for hierarchy "SegmentDecoder7:SevenSegment0" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 105
+Info (12128): Elaborating entity "SegmentDecoder7" for hierarchy "SegmentDecoder7:SevenSegment0" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/TopLevel.vhd Line: 107
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "Counter4:MinsR|Counter4OutputInt[0]" is converted into an equivalent circuit using register "Counter4:MinsR|Counter4OutputInt[0]~_emulated" and latch "Counter4:MinsR|Counter4OutputInt[0]~1" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
     Warning (13310): Register "Counter4:MinsR|Counter4OutputInt[3]" is converted into an equivalent circuit using register "Counter4:MinsR|Counter4OutputInt[3]~_emulated" and latch "Counter4:MinsR|Counter4OutputInt[3]~5" File: C:/Users/colem/Documents/VHDL-Projects/FPGADigitalClock/Counter4.vhd Line: 26
@@ -402,10 +402,10 @@ Info (21057): Implemented 229 device resources after synthesis - the final resou
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
     Info (21061): Implemented 162 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4876 megabytes
-    Info: Processing ended: Mon Apr  3 01:45:56 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4872 megabytes
+    Info: Processing ended: Wed Apr  5 20:14:48 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:35
 
 

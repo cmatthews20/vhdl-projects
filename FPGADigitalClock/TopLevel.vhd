@@ -63,7 +63,7 @@ BEGIN
 
 	-- CHECK IF BAD VALUES BEING LOADED START --
 	
-	PROCESS(CLOCK_50)
+	PROCESS(CLOCK_50, KEY)
 		BEGIN
 
 		IF (UNSIGNED(HrsL_OUT) > "0010") OR 
@@ -103,8 +103,6 @@ BEGIN
 	HrsL : Counter4 PORT MAP(CLOCK_50, HrsLEnable, HrsAsyncLoad, HrsLSyncClr, HrsAsyncClear, LeftLoadVal, HrsL_OUT);
 	
 	OneSecCounter : Counter26 PORT MAP(CLOCK_50, '1', '1', OneSecCounterSyncClr, '1', DummyLoadVal, OneSecCounterOUT);
-	
-	DummyLoadVal <= "00000000000000000000000000";
 	
 	SevenSegment0 : SegmentDecoder7 PORT MAP(SecondsR_OUT, HEX0(6 DOWNTO 0));
 	SevenSegment1 : SegmentDecoder7 PORT MAP(SecondsL_OUT, HEX1(6 DOWNTO 0));
