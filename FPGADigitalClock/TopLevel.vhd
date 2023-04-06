@@ -119,10 +119,8 @@ BEGIN
 	
 	LEDR <= SW;
 	
-	
 	RightLoadVal <= SW(3 DOWNTO 0) AFTER 5 ns;
 	LeftLoadVal <= SW(7 DOWNTO 4) AFTER 5 ns;
-	
 	
 	-- OTHER TOP LEVEL PORT ASSIGNMENTS END --
 	
@@ -205,7 +203,7 @@ ARCHITECTURE rtl OF TopLevelTest IS
 	END COMPONENT;
 	
 	SIGNAL Clock : STD_LOGIC := '0';
-	SIGNAL SW_int : STD_LOGIC_VECTOR(9 DOWNTO 0) := "0011111111";
+	SIGNAL SW_int : STD_LOGIC_VECTOR(9 DOWNTO 0) := "0000100011";
 	SIGNAL KEY_int: STD_LOGIC_VECTOR(3 DOWNTO 0) := "1111";
 	SIGNAL HEX0_int, HEX1_int, HEX2_int, HEX3_int, HEX4_int, HEX5_int : STD_LOGIC_VECTOR(6 DOWNTO 0);
 	SIGNAL LEDR_int : STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -214,6 +212,9 @@ BEGIN
 
 	TopLevelTestModule : TopLevel PORT MAP(Clock,SW_int,KEY_int,HEX0_int,HEX1_int,HEX2_int,HEX3_int,HEX4_int,HEX5_int,LEDR_int);
 	
-	Clock <= NOT Clock AFTER 5 ns;
+	Clock <= NOT Clock AFTER 1 ns;
+	SW_int <= "0001011001" after 12 ns;
+	KEY_int <= "1011" after 10 ns, "1111" after 11 ns, "0111" after 21 ns, "1111" after 22 ns;
 
 END rtl;
+
